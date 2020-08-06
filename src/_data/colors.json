@@ -1,0 +1,10 @@
+{
+  "logoSVG":            "text-indigo-600",
+  "logoSVGMobile":      "text-indigo-600",
+  "logoHover":          "text-indigo-500",
+  "navLinks":           "text-indigo-500",
+  "headers":            "### Headers have to be set in the /src/assets/css/tailwind.css file.",
+  "footerText":         "text-indigo-400",
+  "socialIcons":        "text-indigo-400",
+  "socialIconsHover":   "text-indigo-500"
+}

@@ -10,13 +10,18 @@
 </head>
   <body>
     <div hidden>{% svgsprite %}</div>
+    <div class="flex flex-col min-h-screen">
+    {% include "components/nav.njk" %}
 
+      <div class="flex-grow sm:px-20 lg:px-32 ">
+        <main class="px-4 py-12 prose max-w-none sm:prose-xl xl:prose-xl" id="content" tabindex="-1">
+          {{ content | safe }}
+        </main>
+      </div>
 
-    <div class="prose sm:prose-lg mx-auto ">
-      {{ content | safe }}
+      {% include "footer.njk" %}
     </div>
 
-    {% include "footer.njk" %}
-    <script src="/assets/bundled.js" defer></script>
+  <script src="/assets/main.js" defer></script>
   </body>
-</html>
+</html> 

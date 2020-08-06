@@ -1,6 +1,62 @@
-<footer role="contentinfo" class="w-full p-4 bg-gray-100 text-gray-600 flex items-center justify-center space-x-2">
-    <span class="text-xs">&copy; {{ meta.title }} {{ build.timestamp | dateToFormat('yyyy') }}</span>
-    <a href="https://github.com/eastslopestudio/eleventy-starter">
-        {% svg "github", "Github logo", "w-6 h-6 fill-current" %}
-    </a>
+<footer>
+  <div class="bg-white">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center md:order-2 {{ colors.socialIcons | default('text-gray-400') }} hover:{{ colors.socialIconsHover | default('text-gray-500') }}">
+
+        {% if social.dribbble %}
+        <a href="{{ social.dribbble | url }}">
+          {% svg "dribbble", "Dribbble logo", "mx-2 h-6 w-6 fill-current" %}
+        </a>
+        {% endif %}
+
+
+        {% if social.facebook %}
+        <a href="{{ social.facebook | url }}">
+          {% svg "facebook", "Facebook logo", "mx-2 h-6 w-6 fill-current" %}
+        </a>
+        {% endif %}
+
+
+        {% if social.github %}
+        <a href="{{ social.github | url }}">
+          {% svg "github", "Github logo", "mx-2 h-6 w-6 fill-current" %}
+        </a>
+        {% endif %}
+
+
+        {% if social.instagram %}
+        <a href="{{ social.instagram | url }}">
+          {% svg "instagram", "Instagram logo", "mx-2 h-6 w-6 fill-current" %}
+        </a>
+        {% endif %}
+
+
+        {% if social.pinterest %}
+        <a href="{{ social.pinterest | url }}">
+          {% svg "pinterest", "Pinterest logo", "mx-2 h-6 w-6 fill-current" %}
+        </a>
+        {% endif %}
+
+
+        {% if social.twitter %}
+        <a href="{{ social.twitter | url }}">
+          {% svg "twitter", "Twitter logo", "mx-2 h-6 w-6 fill-current" %}
+        </a>
+        {% endif %}
+
+
+        {% if social.youtube %}
+        <a href="{{ social.youtube | url }}">
+          {% svg "youtube", "Youtube logo", "mx-2 h-6 w-6 fill-current" %}
+        </a>
+        {% endif %}
+
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-base leading-6 {{ colors.footerText | default('text-gray-400') }}">
+          &copy; {{ meta.title }} {{ build.timestamp | dateToFormat('yyyy') }}
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
