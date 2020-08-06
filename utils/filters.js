@@ -6,6 +6,18 @@ module.exports = {
    * Filters
    * @link https://www.11ty.io/docs/filters/
    */
+
+   /**
+    * dateToFormat allows specifiying display format at point of use.
+    * Example in footer: {{ build.timestamp | dateToFormat('yyyy') }}
+    * uses .timestamp from the _data/build.js export and formats it via dateToFormat below
+    */
+  dateToFormat: (date, format) => {
+    return DateTime.fromJSDate(date, { 
+      zone: 'utc'
+    }).toFormat(String(format))
+  },
+
   htmlDateString: (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'

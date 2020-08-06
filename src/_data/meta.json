@@ -1,0 +1,6 @@
+{
+  "title": "11ty, TailwindCSS/UI/Typography, Alpine.js Template",
+  "description": "An 11ty template to quickly spin up a fully functional website with TailwindCSS, TailwindUI, Tailwind Typography, and Alpine.js baked in.",
+  "lang": "en",
+  "locale": "en_us"
+}

@@ -24,7 +24,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev:webpack": "webpack  --mode development",
-    "dev:eleventy": "eleventy --serve --watch",
+    "dev:eleventy": "eleventy --serve",
     "dev:postcss": "postcss src/assets/css/tailwind.css -o dist/assets/tailwind.css --watch --verbose",
     "dev": "npm-run-all clean --parallel dev:* --print-label",
     "build:webpack": "webpack  --mode production",
@@ -47,6 +47,7 @@
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
     "html-minifier": "^4.0.0",
     "luxon": "^1.24.1",
     "markdown-it": "^11.0.0",

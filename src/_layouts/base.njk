@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+    <title>{{ seo.title | default( title ) }}</title>
   <link rel="stylesheet"href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="/assets/tailwind.css"/>
+  {# include "head.njk" #}
 </head>
-<body>
-  <div hidden>{% svgsprite %}</div>
+  <body>
+    <div hidden>{% svgsprite %}</div>
 
 
-  <div class="prose sm:prose-lg mx-auto ">
-    {{ content | safe }}
-  </div>
+    <div class="prose sm:prose-lg mx-auto ">
+      {{ content | safe }}
+    </div>
 
-  <script src="/assets/bundled.js"></script>
-</body>
+    {% include "footer.njk" %}
+    <script src="/assets/bundled.js" defer></script>
+  </body>
 </html>
