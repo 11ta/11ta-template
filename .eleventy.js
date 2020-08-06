@@ -8,6 +8,8 @@ const collections = require('./utils/collections.js')
 const filters = require('./utils/filters.js')
 const shortcodes = require('./utils/shortcodes.js')
 const transforms = require('./utils/transforms.js')
+const svgsprite = require('./utils/svgsprite')
+
 
 module.exports = function (eleventyConfig) {
 
@@ -43,6 +45,13 @@ module.exports = function (eleventyConfig) {
   })
 
   /**
+   * Add async shortcodes
+   *
+   * @link https://www.11ty.dev/docs/languages/nunjucks/#asynchronous-shortcodes
+   */
+  eleventyConfig.addNunjucksAsyncShortcode('svgsprite', svgsprite)
+
+  /**
    * Collections?
    * ============================
    */
@@ -62,11 +71,11 @@ module.exports = function (eleventyConfig) {
    * @link https://www.11ty.dev/docs/copy/
    */
   eleventyConfig.addPassthroughCopy('src/*.png')
-  eleventyConfig.addPassthroughCopy('src/*.svg')
   eleventyConfig.addPassthroughCopy('src/*.jpg')
   eleventyConfig.addPassthroughCopy('src/*.ico')
   eleventyConfig.addPassthroughCopy('src/robots.txt')
   eleventyConfig.addPassthroughCopy('src/assets/images')
+  eleventyConfig.addPassthroughCopy('src/assets/svg')
 
   /**
    * Set custom markdown library instance...
