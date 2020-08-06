@@ -53,7 +53,7 @@ module.exports = function (eleventyConfig) {
    * by default not watched by 11ty
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
-  eleventyConfig.addWatchTarget('./src/_assets')
+  eleventyConfig.addWatchTarget('./src/assets')
   eleventyConfig.addWatchTarget('./tailwind.config.js')
 
 
@@ -66,7 +66,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/*.jpg')
   eleventyConfig.addPassthroughCopy('src/*.ico')
   eleventyConfig.addPassthroughCopy('src/robots.txt')
-  eleventyConfig.addPassthroughCopy('src/_assets')
+  eleventyConfig.addPassthroughCopy('src/assets/images')
 
   /**
    * Set custom markdown library instance...

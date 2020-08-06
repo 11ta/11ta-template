@@ -24,8 +24,11 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev:eleventy": "eleventy --serve --watch",
-    "dev": "run-s clean dev:* --print-label",
-    "build": ""
+    "dev:postcss": "postcss src/assets/css/tailwind.css -o dist/assets/tailwind.css --watch --verbose",
+    "dev": "run-p dev:* --print-label",
+    "build:eleventy": "eleventy",
+    "build:postcss": "NODE_ENV=production postcss src/assets/css/tailwind.css -o dist/assets/tailwind.css --verbose",
+    "build": "run-s clean build:eleventy build:postcss --print-label"
   },
   "dependencies": {
     "alpinejs": "^2.5.0"

@@ -2,7 +2,7 @@ const path = require('path')
 const TerserJSPlugin = require('terser-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/_assets/scripts/main.js'),
+  entry: path.resolve(__dirname, 'src/assets/scripts/main.js'),
   output: {
     path: path.resolve(__dirname, 'dist/assets'),
   },
