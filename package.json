@@ -23,12 +23,14 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
+    "dev:webpack": "webpack  --mode development",
     "dev:eleventy": "eleventy --serve --watch",
     "dev:postcss": "postcss src/assets/css/tailwind.css -o dist/assets/tailwind.css --watch --verbose",
-    "dev": "run-p dev:* --print-label",
-    "build:eleventy": "eleventy",
+    "dev": "npm-run-all clean --parallel dev:* --print-label",
+    "build:webpack": "webpack  --mode production",
+    "build:eleventy": "ELEVENTY_ENV=production eleventy",
     "build:postcss": "NODE_ENV=production postcss src/assets/css/tailwind.css -o dist/assets/tailwind.css --verbose",
-    "build": "run-s clean build:eleventy build:postcss --print-label"
+    "build": "run-s clean build:* --print-label"
   },
   "dependencies": {
     "alpinejs": "^2.5.0"
