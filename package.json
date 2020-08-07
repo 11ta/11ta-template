@@ -56,6 +56,7 @@
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "rimraf": "^3.0.2",
+    "slugify": "^1.4.5",
     "svg-sprite": "^1.5.0",
     "tailwindcss": "^1.6.2",
     "terser-webpack-plugin": "^4.0.0",

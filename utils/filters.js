@@ -1,4 +1,6 @@
 const { DateTime } = require('luxon')
+const slugify = require("slugify");
+
 
 module.exports = {
 
@@ -24,6 +26,24 @@ module.exports = {
     }).toFormat('yyyy-LL-dd');
   },
 
+  machineDate: (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: 'utc'
+    }).toFormat('yyyy-MM-dd');
+  },
+
+  readableDate: (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: 'utc'
+    }).toFormat('dd LLL yyyy');
+  },
+
+
+
+
+
+
+
   /**
    * Date for Permalinks when working with old /YYYY/MM/DD/slug format from Wordpress exports
    * @link https://wp11.netlify.app
@@ -34,6 +54,17 @@ module.exports = {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'
     }).toFormat('yyyy/MM/dd');
+  },
+
+  /**
+   // Universal slug filter strips unsafe chars from URLs
+   */
+  slugify: (string) => {
+    return slugify(string, {
+      lower: true,
+      replacement: "-",
+      remove: /[*+~.·,()'"`´%!?¿:@]/g
+    });
   },
 
 

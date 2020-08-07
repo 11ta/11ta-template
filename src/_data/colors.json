@@ -3,7 +3,10 @@
   "logoSVGMobile":      "text-indigo-600",
   "logoHover":          "text-indigo-500",
   "navLinks":           "text-indigo-500",
-  "headers":            "### Headers have to be set in the /src/assets/css/tailwind.css file.",
+  "navBorders":         "border-indigo-500",
+  "navMobileText":      "text-indigo-600",
+  "navMobileBg":        "bg-indigo-50",
+  "headers":            "### Set Headers (H1, H2..) in /src/assets/css/tailwind.css.",
   "footerText":         "text-indigo-400",
   "socialIcons":        "text-indigo-400",
   "socialIconsHover":   "text-indigo-500"

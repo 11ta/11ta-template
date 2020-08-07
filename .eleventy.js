@@ -94,8 +94,12 @@ module.exports = function (eleventyConfig) {
    * Add layout aliases
    * @link https://www.11ty.dev/docs/layouts/#layout-aliasing
    */
-  eleventyConfig.addLayoutAlias('base', 'base.njk')
-  eleventyConfig.addLayoutAlias('page', 'page.njk')
+  eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
+  eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
+  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
+  eleventyConfig.addLayoutAlias('postslistsimple', 'components/postslistsimple.njk')
+  eleventyConfig.addLayoutAlias('postslist', 'components/postslist.njk')
+  eleventyConfig.addLayoutAlias('postslistpics', 'components/postslistpics.njk')
 
   /**
    * Opts in to a full deep merge when combining the Data Cascade.
@@ -139,7 +143,6 @@ module.exports = function (eleventyConfig) {
       input: 'src',
       output: 'dist',
       includes: '_includes',
-      layouts: '_layouts',
       data: '_data'
     },
     passthroughFileCopy: true,

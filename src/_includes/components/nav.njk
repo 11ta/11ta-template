@@ -1,3 +1,4 @@
+{% set navPages = collections.pages | eleventyNavigation %}
 <nav x-data="{ open: false }" class="bg-white shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
@@ -13,18 +14,12 @@
           </a>
         </div>
         <div class="hidden sm:ml-6 sm:flex">
-          <a href="/" class="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out">
-            Welcome
-          </a>
-          <a href="/about/" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-            About
-          </a>
-          <a href="/blog/" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-            Blog
-          </a>
-          <a href="/contact/" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-            Contact
-          </a>
+          <!-- 11ty Nav Plugin loop  -->
+          {% for entry in navPages %}
+            <a href="{{ entry.url | url }}" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 {% if page.url == entry.url %}{{ colors.navBorders | default('border-gray-700', true) }}{% else %}border-transparent{% endif %} text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              {{ entry.title }}
+            </a>
+          {% endfor %}
         </div>
       </div>
 
@@ -50,18 +45,12 @@
 
   <div x-description="Mobile menu, toggle classes based on menu state." x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
     <div class="pt-2 pb-3">
-      <a href="/" class="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">
-        Welcome
-      </a>
-      <a href="/about/" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-        About
-      </a>
-      <a href="/blog/" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-        Blog
-      </a>
-      <a href="/contact/" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-        Contact
-      </a>
+      <!-- 11ty Nav Plugin loop  -->
+      {% for entry in navPages %}
+        <a href="{{ entry.url | url }}" class="block pl-3 pr-4 py-2 border-l-4 {% if page.url == entry.url %}{{ colors.navBorders | default('border-gray-700', true) }} {{ colors.navMobileBg | default('bg-gray-100', true) }} {{ colors.navMobileText | default('text-gray-700', true) }}{% else %}border-transparent{% endif %} text-base font-medium hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">
+          {{ entry.title }}
+        </a>
+      {% endfor %}
     </div>
 
   </div>

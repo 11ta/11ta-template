@@ -14,12 +14,12 @@
     {% include "components/nav.njk" %}
 
       <div class="flex-grow sm:px-20 lg:px-32 ">
-        <main class="px-4 py-12 prose max-w-none sm:prose-xl xl:prose-xl" id="content" tabindex="-1">
+        <main class="px-4 py-12 prose max-w-none sm:prose-xl" id="content" tabindex="-1">
           {{ content | safe }}
         </main>
       </div>
 
-      {% include "footer.njk" %}
+      {% include "partials/footer.njk" %}
     </div>
 
   <script src="/assets/main.js" defer></script>

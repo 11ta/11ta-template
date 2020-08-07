@@ -3,12 +3,28 @@
 
 @tailwind components;
 
+/* 
+  Prose makes too many assumptions on what we want in heading and image margins.
+  So have to override them here because won't override at the page element.
+  Also, have to put it here under Components as it wont work under base.
+*/
 .prose h1, 
 .prose h2, 
 .prose h3, 
 .prose h4, 
-.prose h5 {
+.prose h5, 
+.heading {
   @apply text-indigo-700;
 }
+
+/* 
+  Reset top margins for specific, classed Headings.
+  This will override margin top at the Page elements.
+  So can use padding top if need space at the Page element.   
+*/
+.prose h3.heading {
+  @apply mt-0;
+}
+
 
 @tailwind utilities;
