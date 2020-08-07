@@ -4,8 +4,8 @@ date: 2020-08-05
 layout: page
 eleventyNavigation:
   key: main
-  title: About Nav
-  order: "2"
+  title: About  # as it will appear in the nav 
+  order: 2      # order to display in the nav 
 seo:
   title: About Us
 ---

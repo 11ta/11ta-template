@@ -4,16 +4,20 @@ date: 2020-08-05
 layout: page
 eleventyNavigation:
   key: main
-  title: Blog
-  order: "3"
+  title: Blog {# as it will appear in the nav #}
+  order: 3    {# order to display in the nav #}
 seo:
   title: From the blog
+  description: 
 ---
 
 {% set postslist = collections.post %}
 
-{# To allow for a user to easily change the Post List Style, 
-    they just change the 'postListStyle' value in /_data/structure.json #}
+{# 
+  Allows a user to easily change the Post List Style.
+  Change the 'postListStyle' value in /_data/structure.json.
+  NOTE: Can make this a select in the CMS?
+#}
 {% set postlist = ['components/', structure.postListStyle, '.njk'] %}
 {% include postlist | join %}
 

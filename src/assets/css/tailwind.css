@@ -18,12 +18,16 @@
 }
 
 /* 
-  Reset top margins for specific, classed Headings.
-  This will override margin top at the Page elements.
-  So can use padding top if need space at the Page element.   
+  Reset top & bottom margins for specific, classed Headings.
+  This will override margin top & bottom at the Page elements.
+  So can use padding top & bottom as needed at the Page element.   
 */
 .prose h3.heading {
-  @apply mt-0;
+  @apply my-0;
+}
+
+.prose img.card {
+  @apply my-0;
 }
 
 
