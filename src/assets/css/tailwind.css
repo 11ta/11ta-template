@@ -26,7 +26,10 @@
   @apply my-0;
 }
 
-.prose img.card {
+.prose img.card, 
+.prose img.feature, 
+.prose figure.feature
+ {
   @apply my-0;
 }
 

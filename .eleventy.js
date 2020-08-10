@@ -74,7 +74,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/*.jpg')
   eleventyConfig.addPassthroughCopy('src/*.ico')
   eleventyConfig.addPassthroughCopy('src/robots.txt')
-  eleventyConfig.addPassthroughCopy('src/assets/images')
+  eleventyConfig.addPassthroughCopy('src/assets/images/')
+  eleventyConfig.addPassthroughCopy('src/assets/svg/')
 
   /**
    * Set custom markdown library instance...
@@ -97,9 +98,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
-  eleventyConfig.addLayoutAlias('postslistsimple', 'components/postslistsimple.njk')
-  eleventyConfig.addLayoutAlias('postslist', 'components/postslist.njk')
-  eleventyConfig.addLayoutAlias('postslistpics', 'components/postslistpics.njk')
 
   /**
    * Opts in to a full deep merge when combining the Data Cascade.

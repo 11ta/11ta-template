@@ -4,8 +4,14 @@
 
     	{% for post in postslist | reverse %}
       <div class="p-4 md:w-1/2 xl:w-1/3 sm:mb-0 mb-6">
-        <div class=" rounded-lg h-64 overflow-hidden ">
-          <img alt="content" class="card object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80">
+        <div class=" rounded-lg shadow-md hover:shadow-lg h-64 overflow-hidden border border-gray-200 ">
+          <a href="{{ post.url | url }}">
+          {% if post.data.images.thumb %}
+            <img class="card" src="/assets/images/{{ post.data.images.thumb }}" alt="">
+          {% else %}
+            <img class="card" src="/assets/svg/placeholder-thumb.svg" alt="">
+          {% endif %}
+          </a>
         </div>
         <h3 class="heading pt-4"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
         <time datetime="{{ post.date | machineDate }}">
@@ -13,8 +19,7 @@
 				</time>
         <p class="text-base leading-relaxed">
           {{ post.data.excerpt }}
-        </p>
-        
+        </p>        
       </div>
 	    {% endfor %}
 

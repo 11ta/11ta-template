@@ -3,7 +3,13 @@ layout: base
 tags: post
 ---
 
-<article>
+{% if images.feature %}
+<figure class="h-48 sm:h-64 lg:h-96 w-screen -mx-12 -mt-12 sm:-mx-20 lg:-mx-32 ">
+  <img class="object-cover h-full w-full" src="/assets/images/{{ images.feature }}" alt="">
+</figure>
+{% endif %}
+
+<article class="mt-12">
   <h1>{{ title }}</h1>
   <p>
     <small>
@@ -16,15 +22,15 @@ tags: post
   {{ layoutContent | safe }}
 
   {% if tags %}
-    <p>
+  Tagged:
+    <span>
     {% for tag in tags %}
       {%- if tag != "post" -%}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{{ "," if not loop.last }}
       {%- endif -%}
     {% endfor %}
-    </p>
+    </span>
   {% endif %}
 
 </article>
-
