@@ -3,6 +3,10 @@
 @tailwind components;
 
 /* 
+  =====
+  UPDATE.... I'M DROPPING THE TYPOGRAPHY PLUGIN (AND POSSIBLY UI)
+  SO ALL THESE CAN GO AWAY AT SOME POINT
+  =====
   Prose makes too many assumptions on what we want in heading and image margins.
   So have to override them here because won't override at the page element.
   Also, have to put it here under Components as it wont work under base.

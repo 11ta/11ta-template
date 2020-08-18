@@ -1,28 +1,184 @@
 <section class="mt-24">
   <div class="container px-5 pb-24 mx-auto">
-    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4">
 
-    	{% for post in postslist | reverse %}
-      <div class="p-4 md:w-1/2 xl:w-1/3 sm:mb-0 mb-6">
-        <div class=" rounded-lg shadow-md hover:shadow-lg h-64 overflow-hidden border border-gray-200 ">
-          <a href="{{ post.url | url }}">
-          {% if post.data.images.thumb %}
-            <img class="card" src="/assets/images/{{ post.data.images.thumb }}" alt="">
-          {% else %}
-            <img class="card" src="/assets/svg/placeholder-thumb.svg" alt="">
-          {% endif %}
-          </a>
+      {% for post in postslist | reverse %}
+        <div class="p-4 mb-6 md:w-1/2 xl:w-1/3 sm:mb-0">
+          <div class="relative flex h-48 overflow-hidden border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+            <a class="" href="{{ post.url | url }}">
+              <img class="absolute inset-0 object-cover object-center w-full h-full" src={% if post.data.images.thumb %}"/assets/images/{{ post.data.images.thumb }}"{% else %}"/assets/images/david-kovalenko-G85VuTpw6jg-unsplash.jpg"{% endif %} alt="">
+            </a>
+          </div>
+          <h3 class="pt-4 heading">
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </h3>
+          <time datetime="{{ post.date | machineDate }}">
+            <small>{{ post.date | readableDate }} by <a href="/authors/{{ post.data.author | slug }}/">{{ post.data.author }}</a>
+            </small>
+          </time>
+          <p class="text-base leading-relaxed">
+            {{ post.data.excerpt }}
+          </p>
         </div>
-        <h3 class="heading pt-4"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-        <time datetime="{{ post.date | machineDate }}">
-					<small>{{ post.date | readableDate }} by <a href="/authors/{{ post.data.author | slug }}/">{{ post.data.author }}</a></small>
-				</time>
-        <p class="text-base leading-relaxed">
-          {{ post.data.excerpt }}
-        </p>        
-      </div>
-	    {% endfor %}
+      {% endfor %}
 
     </div>
   </div>
 </section>
+
+<div class="relative px-4 pt-16 pb-20 bg-gray-50 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+  <div class="absolute inset-0">
+    <div class="bg-white h-1/3 sm:h-2/3"></div>
+  </div>
+  <div class="relative mx-auto max-w-7xl">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        From the blog
+      </h2>
+      <p class="max-w-2xl mx-auto mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+      </p>
+    </div>
+    <div class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div class="flex-shrink-0">
+          <img class="object-cover w-full h-48" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+        </div>
+        <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+          <div class="flex-1">
+            <p class="text-sm font-medium leading-5 text-indigo-600">
+              <a href="#" class="hover:underline">
+                Blog
+              </a>
+            </p>
+            <a href="#" class="block">
+              <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
+                Boost your conversion rate
+              </h3>
+              <p class="mt-3 text-base leading-6 text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
+              </p>
+            </a>
+          </div>
+          <div class="flex items-center mt-6">
+            <div class="flex-shrink-0">
+              <a href="#">
+                <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium leading-5 text-gray-900">
+                <a href="#" class="hover:underline">
+                  Roel Aufderhar
+                </a>
+              </p>
+              <div class="flex text-sm leading-5 text-gray-500">
+                <time datetime="2020-03-16">
+                  Mar 16, 2020
+                </time>
+                <span class="mx-1">
+                  &middot;
+                </span>
+                <span>
+                  6 min read
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div class="flex-shrink-0">
+          <img class="object-cover w-full h-48" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">
+        </div>
+        <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+          <div class="flex-1">
+            <p class="text-sm font-medium leading-5 text-indigo-600">
+              <a href="#" class="hover:underline">
+                Video
+              </a>
+            </p>
+            <a href="#" class="block">
+              <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
+                How to use search engine optimization to drive sales
+              </h3>
+              <p class="mt-3 text-base leading-6 text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.
+              </p>
+            </a>
+          </div>
+          <div class="flex items-center mt-6">
+            <div class="flex-shrink-0">
+              <a href="#">
+                <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium leading-5 text-gray-900">
+                <a href="#" class="hover:underline">
+                  Brenna Goyette
+                </a>
+              </p>
+              <div class="flex text-sm leading-5 text-gray-500">
+                <time datetime="2020-03-16">
+                  Mar 16, 2020
+                </time>
+                <span class="mx-1">
+                  &middot;
+                </span>
+                <span>
+                  6 min read
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div class="flex-shrink-0">
+          <img class="object-cover w-full h-48" src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">
+        </div>
+        <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+          <div class="flex-1">
+            <p class="text-sm font-medium leading-5 text-indigo-600">
+              <a href="#" class="hover:underline"> Case Study</a>
+            </p>
+            <a href="#" class="block">
+              <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
+                Improve your customer experience
+              </h3>
+              <p class="mt-3 text-base leading-6 text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.
+              </p>
+            </a>
+          </div>
+          <div class="flex items-center mt-6">
+            <div class="flex-shrink-0">
+              <a href="#">
+                <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium leading-5 text-gray-900">
+                <a href="#" class="hover:underline">
+                  Daniela Metz
+                </a>
+              </p>
+              <div class="flex text-sm leading-5 text-gray-500">
+                <time datetime="2020-03-16">
+                  Mar 16, 2020
+                </time>
+                <span class="mx-1">
+                  &middot;
+                </span>
+                <span>
+                  6 min read
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

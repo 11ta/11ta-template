@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ seo.title | default( title ) }}</title>
-  <link rel="stylesheet"href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="/assets/tailwind.css"/>
-  {# include "head.njk" #}
-</head>
+    <link rel="stylesheet" href="/assets/tailwind.css"/>
+    {# include "head.njk" #}
+  </head>
   <body>
     <div hidden>{% svgsprite %}</div>
     <div class="flex flex-col min-h-screen">
-    {% include "components/nav.njk" %}
+      {% include "components/nav.njk" %}
 
       <div class="flex-grow mx-4 mb-12 sm:mx-20 lg:mx-32 ">
-        <main class="prose max-w-none sm:prose-xl" id="content">
+        <main class=" max-w-none" id="content">
           {{ content | safe }}
         </main>
       </div>
@@ -22,6 +21,6 @@
       {% include "partials/footer.njk" %}
     </div>
 
-  <script src="/assets/main.js" defer></script>
+    <script src="/assets/main.js" defer></script>
   </body>
-</html> 
+</html>
