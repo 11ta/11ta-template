@@ -1,6 +1,5 @@
 @tailwind base;
 
-
 @tailwind components;
 
 /* 
@@ -8,13 +7,13 @@
   So have to override them here because won't override at the page element.
   Also, have to put it here under Components as it wont work under base.
 */
-.prose h1, 
-.prose h2, 
-.prose h3, 
-.prose h4, 
-.prose h5, 
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
 .heading {
-  @apply text-indigo-700;
+	@apply text-indigo-700;
 }
 
 /* 
@@ -23,15 +22,13 @@
   So can use padding top & bottom as needed at the Page element.   
 */
 .prose h3.heading {
-  @apply my-0;
+	@apply my-0;
 }
 
-.prose img.card, 
-.prose img.feature, 
-.prose figure.feature
- {
-  @apply my-0;
+.prose img.card,
+.prose img.feature,
+.prose figure.feature {
+	@apply my-0;
 }
-
 
 @tailwind utilities;
