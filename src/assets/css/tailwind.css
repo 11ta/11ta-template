@@ -1,38 +1,32 @@
 @tailwind base;
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-bold;
+}
+h1 {
+	@apply text-4xl;
+}
+h2 {
+	@apply text-3xl;
+}
+h3 {
+	@apply text-2xl;
+}
+h4 {
+	@apply text-xl;
+}
+h5 {
+	@apply text-lg;
+}
+p {
+	@apply mt-4;
+}
+
 @tailwind components;
-
-/* 
-  =====
-  UPDATE.... I'M DROPPING THE TYPOGRAPHY PLUGIN (AND POSSIBLY UI)
-  SO ALL THESE CAN GO AWAY AT SOME POINT
-  =====
-  Prose makes too many assumptions on what we want in heading and image margins.
-  So have to override them here because won't override at the page element.
-  Also, have to put it here under Components as it wont work under base.
-*/
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.heading {
-	@apply text-indigo-700;
-}
-
-/* 
-  Reset top & bottom margins for specific, classed Headings.
-  This will override margin top & bottom at the Page elements.
-  So can use padding top & bottom as needed at the Page element.   
-*/
-.prose h3.heading {
-	@apply my-0;
-}
-
-.prose img.card,
-.prose img.feature,
-.prose figure.feature {
-	@apply my-0;
-}
 
 @tailwind utilities;

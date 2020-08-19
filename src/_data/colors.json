@@ -1,13 +1,20 @@
 {
-  "logoSVG":            "text-indigo-600",
-  "logoSVGMobile":      "text-indigo-600",
-  "logoHover":          "text-indigo-500",
-  "navLinks":           "text-indigo-500",
-  "navBorders":         "border-indigo-500",
-  "navMobileText":      "text-indigo-600",
-  "navMobileBg":        "bg-indigo-50",
-  "headers":            "### Set Headers (H1, H2..) in /src/assets/css/tailwind.css.",
-  "footerText":         "text-indigo-400",
-  "socialIcons":        "text-indigo-400",
-  "socialIconsHover":   "text-indigo-500"
+	"logoSVG": "text-indigo-600",
+	"logoSVGMobile": "text-indigo-600",
+	"logoHover": "text-indigo-500",
+	"nav": {
+		"bg": "bg-gray-800",
+		"text": "text-gray-300",
+		"textHover": "text-gray-100",
+		"textActiveBg": "bg-gray-700",
+		"textFocus": "text-gray-500"
+	},
+	"navActive": "text-indigo-500",
+	"navBorders": "border-indigo-500",
+	"navMobileText": "text-indigo-600",
+	"navMobileBg": "bg-indigo-50",
+	"headers": "### Set Headers (H1, H2..) in /src/assets/css/tailwind.css.",
+	"footerText": "text-indigo-400",
+	"socialIcons": "text-indigo-400",
+	"socialIconsHover": "text-indigo-500"
 }
