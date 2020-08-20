@@ -6,7 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-	@apply font-bold;
+	@apply mt-8 font-semibold;
 }
 h1 {
 	@apply text-4xl;
@@ -25,6 +25,16 @@ h5 {
 }
 p {
 	@apply mt-4;
+}
+
+ol {
+	@apply ml-8 list-decimal;
+}
+ul {
+	@apply ml-8 list-disc;
+}
+blockquote {
+	@apply pl-4 mx-4 border-l-4 border-gray-500;
 }
 
 @tailwind components;

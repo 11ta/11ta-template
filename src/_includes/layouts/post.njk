@@ -1,12 +1,11 @@
 ---
 layout: base
-tags: post
 ---
 
 {% if images.feature %}
-<figure class="h-48 sm:h-64 lg:h-96 w-screen -mx-12 -mt-12 sm:-mx-20 lg:-mx-32 ">
-  <img class="object-cover h-full w-full" src="/assets/images/{{ images.feature }}" alt="">
-</figure>
+  <figure class="w-screen h-48 -mx-12 -mt-12 sm:h-64 lg:h-96 sm:-mx-20 lg:-mx-32 ">
+    <img class="object-cover w-full h-full" src="/assets/images/{{ images.feature }}" alt="">
+  </figure>
 {% endif %}
 
 <article class="mt-12">
@@ -24,12 +23,12 @@ tags: post
   {% if tags %}
   Tagged:
     <span>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{{ "," if not loop.last }}
-      {%- endif -%}
-    {% endfor %}
+      {% for tag in tags %}
+        {%- if tag != "post" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{{ "," if not loop.last }}
+        {%- endif -%}
+      {% endfor %}
     </span>
   {% endif %}
 

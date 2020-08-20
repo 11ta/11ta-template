@@ -1,13 +1,12 @@
 ---
 title: Post Three
 date: 2020-07-03T17:44:03.000Z
-excerpt: This is the excerpt for Post Three. This is the excerpt for Post Three. 
+author: Roxanne Darling
+excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 tags:
   - Three
   - second
 ---
-
-# Post Three
 
 This is post Three. This is post Three. This is post Three. This is post Three. This is post Three. This is post Three. This is post Three. This is post Three. This is post Three. This is post Three.
 

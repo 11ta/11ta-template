@@ -1,33 +1,25 @@
 {% set navPages = collections.pages | eleventyNavigation %}
-<nav x-data="{ open: false }" class="{{ colors.nav.bg | default('bg-white',true) }} shadow">
+<nav x-data="{ open: false }" class="{{ colors.navCustom.barBg or colors.navDefault.barBg }} shadow">
   <div class="max-w-6xl px-4 lg:px-8">
     <div class="flex justify-between h-16">
       <div class="flex">
         <div class="flex items-center flex-shrink-0">
           <!-- small logo hidden on md and above -->
-          <a href="/" class="block md:hidden {{ colors.logoSVGMobile | default('text-gray-700') }} hover:{{ colors.logoHover | default('text-gray-600') }}">
-            {% svg "logo_mobile",   "The Mobile Logo",   "fill-current w-16 hover:text-indigo-500" %}
+          <a href="/" class="block md:hidden {{ colors.logoCustom.mobile or colors.logoDefault.mobile }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}">
+            {% svg "logo_mobile",   "The Mobile Logo",   "fill-current w-16 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" %}
           </a>
           <!-- large logo hidden on small, block on md -->
-          <a href="/" class="hidden md:block {{ colors.logoSVG | default('text-gray-700') }} hover:{{ colors.logoHover | default('text-gray-600') }}">
-            {% svg "logo",   "The Logo",   "fill-current h-8 hover:text-indigo-500" %}
+          <a href="/" class="hidden md:block {{ colors.logoCustom.desktop or colors.logoDefault.desktop }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}">
+            {% svg "logo",   "The Logo",   "fill-current h-8 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" %}
           </a>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
           <!-- 11ty Nav Plugin loop  -->
           {% for entry in navPages %}
-            <a href="{{ entry.url | url }}" class=" px-3 py-2 text-sm font-medium rounded-md items-center {% if page.url == entry.url %} {{ colors.nav.textActiveBg | default('bg-gray-200',true) }}{% else %}border-transparent{% endif %} {{ colors.nav.text | default('text-gray-500',true) }} hover:{{ colors.nav.textHover | default('text-gray-700',true) }} focus:outline-none focus:{{ colors.nav.textFocus | default('text-gray-700',true) }} transition duration-150 ease-in-out">
+            <a {% if page.url != entry.url %}href="{{ entry.url | url }}"{% endif %} class=" px-3 py-2 text-sm font-medium rounded-md items-center {% if page.url == entry.url %} {{ colors.navCustom.textActiveBg or colors.navDefault.textActiveBg }} {{ colors.navCustom.textActive or colors.navDefault.textActive }} {% else %} {{ colors.navCustom.text or colors.navDefault.text }} hover:{{ colors.navCustom.textHover or colors.navDefault.textHover }} {% endif %} focus:outline-none focus:{{ colors.navCustom.textFocus or colors.navDefault.textFocus }} transition duration-150 ease-in-out">
               {{ entry.title }}
             </a>
           {% endfor %}
-          {# 
-        <div class="hidden md:ml-6 md:flex md:items-center">
-          <a href="#" class="px-3 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</a>
-          <a href="#" class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Team</a>
-          <a href="#" class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Projects</a>
-          <a href="#" class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Calendar</a>
-        </div> #}
-
         </div>
       </div>
 
@@ -37,7 +29,7 @@
       <!-- MOBILE MENU -->
       <div class="flex items-center -mr-2 sm:hidden">
         <!-- Mobile menu button -->
-        <button @click="open = !open" class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500" x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" aria-label="Main menu" x-bind:aria-expanded="open">
+        <button @click="open = !open" class="inline-flex items-center justify-center p-2 {{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }} transition duration-150 ease-in-out rounded-md hover:{{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }} hover:{{ colors.navCustom.mobileButtonBgover or colors.navDefault.mobileButtonBgHover }} focus:outline-none focus:{{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }} focus:{{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }}" x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" aria-label="Main menu" x-bind:aria-expanded="open">
           <!-- Icon when menu is closed. -->
           <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -55,7 +47,7 @@
     <div class="pt-2 pb-3">
       <!-- 11ty Nav Plugin loop  -->
       {% for entry in navPages %}
-        <a href="{{ entry.url | url }}" class="block pl-3 pr-4 py-2 border-l-4 {% if page.url == entry.url %}{{ colors.navBorders | default('border-gray-700', true) }} {{ colors.navMobileBg | default('bg-gray-100', true) }} {{ colors.navMobileText | default('text-gray-700', true) }}{% else %}border-transparent{% endif %} text-base font-medium hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">
+        <a {% if page.url != entry.url %}href="{{ entry.url | url }}"{% endif %} class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}{{ colors.navCustom.mobileBgActive or colors.navDefault.mobileBgActive }} {{ colors.navCustom.mobileTextActive or colors.navDefault.mobileTextActive }}{% else %}{{ colors.navCustom.mobileBg or colors.navDefault.mobileBg }} hover:{{ colors.navCustom.mobileTextHover or colors.navDefault.mobileTextHover }} hover:{{ colors.navCustom.mobileBgHover or colors.navDefault.mobileBgHover }}  {% endif %} text-base font-medium  {{ colors.navCustom.mobileText or colors.navDefault.mobileText }}  focus:outline-none focus:{{ colors.navCustom.mobileTextFocus or colors.navDefault.mobileTextFocus }} focus:{{ colors.navCustom.mobileBgFocus or colors.navDefault.mobileBgFocus }} transition duration-150 ease-in-out">
           {{ entry.title }}
         </a>
       {% endfor %}

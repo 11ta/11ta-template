@@ -3,6 +3,11 @@ layout: base
 tags: pages
 ---
 
-<h1>{{ seo.title | default(title, true) }}</h1>
+<h1>{{ seo.title or title }}</h1>
+{% if excerpt %}
+  <div class="pb-4 border-b border-gray-300">
+    {{ excerpt }}
+  </div>
+{% endif %}
 
 {{ content | safe }}
