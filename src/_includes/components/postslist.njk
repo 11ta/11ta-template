@@ -21,6 +21,7 @@
               <div class="leading-relaxed">
                 <p>
                   {{ post.data.excerpt }}
+                  {% set tags = post.data.tags %}
                   {% include "components/tagpills.njk" %}
                 </p>
                 {# Used conditionals here to keep control at the template levels rather than at the component level.  #}

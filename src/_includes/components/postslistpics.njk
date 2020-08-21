@@ -27,6 +27,7 @@
 
           <p class="text-base leading-relaxed">
             {{ post.data.excerpt }}
+            {% set tags = post.data.tags %}
             {% include "components/tagpills.njk" %}
           </p>
         </div>

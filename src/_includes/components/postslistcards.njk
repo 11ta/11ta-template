@@ -1,7 +1,7 @@
 <section class="mt-16">
   <div class="relative px-4 pb-20 bg-gray-50 sm:px-6 lg:pb-28 lg:px-8">
     <div class="relative mx-auto max-w-7xl">
-      <div class="grid max-w-lg gap-5 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
+      <div class="grid gap-5 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
         {% for post in postslist | reverse %}
 
           <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
@@ -10,6 +10,7 @@
             </div>
             <div class="flex flex-col justify-between flex-1 p-6 bg-white">
               <div class="flex-1">
+                {% set tags = post.data.tags %}
                 {% include "components/tagpills.njk" %}
                 <a href="{{ post.url | url }}" class="block">
                   <h3 class="mt-2 text-xl font-semibold leading-7 {{ colors.headingsCustom or colors.headingsDefault }}">

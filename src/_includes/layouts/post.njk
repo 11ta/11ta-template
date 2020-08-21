@@ -9,27 +9,17 @@ layout: base
 {% endif %}
 
 <article class="mt-12">
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ date | machineDate }}">
-        {{ date | readableDate }}
-      </time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
-    </small>
-  </p>
+  <h1 class="{{ colors.headingsCustom or colors.headingsDefault }}">{{ seo.title or title }}</h1>
+  <div class="text-sm text-gray-500">
+    <time datetime="{{ date | machineDate }}">
+      {{ date | readableDate }}
+    </time> by <a class="hover:underline" href="/authors/{{ author | slug }}/">{{ author }}</a>
+  </div>
 
   {{ layoutContent | safe }}
 
-  {% if tags %}
-  Tagged:
-    <span>
-      {% for tag in tags %}
-        {%- if tag != "post" -%}
-          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-          <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{{ "," if not loop.last }}
-        {%- endif -%}
-      {% endfor %}
-    </span>
-  {% endif %}
+  <div class="border-t mt-4 pt-4 {{ colors.borderCustom.color or colors.borderDefault.color }} ">
+    {% include "components/tagpills.njk" %}
+  </div>
 
 </article>

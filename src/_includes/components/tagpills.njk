@@ -1,5 +1,5 @@
 <div>
-  {% for tag in post.data.tags %}
+  {% for tag in tags %}
     {# Knock out the first iteration of the loop to drop the default "post" tag generated in `posts/posts.json`. #}
     {# If there's a better/easier way of doing this, please LMK.  #}
     {% if not loop.first %}
