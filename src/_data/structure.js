@@ -12,6 +12,14 @@ module.exports = {
 	postListStyle: 'postslistcards',
 
 	/**
+	 * ===== Tag List Style Options =====
+	 * You can set the Tag List style separately from Post List above.
+	 * If you want Tag List to use the same layout as Post List,
+	 * you can leave it empty below or set it to the same list.
+	 */
+	tagListStyle: '',
+
+	/**
 	 * ===== Display Author Blocks =====
 	 * Set below to 'false' to globally disable Author Avatars
 	 * and links to author's page on Post/Blog listings.
