@@ -34,7 +34,7 @@ ul {
 	@apply ml-8 list-disc;
 }
 blockquote {
-	@apply pl-4 mx-4 border-l-4 border-gray-500;
+	@apply pl-4 mx-4 my-4 border-l-4 border-gray-500;
 }
 
 @tailwind components;

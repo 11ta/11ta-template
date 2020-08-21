@@ -6,4 +6,9 @@ module.exports = {
 	cols: function (content, classes) {
 		return `<div class="${classes}">${content}</div>`
 	},
+
+	bq: function (content, classes) {
+		return `<blockquote class="${classes}">${content}</blockquote>`
+	},
+	// end
 }
