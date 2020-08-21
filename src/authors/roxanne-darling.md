@@ -18,6 +18,6 @@ socialmedia:
   youtube: 
 ---
 
-What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. 
+What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author.
 
-What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. 
+What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author. What to say here about this author.
