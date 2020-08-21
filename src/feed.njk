@@ -1,0 +1,32 @@
+---json
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true
+}
+---
+{# set absolutePageURL to use later in  canonical and og URLs #}
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(build.url) }}{%- endset -%}
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ meta.siteName }}</title>
+  <subtitle>{{ meta.siteDescription }}</subtitle>
+  <link href="{{ meta.siteURL }}"/>
+  <link href="{{ absolutePageUrl }}" rel="self"/>
+  <updated>{{ collections.post | rssLastUpdatedDate }}</updated>
+  <id>{{ meta.siteURL }}</id>
+  <author>
+    <name>{{ meta.authorName }}</name>
+    <email>{{ meta.authorEmail }}</email>
+  </author>
+  {%- for post in collections.post %}
+    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.siteURL) }}{% endset %}
+    <entry>
+      <title>{{ post.data.title }}</title>
+      <link href="{{ absolutePostUrl }}"/>
+      <updated>{{ post.date | rssDate }}</updated>
+      <id>{{ absolutePostUrl }}</id>
+      <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    </entry>
+  {%- endfor %}
+</feed>
