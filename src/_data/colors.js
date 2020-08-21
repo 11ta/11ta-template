@@ -102,4 +102,16 @@ module.exports = {
 
 	socialIconsCustom: '',
 	socialIconsHoverCustom: '',
+
+	// Generally I use borders as replacements for <hr> tags.
+	// You may need to update Layouts and Templates if you want to use these
+	// border settings in other contexts.
+	borderDefault: {
+		borders: 'border-b',
+		color: 'border-gray-300',
+	},
+	borderCustom: {
+		border: '',
+		color: '',
+	},
 }

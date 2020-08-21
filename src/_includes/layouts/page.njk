@@ -3,10 +3,10 @@ layout: base
 tags: pages
 ---
 
-<h1>{{ seo.title or title }}</h1>
-{% if excerpt %}
-  <div class="pb-4 border-b border-gray-300">
-    {{ excerpt }}
+<h1 class="{{ colors.headingsCustom or colors.headingsDefault }}">{{ seo.title or title }}</h1>
+{% if seo.description %}
+  <div class="p-2 {{ colors.borderCustom.borders or colors.borderDefault.borders }} {{ colors.borderCustom.color or colors.borderDefault.color }}">
+    {{ seo.description }}
   </div>
 {% endif %}
 
