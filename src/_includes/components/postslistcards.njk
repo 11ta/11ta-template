@@ -6,7 +6,9 @@
 
           <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
             <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48" src={% if post.data.images.thumb %}"/assets/images/{{ post.data.images.thumb }}"{% else %}"/assets/images/david-kovalenko-G85VuTpw6jg-unsplash.jpg"{% endif %} alt="{{ title }} Thumbnail">
+              <a href="{{ post.url | url }}">
+                <img class="object-cover w-full h-48" src={% if post.data.images.thumb %}"/assets/images/{{ post.data.images.thumb }}"{% else %}"/assets/images/david-kovalenko-G85VuTpw6jg-unsplash.jpg"{% endif %} alt="{{ title }} Thumbnail">
+              </a>
             </div>
             <div class="flex flex-col justify-between flex-1 p-6 bg-white">
               <div class="flex-1">
