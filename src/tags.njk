@@ -4,6 +4,10 @@ pagination:
   data: collections
   size: 1
   alias: tag
+  filter:
+    - authors
+    - pages
+    - post
 permalink: /tags/{{ tag }}/
 eleventyComputed:
   title: Entries Tagged "{{ tag }}”
