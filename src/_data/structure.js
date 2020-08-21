@@ -4,12 +4,12 @@ module.exports = {
 	 * You can currently set one of the following 3 options for how
 	 * the posts/blog listing page displays.
 	 * The templates are located in /src/includes/components/[name].njk
-	 *  1. postlistsimple = Title, Date, Tags, Author (if set)
-	 *  2. postlist =
-	 *  3. postlistpics =
+	 *  1. postslist = Simple listing w/ Title, Date, Tags, Author (if set)
+	 *  2. postslistpics = Same as above with thumbnails
+	 *  3. postslistcards = Nice cards with Author/Date block
 	 *
 	 * */
-	postListStyle: 'postslistsimple',
+	postListStyle: 'postslistcards',
 
 	/**
 	 * ===== Display Author Blocks =====

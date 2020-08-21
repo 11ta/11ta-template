@@ -1,0 +1,24 @@
+---
+layout: base
+tags: authors
+---
+
+<h1 class=" mb-4 {{ colors.headingsCustom or colors.headingsDefault }}">{{ title }}</h1>
+
+{% columns %}
+{% cols "flex-none" %}
+<p>
+  <img class="h-64 rounded-lg" src="/assets/images/authors/{{ image }}" alt="Photo of {{ title }}">
+</p>
+{% endcols %}
+{% cols "flex-grow px-8" %}
+{{ content | safe }}
+<div class="mt-4 text-gray-500">
+  {% if company.website %}
+    <a class="block hover:underline" target="_blank" href="{{ company.website | url }}" alt="Company website">Company Website ↗️</a>
+    <a class="block hover:underline" target="_blank" href="{{ personal.website | url }}" alt="Personal website">Personal Website ↗️</a>
+  {% endif %}
+</div>
+{% include "components/authorsocial.njk" %}
+{% endcols %}
+{% endcolumns %}

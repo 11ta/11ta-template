@@ -69,10 +69,14 @@ module.exports = {
 	authorDefault: {
 		name: 'text-gray-600',
 		date: 'text-gray-500',
+		socialIcons: 'text-gray-500',
+		socialIconsHover: 'text-gray-600',
 	},
 	authorCustom: {
 		name: '',
 		date: '',
+		socialIcons: '',
+		socialIconsHover: '',
 	},
 
 	tagPillDefault: {

@@ -1,0 +1,47 @@
+<div class="flex items-center mt-4 md:justify-between">
+  <div class="flex justify-center md:order-2 {{ colors.authorCustom.socialIcons or colors.authorDefault.socialIcons }}">
+
+    {% if socialmedia.dribbble %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Dribble" href="{{ socialmedia.dribbble | url }}">
+        {% svg "dribbble", "Dribbble logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
+    {% if socialmedia.facebook %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Facebook" href="{{ socialmedia.facebook | url }}">
+        {% svg "facebook", "Facebook logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
+    {% if socialmedia.github %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on GitHub" href="{{ socialmedia.github | url }}">
+        {% svg "github", "Github logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
+    {% if socialmedia.instagram %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Instagram" href="{{ socialmedia.instagram | url }}">
+        {% svg "instagram", "Instagram logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
+    {% if socialmedia.pinterest %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Pinterest" href="{{ socialmedia.pinterest | url }}">
+        {% svg "pinterest", "Pinterest logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
+    {% if socialmedia.twitter %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Twitter" href="{{ socialmedia.twitter | url }}">
+        {% svg "twitter", "Twitter logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
+    {% if socialmedia.youtube %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on YouTube" href="{{ socialmedia.youtube | url }}">
+        {% svg "youtube", "Youtube logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
+  </div>
+</div>
