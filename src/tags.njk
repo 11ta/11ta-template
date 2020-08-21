@@ -8,14 +8,21 @@ permalink: /tags/{{ tag }}/
 eleventyComputed:
   title: Entries Tagged "{{ tag }}”
 ---
-
+{# 
+  We set this to 'postslist' so we can use the same list templates as the blog 
+#}
   {% set postslist = collections[tag] %}
+
+{# 
+  Either inherit the 'postListStyle' or use another layout
+  Please see instructions in /src/_data/structure.js 
+#}
+{% set tagStyle = structure.tagListStyle or structure.postListStyle %}
 
 {# 
   Allows a user to easily change the Tag List Style.
   Please see instructions in /src/_data/structure.js
 #}
-{% set tagStyle = structure.tagListStyle or structure.postListStyle %}
 {% set postlist = ['components/', tagStyle, '.njk'] %}
 {% include postlist | join %}
 

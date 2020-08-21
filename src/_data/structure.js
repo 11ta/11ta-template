@@ -8,6 +8,13 @@ module.exports = {
 	 *  2. postslistpics = Same as above with thumbnails
 	 *  3. postslistcards = Nice cards with Author/Date block
 	 *
+	 * NOTE: If you want to make your own list layouts, you can duplicate
+	 *        any of the existing layouts and modify as you want.
+	 *        Then just add them to the list above
+	 *        (makeing sure to name correctly)
+	 *        and they'll then be available for using below in
+	 *        'postListStyle' and 'tagListStyle.'
+	 *
 	 * */
 	postListStyle: 'postslistcards',
 
@@ -15,7 +22,7 @@ module.exports = {
 	 * ===== Tag List Style Options =====
 	 * You can set the Tag List style separately from Post List above.
 	 * If you want Tag List to use the same layout as Post List,
-	 * you can leave it empty below or set it to the same list.
+	 * you can leave it empty below.
 	 */
 	tagListStyle: '',
 

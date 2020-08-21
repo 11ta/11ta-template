@@ -14,9 +14,8 @@ seo:
 {% set postslist = collections.post %}
 
 {# 
-  Allows a user to easily change the Post List Style.
-  Change the 'postListStyle' value in /_data/structure.json.
-  NOTE: Can make this a select in the CMS?
+  Allows a user to easily change the Tag List Style.
+  Please see instructions in /src/_data/structure.js
 #}
 {% set postlist = ['components/', structure.postListStyle, '.njk'] %}
 {% include postlist | join %}
