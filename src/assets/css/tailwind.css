@@ -6,7 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-	@apply mt-8 font-semibold;
+	@apply font-semibold;
 }
 h1 {
 	@apply text-4xl;
@@ -35,6 +35,12 @@ ul {
 }
 blockquote {
 	@apply pl-4 mx-4 my-4 border-l-4 border-gray-500;
+}
+code {
+	@apply p-1 bg-gray-200 border border-gray-300 rounded-lg;
+}
+pre code {
+	@apply bg-transparent border-0 rounded-none;
 }
 
 @tailwind components;
