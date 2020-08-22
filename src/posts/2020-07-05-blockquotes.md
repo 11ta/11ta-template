@@ -3,13 +3,17 @@ title: Blockquotes - Shortcodes
 date: 2020-07-05T17:44:03.000Z
 excerpt: Blockquotes are easy, even in Markdown. But what if you want to style them?
 author: Shane Robinson
+seo: 
+  title: SEO Title 5
+  description: SEO description from the post and not the default.
+  image: 
 tags:
   - blockquote
   - shortcodes
-images:
-  feature: five-feature.jpg
-  thumb: five-thumb.jpg
-  slide: five-slide.jpg
+images: # relative to /src/assets/images/
+  feature: 2020/07/five-feature.jpg
+  thumb: 2020/07/five-thumb.jpg
+  slide: 2020/07/five-slide.jpg
 ---
 
 Below is a basic blockquote in Markdown.

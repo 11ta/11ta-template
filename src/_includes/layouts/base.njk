@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ seo.title | default( title ) }}</title>
+    <title>{{ seo.title or title }}  | {{meta.siteName }}</title>
     <link rel="stylesheet" href="/assets/tailwind.css"/>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
-
-    {# include "head.njk" #}
+    {% include "partials/head.njk" %}
   </head>
   <body>
     <div hidden>{% svgsprite %}</div>
