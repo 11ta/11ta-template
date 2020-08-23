@@ -16,7 +16,7 @@ layout: base
       {{ date | readableDate }}
     </time>
     {# Global disable author display in /src/_data/structure.js #}
-    {% if structure.displayAuthors %}
+    {% if structure.g_showAuthors %}
       {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
       {% if author %}
      by <a class="hover:underline" href="/authors/{{ author | slug }}/">{{ author }}</a>

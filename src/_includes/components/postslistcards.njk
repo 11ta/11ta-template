@@ -27,8 +27,8 @@
                 </a>
               </div>
               {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
-              {# Display the Author block if structure.displayAuthors is true (default) #}
-              {% if structure.displayAuthors %}
+              {# Display the Author block if structure.g_showAuthors is true (default) #}
+              {% if structure.g_showAuthors %}
                 {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
                 {% if post.data.author %}
                   {% include "components/authordate.njk" %}
