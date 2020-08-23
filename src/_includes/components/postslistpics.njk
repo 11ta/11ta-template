@@ -27,8 +27,11 @@
 
           <p class="text-base leading-relaxed">
             {{ post.data.excerpt }}
-            {% set tags = post.data.tags %}
-            {% include "components/tagpills.njk" %}
+            {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
+            {% if structure.g_showTagPills %}
+              {% set tags = post.data.tags %}
+              {% include "components/tagpills.njk" %}
+            {% endif %}
           </p>
         </div>
       {% endfor %}

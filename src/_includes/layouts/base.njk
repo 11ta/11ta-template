@@ -6,6 +6,9 @@
     <title>{{ seo.title or title }}  | {{meta.siteName }}</title>
     <link rel="stylesheet" href="/assets/tailwind.css"/>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+
     {% include "partials/head.njk" %}
   </head>
   <body>
@@ -13,8 +16,12 @@
     <div class="flex flex-col min-h-screen">
       {% include "components/nav.njk" %}
 
-      <div class="flex-grow max-w-5xl mx-4 my-12 sm:mx-20 lg:mx-32">
+      <div class="flex-grow max-w-full">
         <main class="" id="content">
+          {# Drop in the Carousel if there are values in Frontmatter "carousel" #}
+          {% if carousel %}
+            {% include "components/carousel.njk" %}
+          {% endif %}
           {{ content | safe }}
         </main>
       </div>
@@ -23,5 +30,8 @@
     </div>
 
     <script src="/assets/main.js" defer></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+
   </body>
 </html>

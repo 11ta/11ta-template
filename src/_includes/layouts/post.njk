@@ -8,18 +8,29 @@ layout: base
   </figure>
 {% endif %}
 
-<article class="mt-12">
+<article class="{{ structure.g_pageWidth }} my-12">
   <h1 class="{{ colors.headingsCustom or colors.headingsDefault }}">{{ seo.title or title }}</h1>
   <div class="text-sm text-gray-500">
     <time datetime="{{ date | machineDate }}">
       {{ date | readableDate }}
-    </time> by <a class="hover:underline" href="/authors/{{ author | slug }}/">{{ author }}</a>
+    </time>
+    {# Global disable author display in /src/_data/structure.js #}
+    {% if structure.displayAuthors %}
+      {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
+      {% if author %}
+     by <a class="hover:underline" href="/authors/{{ author | slug }}/">{{ author }}</a>
+      {% endif %}
+    {% endif %}
+
   </div>
 
   {{ layoutContent | safe }}
 
-  <div class="border-t mt-4 pt-4 {{ colors.borderCustom.color or colors.borderDefault.color }} ">
-    {% include "components/tagpills.njk" %}
-  </div>
+  {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
+  {% if structure.g_showTagPills %}
+    <div class="border-t mt-4 pt-4 {{ colors.borderCustom.color or colors.borderDefault.color }} ">
+      {% include "components/tagpills.njk" %}
+    </div>
+  {% endif %}
 
 </article>

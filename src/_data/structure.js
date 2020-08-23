@@ -1,4 +1,16 @@
 module.exports = {
+	/** ===== Globals =====
+	 * In this section we can control Global structural items like
+	 * pageWidth, margins, paddings, etc.
+	 * Only structural elements that probably won't be changed by editors,
+	 * and won't be changed much/ever once the site is in production.
+	 * For example, "g_pageWidth" manages both the Nav and the Page content
+	 * across the entire site so there is consistency on margins, padding, max width
+	 * at all screen sizes.
+	 */
+	g_pageWidth: 'max-w-5xl px-4 md:pl-16 lg:pl-32',
+	g_showTagPills: true,
+
 	/**
 	 * ===== Post List Style Options =====
 	 * You can currently set one of the following 3 options for how

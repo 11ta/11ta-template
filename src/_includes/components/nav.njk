@@ -1,6 +1,6 @@
 {% set navPages = collections.pages | eleventyNavigation %}
-<nav x-data="{ open: false }" class="{{ colors.navCustom.barBg or colors.navDefault.barBg }} shadow">
-  <div class="max-w-6xl px-4 lg:px-8">
+<nav x-data="{ open: false }" class="{{ colors.navCustom.barBg or colors.navDefault.barBg }} shadow relative">
+  <div class="{{ structure.g_pageWidth }}">
     <div class="flex justify-between h-16">
       <div class="flex">
         <div class="flex items-center flex-shrink-0">

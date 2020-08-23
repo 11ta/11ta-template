@@ -21,8 +21,11 @@
               <div class="leading-relaxed">
                 <p>
                   {{ post.data.excerpt }}
-                  {% set tags = post.data.tags %}
-                  {% include "components/tagpills.njk" %}
+                  {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
+                  {% if structure.g_showTagPills %}
+                    {% set tags = post.data.tags %}
+                    {% include "components/tagpills.njk" %}
+                  {% endif %}
                 </p>
                 {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
                 {# Display the Author block if structure.displayAuthors is true (default) #}
