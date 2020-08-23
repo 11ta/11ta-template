@@ -3,6 +3,10 @@ title: Description List - Shortcodes
 date: 2020-07-04T17:44:03.000Z
 author: Shane Robinson
 excerpt: A custom 11ty shortcode allows you to create great looking and function Description Lists.
+seo: 
+  title: 
+  description: 
+  image: 
 tags:
   - shortcodes
   - description list

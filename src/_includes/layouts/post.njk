@@ -3,12 +3,13 @@ layout: base
 ---
 
 {% if images.feature %}
-  <figure class="w-screen h-48 -mx-12 -mt-12 sm:h-64 lg:h-96 sm:-mx-20 lg:-mx-32 ">
+  <figure class="w-screen h-48 md:h-1/3">
     <img class="object-cover w-full h-full" src="/assets/images/{{ images.feature }}" alt="">
   </figure>
 {% endif %}
 
 <article class="{{ structure.g_pageWidth }} my-12">
+
   <h1 class="{{ colors.headingsCustom or colors.headingsDefault }}">{{ seo.title or title }}</h1>
   <div class="text-sm text-gray-500">
     <time datetime="{{ date | machineDate }}">

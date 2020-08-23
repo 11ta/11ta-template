@@ -6,10 +6,11 @@
     <title>{{ seo.title or title }}  | {{meta.siteName }}</title>
     <link rel="stylesheet" href="/assets/tailwind.css"/>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
-
-    {% include "partials/head.njk" %}
+    {% if carousel -%}
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    {%- endif -%}
+    {%- include "partials/head.njk" %}
   </head>
   <body>
     <div hidden>{% svgsprite %}</div>
@@ -30,8 +31,10 @@
     </div>
 
     <script src="/assets/main.js" defer></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+    {% if carousel -%}
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+    {% endif -%}
 
   </body>
 </html>
