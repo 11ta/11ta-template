@@ -27,9 +27,10 @@ heroSettings:
   imageOpacityFilter: black # options = white, black (default is white) -> really depends on your background image
   carousel:
     images:
-      - /assets/images/home/1.jpg
-      - /assets/images/home/2.jpg
-      - /assets/images/home/3.jpg
+      - /assets/images/home/6.jpg
+      - /assets/images/home/7.jpg
+      - /assets/images/home/8.jpg
+      - /assets/images/home/9.jpg
   video:
     url: /assets/video/forestfire.mp4 # local relative to site root, or full https://... if remote?
     opacityMobile: 50 # options 25, 50, 75, 100 (default)
