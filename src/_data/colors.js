@@ -79,6 +79,21 @@ module.exports = {
 		socialIconsHover: '',
 	},
 
+	buttonDefault: {
+		text: 'text-white',
+		textHover: 'text-white',
+		bg: 'bg-teal-500',
+		bgHover: 'bg-teal-600',
+		border: 'border-teal-900',
+	},
+	buttonCustom: {
+		text: '',
+		textHover: '',
+		bg: '',
+		bgHover: '',
+		border: '',
+	},
+
 	tagPillDefault: {
 		text: 'text-gray-500',
 		textHover: 'text-gray-600',

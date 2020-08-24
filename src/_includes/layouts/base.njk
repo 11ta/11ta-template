@@ -17,6 +17,14 @@
     <div class="flex flex-col min-h-screen">
       {% include "components/nav.njk" %}
 
+      {#  Allows a user to easily change the Hero type on the Home page...or any page.
+          See /src/home.md for how to use. 
+      #}
+      {% if hero %}
+        {% set hero = ['components/hero-', hero, '.njk'] %}
+        {% include hero | join %}
+      {% endif %}
+
       <div class="flex-grow max-w-full">
         <main class="" id="content">
           {# Drop in the Carousel if there are values in Frontmatter "carousel" #}

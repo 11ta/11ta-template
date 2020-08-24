@@ -25,6 +25,10 @@ module.exports = {
 	g_showAuthors: true,
 
 	/**
+	 * ===== Home Page Carousel & Hero Controls =====
+	 */
+
+	/**
 	 * ===== Post List Style Options =====
 	 * You can currently set one of the following 3 options for how
 	 * the posts/blog listing page displays.
