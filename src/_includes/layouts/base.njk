@@ -6,6 +6,7 @@
     <title>{{ seo.title or title }}  | {{meta.siteName }}</title>
     <link rel="stylesheet" href="/assets/tailwind.css"/>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    {# Only include the Flickity js if this page uses a hero.carousel  #}
     {% if hero == "carousel" -%}
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
@@ -25,9 +26,16 @@
         {% include heroComponent | join %}
       {% endif %}
 
+      {# If any frontmatter includes images.feature, insert it at the top of the page, 
+      below the nav and outside the default wrapper below. #}
+      {% if images.feature %}
+        <figure class="w-screen h-48 md:h-1/3">
+          <img class="object-cover w-full h-full" src="/assets/images/{{ images.feature }}" alt="{{ title }}">
+        </figure>
+      {% endif %}
+
       <div class="flex-grow max-w-full">
-        <main class="" id="content">
-          {# Drop in the Carousel if there are values in Frontmatter "carousel" #}
+        <main class="block max-w-5xl px-4 pt-12 pb-32 md:pl-20 xl:max-w-6xl xl:mx-auto" id="content">
           {{ content | safe }}
         </main>
       </div>
@@ -37,6 +45,7 @@
 
     <script src="/assets/main.js" defer></script>
 
+    {# Only include the Flickity js if this page uses a hero.carousel  #}
     {% if hero == "carousel" %}
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>

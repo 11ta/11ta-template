@@ -1,0 +1,36 @@
+<main class="lg:relative h-{{ heroSettings.height.mobile or '1/1' }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.mobile or '1/1' }}">
+  <div
+        class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left"
+      >
+    <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+
+      <h2
+            class="text-4xl font-semibold leading-10 tracking-tight {{ heroSettings.headingTextColor or 'text-white' }} sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
+          >
+        {{ heroSettings.headingText }}
+      </h2>
+      <p
+            class="max-w-md mx-auto mt-3 text-lg {{ heroSettings.subheadingTextColor }} sm:text-xl md:mt-5 md:max-w-3xl"
+          >
+        {{ heroSettings.subheadingText }}
+
+      </p>
+
+      {% if heroSettings.buttonText %}
+        <div class="w-full mt-12 ">
+          <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ colors.buttonDefault.text or colors.buttonCustom.text }} hover:{{ colors.buttonDefault.textHover or colors.buttonCustom.textHover }} {{ colors.buttonDefault.bg or colors.buttonCustom.bg }} hover:{{ colors.buttonDefault.bgHover or colors.buttonCustom.bgHover }} {{ colors.buttonDefault.border or colors.buttonCustom.border }}">{{ heroSettings.buttonText }}</a>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+  <div
+        class="relative w-full h-1/2 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
+      >
+    <img
+          class="absolute inset-0 object-cover w-full h-full"
+          src="/assets/images/home/plane.jpg"
+          alt="Woman on her phone"
+/>
+  </div>
+</main>
