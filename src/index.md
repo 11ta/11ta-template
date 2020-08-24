@@ -8,7 +8,7 @@ eleventyNavigation:
 seo: # uncomment 'seo' and then any elements to use them
   title:
   description:
-hero: graphic # options: carousel, graphic, video, split (text & iamge)
+hero: carousel # options: carousel, graphic, video, split (text & iamge)
 heroSettings:
   headingText: Is your data lost in the forest, or the trees?
   headingTextColor: # default = text-white (can use any TailwindCSS text-[color]-[xxx])
@@ -23,7 +23,7 @@ heroSettings:
   imageOpacity: 50 # options = 25, 50, 75 (default is 100)
   imageOpacityFilter: black # options = white, black (default is white) -> really depends on your background image
   height:
-    mobile: # options = 1/1 (default = full screen), 1/2, 1/3, 3/4, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
+    mobile: 9/10 # options = 1/1 (default = full screen), 1/2, 1/3, 3/4, 9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
     desktop: # leave blank to inherit "mobile" height (default = full screen)
   carousel:
     images:

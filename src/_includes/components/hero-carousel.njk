@@ -1,0 +1,9 @@
+<div class="mb-16 h-{{ heroSettings.height.mobile or "1/1" }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.mobile or "1/1" }}">
+  <div class="h-full main-carousel" data-flickity='{"lazyLoad":"1", "wrapAround":true}'>
+
+    {% for image in heroSettings.carousel.images %}
+      <div class="w-full h-full bg-center bg-no-repeat bg-cover carousel-cell" style="background-image: url({{ image }});"></div>
+    {% endfor %}
+
+  </div>
+</div>

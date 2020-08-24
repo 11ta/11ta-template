@@ -6,7 +6,7 @@
     <title>{{ seo.title or title }}  | {{meta.siteName }}</title>
     <link rel="stylesheet" href="/assets/tailwind.css"/>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
-    {% if carousel -%}
+    {% if hero == "carousel" -%}
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
     {%- endif -%}
@@ -21,16 +21,13 @@
           See /src/home.md for how to use. 
       #}
       {% if hero %}
-        {% set hero = ['components/hero-', hero, '.njk'] %}
-        {% include hero | join %}
+        {% set heroComponent = ['components/hero-', hero, '.njk'] %}
+        {% include heroComponent | join %}
       {% endif %}
 
       <div class="flex-grow max-w-full">
         <main class="" id="content">
           {# Drop in the Carousel if there are values in Frontmatter "carousel" #}
-          {% if carousel %}
-            {% include "components/carousel.njk" %}
-          {% endif %}
           {{ content | safe }}
         </main>
       </div>
@@ -39,10 +36,11 @@
     </div>
 
     <script src="/assets/main.js" defer></script>
-    {% if carousel -%}
+
+    {% if hero == "carousel" %}
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
-    {% endif -%}
+    {% endif %}
 
   </body>
 </html>
