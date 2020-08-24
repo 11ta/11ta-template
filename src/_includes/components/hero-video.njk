@@ -1,0 +1,9 @@
+<header class="relative lg:overflow-hidden h-{{ heroSettings.height.mobile or '1/1' }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.mobile or '1/1' }}">
+  <div class="absolute inset-0 z-negative opacity-{{ heroSettings.video.opacityMobile or '100' }} md:opacity-{{ heroSettings.video.opacityDesktop or '100' }}">
+    <video src="{{ heroSettings.video.url }}" autoplay muted loop class="object-cover w-full h-full"></video>
+  </div>
+
+  {# Shared across hero components  #}
+  {% include "components/hero-text-overlay.njk" %}
+
+</header>

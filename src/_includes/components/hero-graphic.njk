@@ -1,23 +1,9 @@
 <div
-      class="relative w-full bg-fixed bg-center bg-no-repeat bg-cover bg-{{ heroSettings.imagePosition }} h-{{ heroSettings.height.mobile or '1/1' }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.desktop or '1/1' }}"
+      class="relative w-full bg-fixed bg-center bg-no-repeat bg-cover bg-{{ heroSettings.imagePosition }} h-{{ heroSettings.height.mobile or '1/1' }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.mobile or '1/1' }}"
       style="background-image: url({{ heroSettings.image }});"
     >
-  <div class="absolute w-full h-full bg-{{ heroSettings.imageOpacityFilter  or 'white' }} bg-opacity-{{ heroSettings.imageOpacity or 0 }}">
 
-    <div
-        class="absolute flex flex-col items-center justify-center h-full max-w-3xl px-8 {{ heroSettings.headingTextColor or 'text-white' }} lg:max-w-5xl md:pl-32"
-      >
-      <div class="text-4xl font-semibold leading-tight uppercase md:text-6xl">
-        {{ heroSettings.headingText }}
-      </div>
-      <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl {{ heroSettings.subheadingTextColor }}">
-        {{ heroSettings.subheadingText }}
-      </div>
-      {% if heroSettings.buttonText %}
-        <div class="w-full mt-12 ">
-          <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ colors.buttonDefault.text or colors.buttonCustom.text }} hover:{{ colors.buttonDefault.textHover or colors.buttonCustom.textHover }} {{ colors.buttonDefault.bg or colors.buttonCustom.bg }} hover:{{ colors.buttonDefault.bgHover or colors.buttonCustom.bgHover }} {{ colors.buttonDefault.border or colors.buttonCustom.border }}">{{ heroSettings.buttonText }}</a>
-        </div>
-      {% endif %}
-    </div>
-  </div>
+  {# Shared across hero components  #}
+  {% include "components/hero-text-overlay.njk" %}
+
 </div>
