@@ -8,6 +8,14 @@ module.exports = {
 	 *      change the "xxxDefault" key values.
 	 *
 	 *    "xxxCustom" values will always override "xxxDefault" values.
+	 *
+	 * ~~~~~ Cusomization tip ~~~~~
+	 *    To quickly create a full set of custom colors,
+	 *    simply select and copy the set of "Default" elements
+	 *    and 'replace paste' them in the "Custom" area.
+	 *    Then just change the "color" value in the middle.
+	 *    This will help keep the customization values looking correct
+	 *    and wil ensure no errors in "text", "bg", and "border" values.
 	 */
 	navDefault: {
 		barBg: 'bg-white',
@@ -52,6 +60,9 @@ module.exports = {
 		mobileButtonBgHover: '',
 	},
 
+	/**
+	 * ===== Logo / SVG =====
+	 */
 	logoDefault: {
 		desktop: 'text-teal-500',
 		mobile: 'text-teal-500',
@@ -63,9 +74,17 @@ module.exports = {
 		hover: '',
 	},
 
+	/**
+	 * ===== Headings: H1, H2, H3, H4, H5, H6
+	 */
 	headingsDefault: 'text-teal-500',
 	headingsCustom: '',
 
+	/**
+	 * ===== Author / Date Block and their Social Icons =====
+	 *
+	 * Manage the global Footer Icons below in the Footer section
+	 */
 	authorDefault: {
 		name: 'text-gray-600',
 		date: 'text-gray-500',
@@ -79,6 +98,9 @@ module.exports = {
 		socialIconsHover: '',
 	},
 
+	/**
+	 * ===== Buttons =====
+	 */
 	buttonDefault: {
 		text: 'text-white',
 		textHover: 'text-white',
@@ -94,6 +116,39 @@ module.exports = {
 		border: '',
 	},
 
+	/**
+	 * ===== Pagination Settings =====
+	 *
+	 * === Post Listing Pills ===
+	 */
+	paginateDefault: {
+		blockBg: '',
+		blockBorder: 'border-gray-200',
+		linkText: 'text-gray-600',
+		linkTextActive: 'text-gray-500',
+		linkTextHover: 'text-gray-700',
+		linkBg: 'bg-white',
+		linkBgActive: 'bg-gray-100',
+		linkBgHover: 'bg-gray-200',
+		linkBorder: 'border-gray-300',
+		linkFocusBorder: 'border-blue-300',
+	},
+	paginateCustom: {
+		blockBg: '',
+		blockBorder: '',
+		linkText: '',
+		linkTextActive: '',
+		linkTextHover: '',
+		linkBg: '',
+		linkBgActive: '',
+		linkBgHover: '',
+		linkBorder: '',
+		linkFocusBorder: '',
+	},
+
+	/**
+	 * === Previous / Next Post Detail Links
+	 */
 	prevNextDefault: {
 		text: 'text-gray-500',
 		textHover: 'text-gray-600',
@@ -107,6 +162,10 @@ module.exports = {
 		bgHover: '',
 	},
 
+	/**
+	 * ===== Tag Pills on Post Listings and Details
+	 * You can disable these globally in /src/_data/structure.js
+	 */
 	tagPillDefault: {
 		text: 'text-gray-500',
 		textHover: 'text-gray-600',
@@ -120,6 +179,11 @@ module.exports = {
 		bgHover: '',
 	},
 
+	/**
+	 * ===== Footer =====
+	 *
+	 * === Text and Background
+	 */
 	footerDefault: {
 		barBg: 'bg-white',
 		text: 'text-teal-500',
@@ -129,6 +193,10 @@ module.exports = {
 		text: '',
 	},
 
+	/**
+	 * === Footer social icons
+	 * Manage the Author social icons above in the Author section
+	 */
 	socialIconsDefault: 'text-teal-400',
 	socialIconsHoverDefault: 'text-teal-500',
 

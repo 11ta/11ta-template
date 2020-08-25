@@ -9,18 +9,24 @@ module.exports = {
 	 * at all screen sizes.
 	 */
 	g_pageWidth: 'max-w-5xl px-4 md:pl-16 lg:pl-32',
+
+	/**
+	 * Globally disable display of Tag pills/links
+	 */
 	g_showTagPills: true,
+
+	/**
+	 * Set alignment of Pagination links on Post Listing views.
+	 * Options = start, center, end
+	 */
+	g_alignPagination: 'center',
+
 	/**
 	 * ===== Display Author Blocks =====
 	 * Set below to 'false' to globally disable Author Avatars
 	 * and links to author's page on Post/Blog listings.
 	 *
-	 * To use Authors you need to do the following:
-	 *  1. Create square .JPG images for each author,
-	 *  2. Place them in the `/src/assets/images/authors/` directory,
-	 *  3. Use file naming syntax "first-last.jpg" (lowercase version of Author's name)
-	 *      NOTE: If the avatar images are not named the same as the Author's name, they won't display.
-	 *  4. If you leave the "author" frontmatter value empty, it will disable display for that post only.
+	 * Add and Manage Author data in src/_data/authors.json
 	 */
 	g_showAuthors: true,
 
