@@ -1,5 +1,6 @@
 const { DateTime } = require('luxon')
 const slugify = require('slugify')
+const { postcss } = require('cssnano')
 
 module.exports = {
 	/**
@@ -64,5 +65,12 @@ module.exports = {
 	getAuthor: (authors, key) => {
 		let author = authors.filter((a) => a.slug === key)[0]
 		return author
+	},
+
+	/**
+	 * Get Posts by Author for the Author detail page
+	 */
+	getPostsByAuthor: (posts, key) => {
+		return posts.filter((a) => a.data.author === key)
 	},
 }

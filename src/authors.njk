@@ -42,3 +42,17 @@ eleventyComputed:
 {% include "components/authorsocial.njk" %}
 {% endcols %}
 {% endcolumns %}
+
+<div class="px-8 pt-4 mt-8 text-gray-500 border-t border-gray-300">
+  <h3 class="">Posts by {{ title }}:</h3>
+
+  {% set posts = collections.post | getPostsByAuthor(author.slug) %}
+  <ul>
+    {% for post in posts %}
+      <li>
+        <a href="{{post.url}}">{{post.data.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
