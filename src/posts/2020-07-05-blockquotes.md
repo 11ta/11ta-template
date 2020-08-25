@@ -2,11 +2,11 @@
 title: Blockquotes - Shortcodes
 date: 2020-07-05T17:44:03.000Z
 excerpt: Blockquotes are easy, even in Markdown. But what if you want to style them?
-author: Shane Robinson
-seo: 
-  title: 
-  description: 
-  image: 
+author: shane-robinson
+seo:
+  title:
+  description:
+  image:
 tags:
   - blockquote
   - shortcodes

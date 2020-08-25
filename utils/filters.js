@@ -57,4 +57,12 @@ module.exports = {
 			remove: /[*+~.·,()'"`´%!?¿:@]/g,
 		})
 	},
+
+	/**
+	 * Get Authors from _data/authors.json
+	 */
+	getAuthor: (authors, label) => {
+		let author = authors.filter((a) => a.slug === label)[0]
+		return author
+	},
 }

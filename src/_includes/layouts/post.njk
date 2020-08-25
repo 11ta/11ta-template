@@ -13,7 +13,8 @@ layout: base
     {% if structure.g_showAuthors %}
       {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
       {% if author %}
-     by <a class="hover:underline" href="/authors/{{ author | slug }}/">{{ author }}</a>
+        {% set postAuthor = authors | getAuthor(author) %}
+        by <a class="hover:underline" href="/authors/{{ author }}/">{{ postAuthor.name }}</a>
       {% endif %}
     {% endif %}
 

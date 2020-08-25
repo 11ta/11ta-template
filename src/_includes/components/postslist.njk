@@ -32,6 +32,7 @@
                 {% if structure.g_showAuthors %}
                   {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
                   {% if post.data.author %}
+                    {% set postAuthor = authors | getAuthor(post.data.author) %}
                     {% include "components/authordate.njk" %}
                   {% endif %}
                 {% endif %}

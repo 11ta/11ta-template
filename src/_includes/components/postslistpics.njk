@@ -20,7 +20,8 @@
             {% if structure.g_showAuthors %}
               {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
               {% if post.data.author %}
-                by <a href="/authors/{{ post.data.author | slug }}/">{{ post.data.author }}</a>
+                {% set postAuthor = authors | getAuthor(post.data.author) %}
+                by <a href="/authors/{{ post.data.author }}/">{{ postAuthor.name }}</a>
               {% endif %}
             {% endif %}
           </small>

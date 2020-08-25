@@ -1,12 +1,12 @@
 <div class="flex items-center mt-6">
   <div class="flex-shrink-0">
-    <a href="/authors/{{ post.data.author | slug }}/">
-      <img class="w-10 h-10 rounded-full" src="/assets/images/authors/{{ post.data.author | slug }}.jpg" alt=" Photo of {{ post.data.author }}">
+    <a href="/authors/{{ post.data.author }}/">
+      <img class="w-10 h-10 rounded-full" src="{{ postAuthor.image }}" alt=" Photo of {{ postAuthor.name }}">
     </a>
   </div>
   <div class="ml-3">
     <p class="pt-0 mt-0 text-sm font-medium leading-5">
-      <a href="/authors/{{ post.data.author | slug }}/" class="hover:underline {{ colors.authorCustom.name or colors.authorDefault.name }}">{{ post.data.author }}</a>
+      <a href="/authors/{{ post.data.author }}/" class="hover:underline {{ colors.authorCustom.name or colors.authorDefault.name }}">{{ postAuthor.name }}</a>
     </p>
     <div class="flex text-sm leading-5 {{ colors.authorCustom.date or colors.authorDefault.date }}">
       <time datetime="{{ post.date | dateToFormat("yyyy-MM-dd") }}">{{ post.date | dateToFormat("LLL dd, yyyy") }}</time>

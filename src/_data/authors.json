@@ -1,10 +1,60 @@
 [
 	{
+		"slug": "shane-robinson",
 		"name": "Shane Robinson",
-		"image": "/assets/images/authors/shane-robinson.jpg"
+		"image": "/assets/images/authors/shane-robinson.jpg",
+		"bio": "",
+		"company": {
+			"website": "https://www.barefeetstudios.com",
+			"website-label": "Bare Feet Studios, LLC",
+			"email": "shane@barefeetstudios.com"
+		},
+		"personal": {
+			"website-1": "https://www.shanerobinson.com",
+			"website-1-label": "ShaneRobinson.com",
+			"website-2": "https://linkist.netlify.app/",
+			"website-2-label": "Linkist: Control your own links",
+			"website-3": "https://sr-100daysofcode.netlify.app/",
+			"website-3-label": "#100DaysOfCode project minisite",
+			"email": "shane@shanerobinson.com"
+		},
+		"socialMedia": {
+			"dribble": "",
+			"facebook": "",
+			"github": "https://github.com/shanerobinson/",
+			"instagram": "https://instagram.com/shanerobinson/",
+			"pinterest": "https://pinterest.com/shanerobinson/",
+			"twitter": "https://twitter.com/shanerobinson/",
+			"youtube": ""
+		}
 	},
 	{
+		"slug": "roxanne-darling",
 		"name": "Roxanne Darling",
-		"image": "/assets/images/authors/roxanne-darling.jpg"
+		"image": "/assets/images/authors/roxanne-darling.jpg",
+		"bio": "",
+		"company": {
+			"website": "https://www.barefeetstudios.com",
+			"website-label": "Bare Feet Studios, LLC",
+			"email": "roxanne@barefeetstudios.com"
+		},
+		"personal": {
+			"website-1": "https://www.roxannedarling.com",
+			"website-1-label": "RoxanneDarling.com",
+			"website-2": "https://www.inthetransition.com",
+			"website-2-label": "In The Transition",
+			"website-3": "https://www.iamfortheloveofnature.com/",
+			"website-3-label": "I Am: For The Love Of Nature",
+			"email": "rox@roxannedarling.com"
+		},
+		"socialMedia": {
+			"dribble": "",
+			"facebook": "",
+			"github": "",
+			"instagram": "https://instagram.com/roxannedarling/",
+			"pinterest": "https://pinterest.com/roxannedarling/",
+			"twitter": "https://twitter.com/roxannedarling/",
+			"youtube": ""
+		}
 	}
 ]
