@@ -59,10 +59,10 @@ module.exports = {
 	},
 
 	/**
-	 * Get Authors from _data/authors.json
+	 * Get Authors from _data/authors.json to use in Post Lists and Detail
 	 */
-	getAuthor: (authors, label) => {
-		let author = authors.filter((a) => a.slug === label)[0]
+	getAuthor: (authors, key) => {
+		let author = authors.filter((a) => a.slug === key)[0]
 		return author
 	},
 }

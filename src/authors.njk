@@ -1,0 +1,44 @@
+---
+layout: base
+pagination: 
+  data: authors
+  size: 1
+  alias: author
+permalink: "/authors/{{ author.slug }}/"
+eleventyComputed:
+  title: "{{ author.name }}"
+---
+
+<h1 class=" mb-4 {{ colors.headingsCustom or colors.headingsDefault }}">{{ title }}</h1>
+
+{% columns %}
+{% cols "flex-none" %}
+<p>
+  <img class="h-64 rounded-lg" src="{{ author.image }}" alt="Photo of {{ title }}">
+</p>
+{% endcols %}
+{% cols "flex-grow px-8" %}
+<div class="mt-4 text-gray-500">
+  <div class="mb-4">
+    {{ author.bio }}
+  </div>
+  {% if author.company.website %}
+    <a class="block hover:underline" target="_blank" href="{{ author.company.website | url }}" alt="author.company.websiteLabel website">{{ author.company.websiteLabel }} ↗️</a>
+  {% endif %}
+
+  {% if author.personal.website1 %}
+    <a class="block hover:underline" target="_blank" href="{{ author.personal.website1 | url }}" alt="author.personal.website1Label website">{{ author.personal.website1Label }} ↗️</a>
+  {% endif %}
+
+  {% if author.personal.website2 %}
+    <a class="block hover:underline" target="_blank" href="{{ author.personal.website2 | url }}" alt="author.personal.website2Label website">{{ author.personal.website2Label }} ↗️</a>
+  {% endif %}
+
+  {% if author.personal.website3 %}
+    <a class="block hover:underline" target="_blank" href="{{ author.personal.website3 | url }}" alt="author.personal.website3Label website">{{ author.personal.website3Label }} ↗️</a>
+  {% endif %}
+
+</div>
+{% include "components/authorsocial.njk" %}
+{% endcols %}
+{% endcolumns %}
