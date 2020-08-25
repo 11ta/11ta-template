@@ -29,4 +29,23 @@ layout: base
     </div>
   {% endif %}
 
+  {# ===== Previous and Next =====  #}
+  <div class="flex flex-row justify-between  border-t mt-4 pt-4 {{ colors.borderCustom.color or colors.borderDefault.color }} ">
+    {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.post | getNextCollectionItem(page) %}
+
+    <div class="">
+      {% if previousPost %}
+        <a class="{{ colors.prevNextCustom.text or colors.prevNextDefault.text }} hover:{{ colors.prevNextCustom.text or colors.prevNextDefault.textHover }}" href="{{ previousPost.url }}">← {{ previousPost.data.title }}</a>
+      {% endif %}
+    </div>
+
+    <div class="">
+      {% if nextPost %}
+        <a class="{{ colors.prevNextCustom.text or colors.prevNextDefault.text }} hover:{{ colors.prevNextCustom.text or colors.prevNextDefault.textHover }}" href="{{ nextPost.url }}">{{ nextPost.data.title }} →</a>
+      {% endif %}
+    </div>
+
+  </div>
+
 </article>

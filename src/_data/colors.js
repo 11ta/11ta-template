@@ -94,6 +94,19 @@ module.exports = {
 		border: '',
 	},
 
+	prevNextDefault: {
+		text: 'text-gray-500',
+		textHover: 'text-gray-600',
+		bg: '',
+		bgHover: '',
+	},
+	prevNextCustom: {
+		text: '',
+		textHover: '',
+		bg: '',
+		bgHover: '',
+	},
+
 	tagPillDefault: {
 		text: 'text-gray-500',
 		textHover: 'text-gray-600',
