@@ -3,8 +3,10 @@ layout: base
 tags: pages
 ---
 
-<article class="{{ structure.g_pageWidth }} my-12">
+<article class="{{ structure.g_pageWidth }}">
+
   <h1 class="{{ colors.headingsCustom or colors.headingsDefault }}">{{ seo.title or title }}</h1>
+
   {% if seo.description %}
     <div class="p-2 {{ colors.borderCustom.borders or colors.borderDefault.borders }} {{ colors.borderCustom.color or colors.borderDefault.color }}">
       {{ seo.description }}
@@ -12,4 +14,5 @@ tags: pages
   {% endif %}
 
   {{ content | safe }}
+
 </article>

@@ -41,23 +41,23 @@ module.exports = {
 	 *  If you delete any variable keys, 11ty won't work.
 	 */
 	navCustom: {
-		barBg: 'bg-gray-800',
-		text: '',
-		textActive: '',
-		textHover: '',
-		textActiveBg: '',
-		textFocus: '',
+		barBg: '',
+		text: 'text-gray-500',
+		textActive: 'text-gray-600',
+		textHover: 'text-gray-600',
+		textActiveBg: 'bg-gray-100',
+		textFocus: 'text-gray-500',
 		mobileBg: '',
-		mobileBgActive: '',
-		mobileBgHover: '',
-		mobileBgFocus: '',
-		mobileText: '',
-		mobileTextActive: '',
-		mobileTextHover: '',
-		mobileTextFocus: '',
-		mobileButton: '',
-		mobileButtonHover: '',
-		mobileButtonBgHover: '',
+		mobileBgActive: 'bg-gray-700',
+		mobileBgHover: 'bg-gray-100',
+		mobileBgFocus: 'bg-gray-300',
+		mobileText: 'text-gray-500',
+		mobileTextActive: 'text-gray-300',
+		mobileTextHover: 'text-gray-600',
+		mobileTextFocus: 'text-gray-700',
+		mobileButton: 'text-gray-500',
+		mobileButtonHover: 'text-gray-600',
+		mobileButtonBgHover: 'bg-gray-100',
 	},
 
 	/**
@@ -69,16 +69,16 @@ module.exports = {
 		hover: 'text-teal-600',
 	},
 	logoCustom: {
-		desktop: '',
-		mobile: '',
-		hover: '',
+		desktop: 'text-gray-700',
+		mobile: 'text-gray-700',
+		hover: 'text-gray-800',
 	},
 
 	/**
 	 * ===== Headings: H1, H2, H3, H4, H5, H6
 	 */
 	headingsDefault: 'text-teal-500',
-	headingsCustom: '',
+	headingsCustom: 'text-gray-700',
 
 	/**
 	 * ===== Author / Date Block and their Social Icons =====
@@ -189,8 +189,8 @@ module.exports = {
 		text: 'text-teal-500',
 	},
 	footerCustom: {
-		barBg: 'bg-gray-800',
-		text: '',
+		barBg: '',
+		text: 'text-gray-500',
 	},
 
 	/**
@@ -200,8 +200,8 @@ module.exports = {
 	socialIconsDefault: 'text-teal-400',
 	socialIconsHoverDefault: 'text-teal-500',
 
-	socialIconsCustom: '',
-	socialIconsHoverCustom: '',
+	socialIconsCustom: 'text-gray-400',
+	socialIconsHoverCustom: 'text-gray-500',
 
 	// Generally I use borders as replacements for <hr> tags.
 	// You may need to update Layouts and Templates if you want to use these

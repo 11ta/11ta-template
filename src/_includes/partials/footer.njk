@@ -4,50 +4,50 @@
       <div class="flex justify-center md:order-2 {{ colors.socialIconsCustom or colors.socialIconsDefault }}">
 
         {% if social.dribbble %}
-          <a class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.dribbble | url }}">
+          <a alt="Link to Dribbble" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.dribbble | url }}">
             {% svg "dribbble", "Dribbble logo", "mx-2 h-6 w-6 fill-current" %}
           </a>
         {% endif %}
 
         {% if social.facebook %}
-          <a class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.facebook | url }}">
+          <a alt="Link to Facebook" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.facebook | url }}">
             {% svg "facebook", "Facebook logo", "mx-2 h-6 w-6 fill-current" %}
           </a>
         {% endif %}
 
         {% if social.github %}
-          <a class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.github | url }}">
+          <a alt="Link to GitHub" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.github | url }}">
             {% svg "github", "Github logo", "mx-2 h-6 w-6 fill-current" %}
           </a>
         {% endif %}
 
         {% if social.instagram %}
-          <a class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.instagram | url }}">
+          <a alt="Link to Instagram" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.instagram | url }}">
             {% svg "instagram", "Instagram logo", "mx-2 h-6 w-6 fill-current" %}
           </a>
         {% endif %}
 
         {% if social.pinterest %}
-          <a class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.pinterest | url }}">
+          <a alt="Link to Pinterest" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.pinterest | url }}">
             {% svg "pinterest", "Pinterest logo", "mx-2 h-6 w-6 fill-current" %}
           </a>
         {% endif %}
 
         {% if social.twitter %}
-          <a class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.twitter | url }}">
+          <a alt="Link to Twitter" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.twitter | url }}">
             {% svg "twitter", "Twitter logo", "mx-2 h-6 w-6 fill-current" %}
           </a>
         {% endif %}
 
         {% if social.youtube %}
-          <a class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.youtube | url }}">
+          <a alt="Link to YouTube" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.youtube | url }}">
             {% svg "youtube", "Youtube logo", "mx-2 h-6 w-6 fill-current" %}
           </a>
         {% endif %}
 
       </div>
       <div class="mt-8 md:mt-0 md:order-1">
-        <p class="text-center text-base leading-6 {{ colors.footerDefault.text or colors.footerCustom.text }}">
+        <p class="text-center text-base leading-6 {{ colors.footerCustom.text or colors.footerDefault.text }}">
           &copy; {{ build.timestamp | dateToFormat('yyyy') }}, {{ meta.siteName }}
         </p>
       </div>
