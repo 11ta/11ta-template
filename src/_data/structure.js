@@ -31,7 +31,16 @@ module.exports = {
 	g_showAuthors: true,
 
 	/**
-	 * ===== Display Social Share Icons =====
+	 * ===== Display Footer & Social Share Icons =====
+	 *
+	 * Set to fully disable display of the Social Links in the footer.
+	 * These social platform links are managed in the _data/social.json file.
+	 * *** It may have made sense to just put them here....but they were in social.json
+	 * *** before this file existed. :-)
+	 * I might move stuff around on the next version...
+	 */
+	g_showFooterSocialIcons: true,
+	/**
 	 * Set to 'false' to disable the "Share:" icons on the Post Detail views.
 	 * You can also set individual platforms to 'false' to disable just those platforms.
 	 * NOTE: We don't support Facebook (and deleted our Profiles and Pages in 2017) so

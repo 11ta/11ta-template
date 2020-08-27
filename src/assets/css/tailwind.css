@@ -23,6 +23,9 @@ h4 {
 h5 {
 	@apply text-lg;
 }
+p > a {
+	@apply font-medium text-indigo-500;
+}
 p {
 	@apply mt-4;
 }

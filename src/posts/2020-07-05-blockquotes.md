@@ -6,14 +6,14 @@ author: shane-robinson
 seo:
   title:
   description:
-  image: 2020/07/five-slide.jpg
+  image: 2020/07/blockquote.jpg
+images: # relative to /src/assets/images/
+  feature:
+  thumb: 2020/07/blockquote.jpg
+  slide:
 tags:
   - blockquote
   - shortcodes
-images: # relative to /src/assets/images/
-  feature: 2020/07/five-feature.jpg
-  thumb: 2020/07/five-thumb.jpg
-  slide: 2020/07/five-slide.jpg
 ---
 
 Below is a basic blockquote in Markdown.

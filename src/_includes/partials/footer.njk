@@ -2,43 +2,45 @@
   <div class="{{ colors.footerCustom.barBg or colors.footerDefault.barBg }}">
     <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
       <div class="flex justify-center md:order-2 {{ colors.socialIconsCustom or colors.socialIconsDefault }}">
+        {% if structure.g_showFooterSocialIcons %}
 
-        {% if social.dribbble %}
-          <a alt="Link to Dribbble" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.dribbble | url }}">
-            {% svg "dribbble", "Dribbble logo", "mx-2 h-6 w-6 fill-current" %}
-          </a>
+          {% if social.dribbble %}
+            <a alt="Link to Dribbble" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.dribbble | url }}">
+              {% svg "dribbble", "Dribbble logo", "mx-2 h-6 w-6 fill-current" %}
+            </a>
+          {% endif %}
+
+          {% if social.github %}
+            <a alt="Link to GitHub" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.github | url }}">
+              {% svg "github", "Github logo", "mx-2 h-6 w-6 fill-current" %}
+            </a>
+          {% endif %}
+
+          {% if social.instagram %}
+            <a alt="Link to Instagram" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.instagram | url }}">
+              {% svg "instagram", "Instagram logo", "mx-2 h-6 w-6 fill-current" %}
+            </a>
+          {% endif %}
+
+          {% if social.pinterest %}
+            <a alt="Link to Pinterest" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.pinterest | url }}">
+              {% svg "pinterest", "Pinterest logo", "mx-2 h-6 w-6 fill-current" %}
+            </a>
+          {% endif %}
+
+          {% if social.twitter %}
+            <a alt="Link to Twitter" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.twitter | url }}">
+              {% svg "twitter", "Twitter logo", "mx-2 h-6 w-6 fill-current" %}
+            </a>
+          {% endif %}
+
+          {% if social.youtube %}
+            <a alt="Link to YouTube" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.youtube | url }}">
+              {% svg "youtube", "Youtube logo", "mx-2 h-6 w-6 fill-current" %}
+            </a>
+          {% endif %}
+
         {% endif %}
-
-        {% if social.github %}
-          <a alt="Link to GitHub" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.github | url }}">
-            {% svg "github", "Github logo", "mx-2 h-6 w-6 fill-current" %}
-          </a>
-        {% endif %}
-
-        {% if social.instagram %}
-          <a alt="Link to Instagram" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.instagram | url }}">
-            {% svg "instagram", "Instagram logo", "mx-2 h-6 w-6 fill-current" %}
-          </a>
-        {% endif %}
-
-        {% if social.pinterest %}
-          <a alt="Link to Pinterest" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.pinterest | url }}">
-            {% svg "pinterest", "Pinterest logo", "mx-2 h-6 w-6 fill-current" %}
-          </a>
-        {% endif %}
-
-        {% if social.twitter %}
-          <a alt="Link to Twitter" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.twitter | url }}">
-            {% svg "twitter", "Twitter logo", "mx-2 h-6 w-6 fill-current" %}
-          </a>
-        {% endif %}
-
-        {% if social.youtube %}
-          <a alt="Link to YouTube" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.youtube | url }}">
-            {% svg "youtube", "Youtube logo", "mx-2 h-6 w-6 fill-current" %}
-          </a>
-        {% endif %}
-
       </div>
       <div class="mt-8 md:mt-0 md:order-1">
         <p class="text-center text-base leading-6 {{ colors.footerCustom.text or colors.footerDefault.text }}">

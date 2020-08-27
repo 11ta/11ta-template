@@ -6,10 +6,14 @@ excerpt: A custom 11ty shortcode allows you to create great looking and function
 seo:
   title:
   description:
-  image:
+  image: 2020/07/dl.jpg
+images: # relative to /src/assets/images/
+  feature:
+  thumb: 2020/07/dl.jpg
+  slide:
 tags:
   - shortcodes
-  - description list
+  - description-list
 ---
 
 This post uses shortcode `wrap` and **Description List** shortcodes `dl` _(description list)_, `dt` _(description term)_, and `dd` _(description description)_.
