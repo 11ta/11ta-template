@@ -18,7 +18,7 @@
 
       {% if heroSettings.buttonText %}
         <div class="w-full mt-12 ">
-          <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ colors.buttonDefault.text or colors.buttonCustom.text }} hover:{{ colors.buttonDefault.textHover or colors.buttonCustom.textHover }} {{ colors.buttonDefault.bg or colors.buttonCustom.bg }} hover:{{ colors.buttonDefault.bgHover or colors.buttonCustom.bgHover }} {{ colors.buttonDefault.border or colors.buttonCustom.border }}">{{ heroSettings.buttonText }}</a>
+          <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ colors.buttonCustom.text or colors.buttonDefault.text }} {{ colors.buttonCustom.bg or colors.buttonDefault.bg }} hover:{{ colors.buttonCustom.textHover or colors.buttonDefault.textHover }} hover:{{ colors.buttonCustom.bgHover or colors.buttonDefault.bgHover }} {{ colors.buttonCustom.border or colors.buttonDefault.border }}">{{ heroSettings.buttonText }}</a>
         </div>
       {% endif %}
 
@@ -30,7 +30,7 @@
     <img
           class="absolute inset-0 object-cover w-full h-full"
           src="/assets/images/home/plane.jpg"
-          alt="Woman on her phone"
+          alt="Lost Plane"
 />
   </div>
 </main>

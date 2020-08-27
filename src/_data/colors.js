@@ -138,7 +138,7 @@ module.exports = {
 	buttonCustom: {
 		text: '',
 		textHover: '',
-		bg: '',
+		bg: 'bg-red-700',
 		bgHover: '',
 		border: '',
 	},

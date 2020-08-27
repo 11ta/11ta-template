@@ -24,7 +24,7 @@ heroSettings:
   buttonText: Contact Us... # no button generated if left blank
   buttonURL: /contact/ # full url required. Example: https://thisdomain.com/somepage/
   buttonTextColor: # leave blank to inherit from /src/_data/colors.buttonCustom or buttonDefault
-  buttonBgColor: # leave blank to inherit from /src/_data/colors.buttonCustom or buttonDefault
+  buttonBgColor: # leave blank to inherit from /src/_data/colors.buttonCustom.bg or buttonDefault.bg
   image: /assets/images/home/plane.jpg # image URL
   imagePosition: left # options = left, center, right
   imageOpacity: 50 # options = 25, 50, 75 (default is 100)
