@@ -1,7 +1,13 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-	purge: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md'],
+	purge: [
+		'./src/**/*.html',
+		'./src/**/*.njk',
+		'./src/**/*.md',
+		'./src/_data/colors.js',
+		'./src/_data/structure.js',
+	],
 	experimental: {
 		applyComplexClasses: true,
 	},
