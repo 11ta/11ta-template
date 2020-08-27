@@ -1,4 +1,4 @@
-<main class="lg:relative h-{{ heroSettings.height.mobile or '1/1' }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.mobile or '1/1' }}">
+<main class="lg:relative {{ heroSettings.height.mobile or 'h-1/1' }} sm:{{ heroSettings.height.desktop or heroSettings.height.mobile or 'h-1/1' }}">
   <div
         class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left"
       >

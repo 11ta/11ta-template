@@ -1,4 +1,4 @@
-<div class="mb-16 h-{{ heroSettings.height.mobile or "1/1" }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.mobile or "1/1" }}">
+<div class="mb-16 {{ heroSettings.height.mobile or "h-1/1" }} sm:{{ heroSettings.height.desktop or heroSettings.height.mobile or "h-1/1" }}">
   <div class="h-full main-carousel" data-flickity='{"lazyLoad":"1", "wrapAround":true}'>
 
     {% for image in heroSettings.carousel.images %}
