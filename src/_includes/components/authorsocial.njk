@@ -19,6 +19,12 @@
       </a>
     {% endif %}
 
+    {% if author.socialMedia.linkedin %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on LinkedIn" href="{{ author.socialMedia.linkedin | url }}">
+        {% svg "linkedin", "LinkedIn logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
     {% if author.socialMedia.pinterest %}
       <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Pinterest" href="{{ author.socialMedia.pinterest | url }}">
         {% svg "pinterest", "Pinterest logo", "mx-2 h-10 w-10 fill-current" %}

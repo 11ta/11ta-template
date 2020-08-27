@@ -31,6 +31,22 @@ module.exports = {
 	g_showAuthors: true,
 
 	/**
+	 * ===== Display Social Share Icons =====
+	 * Set to 'false' to disable the "Share:" icons on the Post Detail views.
+	 * You can also set individual platforms to 'false' to disable just those platforms.
+	 * NOTE: We don't support Facebook (and deleted our Profiles and Pages in 2017) so
+	 * if you want Facebook support you'll have to build it yourself.
+	 * https://deletefacebook.com/
+	 */
+	g_showSocialShareIcons: true,
+	// Display individual Share Icons. Above must be 'true' for items below to display.
+	g_showShareLinkedIn: true,
+	g_showSharePinterest: true,
+	g_showShareReddit: true,
+	g_showShareTwitter: true,
+	g_showShareEmail: true,
+
+	/**
 	 * ===== Home Page Carousel & Hero Controls =====
 	 */
 

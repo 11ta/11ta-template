@@ -99,6 +99,23 @@ module.exports = {
 	},
 
 	/**
+	 * ===== Social Share Icons =====
+	 *
+	 * Manage the colors of the Social Share icons at the bottom of
+	 * Posts detail views
+	 *
+	 * Manage display in /src/_data/structure.js
+	 */
+	socialShareDefault: {
+		color: 'text-gray-500',
+		hover: 'text-gray-600',
+	},
+	socialShareCustom: {
+		color: '',
+		hover: '',
+	},
+
+	/**
 	 * ===== Buttons =====
 	 */
 	buttonDefault: {

@@ -6,7 +6,7 @@ author: shane-robinson
 seo:
   title:
   description:
-  image:
+  image: 2020/07/five-slide.jpg
 tags:
   - blockquote
   - shortcodes

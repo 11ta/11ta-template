@@ -22,10 +22,21 @@ layout: base
 
   {{ layoutContent | safe }}
 
-  {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
-  {% if structure.g_showTagPills %}
-    <div class="border-t mt-4 pt-4 {{ colors.borderCustom.color or colors.borderDefault.color }} ">
-      {% include "components/tagpills.njk" %}
+  {% if structure.g_showTagPills or structure.g_showSocialShareIcons %}
+    <div class="flex flex-row justify-between pt-4 mt-12 border-t ">
+
+      {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
+      {% if structure.g_showTagPills %}
+        <div class="{{ colors.borderCustom.color or colors.borderDefault.color }} ">
+          {% include "components/tagpills.njk" %}
+        </div>
+      {% endif %}
+
+      {# If you don't want to display Social Share icons, disable them in /src/_data/structure.js  #}
+      {% if structure.g_showSocialShareIcons %}
+        {% include "components/socialshare.njk" %}
+      {% endif %}
+
     </div>
   {% endif %}
 
