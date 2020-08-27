@@ -7,6 +7,7 @@ module.exports = {
 	lang: 'en',
 	locale: 'en_us',
 	authorName: 'Shane Robinson',
+	authorURL: 'shane-robinson',
 	authorEmail: 'shane@shanerobinson.com',
 	twitterSite: '@shanerobinson',
 	twitterCreator: '@shanerobinson',

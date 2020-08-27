@@ -2,7 +2,7 @@ module.exports = {
 	// ++++++++++++++++++++
 	// Wrap any content, or other shortcodes, in a block you can style however you want
 	wrap: function (content, classes = '') {
-		return `<div class="p-4 ${classes}">${content}</div>`
+		return `<div class="wrapper p-4 ${classes}">${content}</div>`
 	},
 
 	// ++++++++++++++++++++

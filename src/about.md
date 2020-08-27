@@ -11,9 +11,13 @@ seo:
   title: About Us
 ---
 
-## I hear the jury's still out on science.
+{% wrap "text-red-500 bg-red-100 mt-4 border border-red-300 rounded-lg underline" %}
 
-> Text courtesy [Fillerama.io](http://fillerama.io/)
+Text courtesy [Fillerama.io](http://fillerama.io/)
+
+{% endwrap %}
+
+## I hear the jury's still out on science.
 
 Guy's a pro. It's a hug, Michael. I'm hugging you. Michael! I care deeply for nature. That's what it said on 'Ask Jeeves.' Across from where?
 
