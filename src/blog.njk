@@ -4,19 +4,19 @@ date: 2020-08-05
 layout: page
 eleventyNavigation:
   key: main
-  title: Blog # as it will appear in the nav
+  title: Blog #  as it will appear in the nav
   order: 3    # order to display in the nav
 seo:
   title: From the blog...
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quisquam numquam atque consequatur. Porro quibusdam alias blanditiis a ipsa unde cupiditate, hic accusantium, fugit excepturi explicabo voluptatibus mollitia esse enim!"
 pagination:
   data: collections.post 
-  size: 2
+  size: 12
   reverse: true
   alias: posts
 ---
 
-{% set postslist = posts %}
+{% set postslist = posts | reverse %}
 
 {# 
   Allows a user to easily change the Tag List Style.
@@ -26,4 +26,7 @@ pagination:
 {% include postlist | join %}
 
 {# ===== Paginate based on "size" frontmatter value above =====  #}
-{% include "components/pagination.njk" %}
+{# Don't even include the pagination component if there are fewer posts than needed to paginate  #}
+{% if collections.post.length > pagination.size %}
+  {% include "components/pagination.njk" %}
+{% endif %}

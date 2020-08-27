@@ -1,6 +1,6 @@
 ---
-title: Hello World
-layout: base
+title: Let's talk about static sites!
+layout: page
 eleventyNavigation:
   key: main
   title: Welcome # as it will appear in the nav
@@ -37,14 +37,8 @@ heroSettings:
     opacityDesktop: # options 25, 50, 75, 100 (default)
 ---
 
-{% wrap "bg-gray-200 rounded-lg shadow-lg border border-gray-300 " %}
-
-## Let's talk about static sites!
-
 This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text.
 
 This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text.
 
 This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text. This is a bunch of text.
-
-{% endwrap %}
