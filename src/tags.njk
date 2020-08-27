@@ -31,7 +31,7 @@ eleventyComputed:
 {% include postlist | join %}
 
 <div class="border-t border-gray-300">
-<h4>All Tags:</h4>
+<h4 class="{{ colors.tagPillCustom.text or colors.tagPillDefault.text }}">All Tags:</h4>
 {% set tags = collections.tagList %}
 {% include "components/tagpills.njk" %}
 </div>
