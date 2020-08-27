@@ -12,13 +12,13 @@ seo: # SEO values are used for OG and will overwrite 'title' and 'excerpt' above
   title:
   description:
   image: # used for OG:image and Twitter:image. Overrides default set in _data/meta.siteImage
-hero: split # options: carousel, graphic, video, split (text & image)
+hero: graphic # options: carousel, graphic, video, split (text & image)
 heroSettings:
   height:
     mobile: # options = 1/1 (default = full screen), 1/2, 1/3, 3/4, 9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
     desktop: # leave blank to inherit "mobile" height (default = full screen)
   headingText: Is your data lost in the forest, or the trees?
-  headingTextColor: text-gray-800 # default = text-white (can use any TailwindCSS text-[color]-[xxx])
+  headingTextColor: # text-gray-800 # default = text-white (can use any TailwindCSS text-[color]-[xxx])
   subheadingText: This is some pithy text that explains why you should hire us without reading any further. Or is it farther?
   subheadingTextColor: # Leave empty to inherit headingTextColor or default (text-white) or use any text-[color]-[xxx]
   buttonText: Contact Us... # no button generated if left blank
