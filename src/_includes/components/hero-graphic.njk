@@ -1,5 +1,5 @@
 <div
-      class="relative w-full bg-fixed bg-center bg-no-repeat bg-cover bg-{{ heroSettings.imagePosition }} h-{{ heroSettings.height.mobile or '1/1' }} sm:h-{{ heroSettings.height.desktop or heroSettings.height.mobile or '1/1' }}"
+      class="relative w-full bg-fixed bg-center bg-no-repeat bg-cover bg-{{ heroSettings.imagePosition }} {{ heroSettings.height.mobile or 'h-1/1' }} sm:{{ heroSettings.height.desktop or heroSettings.height.mobile or 'h-1/1' }}"
       style="background-image: url({{ heroSettings.image }});"
     >
 

@@ -15,7 +15,7 @@ seo: # SEO values are used for OG and will overwrite 'title' and 'excerpt' above
 hero: graphic # options: carousel, graphic, video, split (text & image)
 heroSettings:
   height:
-    mobile: 9/10 # options = 1/1 (default = full screen), 1/2, 1/3, 3/4, 9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
+    mobile: h-9/10 # options = 1/1 (default = full screen), 1/2, 1/3, 3/4, 9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
     desktop: # leave blank to inherit "mobile" height (default = full screen)
   headingText: Is your data lost in the forest, or the trees?
   headingTextColor: # text-gray-800 # default = text-white (can use any TailwindCSS text-[color]-[xxx])
