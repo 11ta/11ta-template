@@ -7,12 +7,6 @@
       </a>
     {% endif %}
 
-    {% if author.socialMedia.facebook %}
-      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Facebook" href="{{ author.socialMedia.facebook | url }}">
-        {% svg "facebook", "Facebook logo", "mx-2 h-10 w-10 fill-current" %}
-      </a>
-    {% endif %}
-
     {% if author.socialMedia.github %}
       <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on GitHub" href="{{ author.socialMedia.github | url }}">
         {% svg "github", "Github logo", "mx-2 h-10 w-10 fill-current" %}

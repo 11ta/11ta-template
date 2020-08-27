@@ -9,12 +9,6 @@
           </a>
         {% endif %}
 
-        {% if social.facebook %}
-          <a alt="Link to Facebook" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.facebook | url }}">
-            {% svg "facebook", "Facebook logo", "mx-2 h-6 w-6 fill-current" %}
-          </a>
-        {% endif %}
-
         {% if social.github %}
           <a alt="Link to GitHub" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ social.github | url }}">
             {% svg "github", "Github logo", "mx-2 h-6 w-6 fill-current" %}

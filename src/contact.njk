@@ -56,29 +56,29 @@ seo:
     </div>
     <div class="px-4 py-16 bg-white sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
       <div class="max-w-lg mx-auto lg:max-w-none">
-        <form action="#" method="POST" class="grid grid-cols-1 row-gap-6">
+        <form name="contact" action="/thankyou" method="POST" data-netlify="true" class="grid grid-cols-1 row-gap-6">
           <div>
             <label for="full_name" class="sr-only">Full name</label>
             <div class="relative rounded-md shadow-sm">
-              <input id="full_name" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Full name">
+              <input id="full_name" name="name" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Full name">
             </div>
           </div>
           <div>
             <label for="email" class="sr-only">Email</label>
             <div class="relative rounded-md shadow-sm">
-              <input id="email" type="email" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Email">
+              <input id="email" name="email" type="email" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Email">
             </div>
           </div>
           <div>
             <label for="phone" class="sr-only">Phone</label>
             <div class="relative rounded-md shadow-sm">
-              <input id="phone" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Phone">
+              <input id="phone" name="phone" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Phone">
             </div>
           </div>
           <div>
             <label for="message" class="sr-only">Message</label>
             <div class="relative rounded-md shadow-sm">
-              <textarea id="message" rows="4" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Message"></textarea>
+              <textarea id="message" name="message" rows="4" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Message"></textarea>
             </div>
           </div>
           <div class="">
