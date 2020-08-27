@@ -16,7 +16,7 @@ module.exports = {
 	},
 	theme: {
 		extend: {
-			// created my own heights so can specify when using a carousel
+			// created my own heights so can specify for Heros
 			height: (theme) => ({
 				'1/2': '50vh',
 				'3/4': '75vh',
