@@ -6,7 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-	@apply font-semibold;
+	@apply font-semibold text-gray-700;
 }
 h1 {
 	@apply text-4xl;
@@ -26,6 +26,9 @@ h5 {
 p {
 	@apply mt-4;
 }
+.wrapper > p:first-of-type {
+	@apply p-0 m-0;
+}
 
 ol {
 	@apply ml-8 list-decimal;
@@ -41,10 +44,6 @@ code {
 }
 pre code {
 	@apply bg-transparent border-0 rounded-none;
-}
-
-.wrapper > p:first-of-type {
-	@apply p-0 m-0;
 }
 
 @tailwind components;

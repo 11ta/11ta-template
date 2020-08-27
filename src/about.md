@@ -1,14 +1,15 @@
 ---
-title: About Title
+title: About Title # will be overwritten by SEO.title below
 date: 2020-08-05
 layout: page
-meta: about
 eleventyNavigation:
   key: main
   title: About # as it will appear in the nav
   order: 2 # order to display in the nav
 seo:
-  title: About Us
+  title: About Us # overrides 'title' above on both Page and META
+  description:
+  image:
 ---
 
 {% wrap "text-red-500 bg-red-100 mt-4 border border-red-300 rounded-lg underline" %}
@@ -31,7 +32,7 @@ No! I was ashamed to be SEEN with you. I like being with you. That's why you alw
 2. What's Spanish for "I know you speak English?"
 3. What's Spanish for "I know you speak English?"
 
-### There's so many poorly chosen words in that sentence.
+### No… but I'd like to be asked!
 
 I don't understand the question, and I won't respond to it. Oh, you're gonna be in a coma, all right. I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense.
 

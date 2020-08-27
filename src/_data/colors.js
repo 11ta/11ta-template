@@ -1,5 +1,11 @@
 module.exports = {
 	/**
+	 * ===== Global Site Text Color =====
+	 */
+	siteTextDefault: 'text-gray-900',
+	siteTextCustom: '',
+
+	/**
 	 * "xxxDefault" key values should generally be kept for reference so:
 	 *    1. You can easily revert to the original colors if needed.
 	 *    2. You can use them as reference for customizing your color set.
@@ -76,6 +82,10 @@ module.exports = {
 
 	/**
 	 * ===== Headings: H1, H2, H3, H4, H5, H6
+	 *
+	 * NOTE: These are for headings controled in templates.
+	 * For content headings added by Editors in .md files,
+	 * manage those in /src/assets/css/tailwind.css
 	 */
 	headingsDefault: 'text-teal-500',
 	headingsCustom: 'text-gray-700',
