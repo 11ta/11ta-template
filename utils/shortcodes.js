@@ -1,10 +1,10 @@
 const markdownIt = require('markdown-it')
 
 module.exports = {
-	svg: function (name, desc, classes, viewBox) {
+	svg: function (name, desc, classes, location, viewBox) {
 		const viewBoxAttr = viewBox ? `viewBox="${viewBox}"` : ''
 		return `<svg ${viewBoxAttr} class="${classes}" aria-describedby="symbol-${name}-desc" aria-labelledby="symbol-${name}-desc" role="group">
-                <desc id="symbol-${name}-desc">${desc}</desc>
+                <desc id="symbol-${name}-desc-${location}">${desc}</desc>
                 <use xlink:href="#symbol-${name}"></use>
             </svg>`
 	},
