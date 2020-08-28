@@ -15,7 +15,7 @@
 
   {% if structure.g_showShareLinkedIn %}
     <div>
-      <a rel="noreferrer" aria-label="Share on LinkedIn" id="linkedin" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on LinkedIn" href="https://linkedin.com/shareArticle?mini=true&title={{ title | urlencode }}&url={{ absolutePageUrl }}" target="_blank">
+      <a rel="noreferrer" aria-label="Share on LinkedIn" id="sharevialinkedin" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on LinkedIn" href="https://linkedin.com/shareArticle?mini=true&title={{ title | urlencode }}&url={{ absolutePageUrl }}" target="_blank">
         {% svg "linkedin", "LinkedIn logo", "mx-2 h-6 w-6 fill-current" %}
       </a>
     </div>
@@ -23,7 +23,7 @@
 
   {% if structure.g_showSharePinterest %}
     <div>
-      <a rel="noreferrer" aria-label="Share on Pinterest" id="pinterest" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url={{ absolutePageUrl | urlencode }}&description=&media=" target="_blank">
+      <a rel="noreferrer" aria-label="Share on Pinterest" id="shareviapinterest" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url={{ absolutePageUrl | urlencode }}&description=&media=" target="_blank">
         {% svg "pinterest", "Pinterest logo", "mx-2 h-6 w-6 fill-current" %}
       </a>
     </a>
@@ -32,7 +32,7 @@
 
 {% if structure.g_showShareReddit %}
   <div>
-    <a rel="noreferrer" aria-label="Share on Reddit" id="reddit" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on Reddit"  href="https://reddit.com/submit?url={{ absolutePageUrl }}&title={{ title | urlencode }}"  target="_blank">
+    <a rel="noreferrer" aria-label="Share on Reddit" id="shareviareddit" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on Reddit"  href="https://reddit.com/submit?url={{ absolutePageUrl }}&title={{ title | urlencode }}"  target="_blank">
       {% svg "reddit", "Reddit logo", "mx-2 h-6 w-6 fill-current" %}
     </a>
   </div>
@@ -40,7 +40,7 @@
 
 {% if structure.g_showShareTwitter %}
   <div>
-    <a rel="noreferrer" aria-label="Share on Twitter" id="twitter" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on Twitter"  href="https://twitter.com/share?text={{ title | urlencode }}&url={{ absolutePageUrl }}">
+    <a rel="noreferrer" aria-label="Share on Twitter" id="shareviatwitter" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on Twitter"  href="https://twitter.com/share?text={{ title | urlencode }}&url={{ absolutePageUrl }}">
       {% svg "twitter", "Twitter logo", "mx-2 h-6 w-6 fill-current" %}
     </a>
   </div>
@@ -48,7 +48,7 @@
 
 {% if structure.g_showShareEmail %}
   <div>
-    <a rel="noreferrer"  aria-label="Share via email" id="email" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share via Email"  href="mailto:?subject={{ title | urlencode }}&body={{ absolutePageUrl }}">
+    <a rel="noreferrer"  aria-label="Share via email" id="shareviaemail" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share via Email"  href="mailto:?subject={{ title | urlencode }}&body={{ absolutePageUrl }}">
       {% svg "email", "Send email", "mx-2 h-6 w-6 fill-current" %}
     </a>
   </div>
