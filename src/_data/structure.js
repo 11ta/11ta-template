@@ -17,6 +17,9 @@ module.exports = {
 
 	/**
 	 * Set alignment of Pagination links on Post Listing views.
+	 * NOTE: Pagination tabs don't display if not required.
+	 * This is controled in the Frontmatter of the listing template
+	 *
 	 * Options = start, center, end
 	 */
 	g_alignPagination: 'center',
