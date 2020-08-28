@@ -1,6 +1,7 @@
 const { DateTime } = require('luxon')
 const slugify = require('slugify')
 const { postcss } = require('cssnano')
+const cleanCSS = require('clean-css')
 
 module.exports = {
 	/**
@@ -72,5 +73,12 @@ module.exports = {
 	 */
 	getPostsByAuthor: (posts, key) => {
 		return posts.filter((a) => a.data.author === key)
+	},
+
+	/**
+	 * Minify and inline CSS per a tip on 11ty: https://www.11ty.dev/docs/quicktips/inline-css/
+	 */
+	cssmin: (code) => {
+		return new cleanCSS({}).minify(code).styles
 	},
 }

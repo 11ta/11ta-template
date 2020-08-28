@@ -7,7 +7,7 @@
           {# Display Social icons from _data/social.json  #}
           {% for site in social %}
             {% if site.url %}
-              <a alt="Link to {{ site.platform }}" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ site.url | url }}">
+              <a aria-label="Link to {{ site.platform }}" alt="Link to {{ site.platform }}" class="hover:{{ colors.socialIconsHoverCustom or colors.socialIconsHoverDefault }}" href="{{ site.url | url }}">
                 {% svg site.platform, site.platform, "mx-2 h-6 w-6 fill-current" %}
               </a>
             {% endif %}

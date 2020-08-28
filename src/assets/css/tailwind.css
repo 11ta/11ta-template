@@ -24,7 +24,7 @@ h5 {
 	@apply text-lg;
 }
 p > a {
-	@apply font-medium text-indigo-500;
+	@apply font-medium text-indigo-700;
 }
 p {
 	@apply mt-4;

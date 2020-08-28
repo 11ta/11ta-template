@@ -67,4 +67,4 @@ And there are several **Shortcodes** _(both single and paired)_ and **Filters** 
 - Wrapper for managing blocks with background images, borders, etc.
 - YouTube embed that allows you to control add an iFrame title (required for accessability), width/height ratio, and set the start time in "m:ss" format so you don't have to manually count the seconds.
 
-#### This is all in Version 1... Lots more to come!
+**This is all in Version 1... Lots more to come!**

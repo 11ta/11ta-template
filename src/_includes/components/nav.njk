@@ -5,11 +5,11 @@
       <div class="flex">
         <div class="flex items-center flex-shrink-0">
           <!-- small logo hidden on md and above -->
-          <a href="/" class="block md:hidden {{ colors.logoCustom.mobile or colors.logoDefault.mobile }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Mobile Logo">
+          <a aria-label="Mobile Logo" href="/" class="block md:hidden {{ colors.logoCustom.mobile or colors.logoDefault.mobile }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Mobile Logo">
             {% svg "logo_mobile",   "The Mobile Logo",   "fill-current w-16 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" %}
           </a>
           <!-- large logo hidden on small, block on md -->
-          <a href="/" class="hidden md:block {{ colors.logoCustom.desktop or colors.logoDefault.desktop }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Desktop Logo">
+          <a aria-label="Desktop Logo" href="/" class="hidden md:block {{ colors.logoCustom.desktop or colors.logoDefault.desktop }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Desktop Logo">
             {% svg "logo",   "The Logo",   "fill-current h-8 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" %}
           </a>
         </div>
