@@ -20,23 +20,28 @@ eleventyComputed:
   <div class="mb-4">
     {{ author.bio }}
   </div>
-  {% if author.company.website %}
-    <a class="block hover:underline" target="_blank" href="{{ author.company.website | url }}" alt="author.company.websiteLabel website">{{ author.company.websiteLabel }} ↗️</a>
-  {% endif %}
 
-  {% if author.personal.website1 %}
-    <a class="block hover:underline" target="_blank" href="{{ author.personal.website1 | url }}" alt="author.personal.website1Label website">{{ author.personal.website1Label }} ↗️</a>
-  {% endif %}
+  {# Display array of Author's company websites  #}
+  <div>
+    {% for sites in author.companyWebsites %}
+      {% if sites.url %}
+        <a class="block hover:underline" target="_blank" href="{{ sites.url | url }}" alt="sites.label website">{{ sites.label }} ↗️</a>
+      {% endif %}
+    {% endfor %}
+  </div>
 
-  {% if author.personal.website2 %}
-    <a class="block hover:underline" target="_blank" href="{{ author.personal.website2 | url }}" alt="author.personal.website2Label website">{{ author.personal.website2Label }} ↗️</a>
-  {% endif %}
-
-  {% if author.personal.website3 %}
-    <a class="block hover:underline" target="_blank" href="{{ author.personal.website3 | url }}" alt="author.personal.website3Label website">{{ author.personal.website3Label }} ↗️</a>
-  {% endif %}
+  {# Display array of Author's personal websites  #}
+  <div>
+    {% for sites in author.personalWebsites %}
+      {% if sites.url %}
+        <a class="block hover:underline" target="_blank" href="{{ sites.url | url }}" alt="sites.label website">{{ sites.label }} ↗️</a>
+      {% endif %}
+    {% endfor %}
+  </div>
 
 </div>
+
+{# Display Author's social platform links  #}
 {% include "components/authorsocial.njk" %}
 {% endcols %}
 {% endcolumns %}

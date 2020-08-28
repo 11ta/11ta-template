@@ -4,20 +4,27 @@
 		"name": "Shane Robinson",
 		"image": "/assets/images/authors/shane-robinson.jpg",
 		"bio": "Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. ",
-		"company": {
-			"website": "https://www.barefeetstudios.com",
-			"websiteLabel": "Bare Feet Studios, LLC",
-			"email": "shane@barefeetstudios.com"
-		},
-		"personal": {
-			"website1": "https://www.shanerobinson.com",
-			"website1Label": "ShaneRobinson.com",
-			"website2": "https://linkist.netlify.app/",
-			"website2Label": "Linkist: Control your own links",
-			"website3": "https://sr-100daysofcode.netlify.app/",
-			"website3Label": "#100DaysOfCode project minisite",
-			"email": "shane@shanerobinson.com"
-		},
+		"companyWebsites": [
+			{
+				"url": "https://www.barefeetstudios.com",
+				"label": "Bare Feet Studios, LLC",
+				"email": "shane@barefeetstudios.com"
+			}
+		],
+		"personalWebsites": [
+			{
+				"url": "https://www.shanerobinson.com",
+				"label": "ShaneRobinson.com"
+			},
+			{
+				"url": "https://linkist.netlify.app/",
+				"label": "Linkist: Control your own links"
+			},
+			{
+				"url": "https://sr-100daysofcode.netlify.app/",
+				"label": "#100DaysOfCode project minisite"
+			}
+		],
 		"socialMedia": {
 			"dribble": "",
 			"github": "https://github.com/shanerobinson/",
@@ -33,20 +40,27 @@
 		"name": "Roxanne Darling",
 		"image": "/assets/images/authors/roxanne-darling.jpg",
 		"bio": "Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. ",
-		"company": {
-			"website": "https://www.barefeetstudios.com",
-			"websiteLabel": "Bare Feet Studios, LLC",
-			"email": "roxanne@barefeetstudios.com"
-		},
-		"personal": {
-			"website1": "https://www.roxannedarling.com",
-			"website1Label": "RoxanneDarling.com",
-			"website2": "https://www.inthetransition.com",
-			"website2Label": "In The Transition",
-			"website3": "https://www.iamfortheloveofnature.com/",
-			"website3Label": "I Am: For The Love Of Nature",
-			"email": "rox@roxannedarling.com"
-		},
+		"companyWebsites": [
+			{
+				"url": "https://www.barefeetstudios.com",
+				"label": "Bare Feet Studios, LLC",
+				"email": "roxanne@barefeetstudios.com"
+			}
+		],
+		"personalWebsites": [
+			{
+				"url": "https://www.roxannedarling.com/",
+				"label": "RoxanneDarling.com"
+			},
+			{
+				"url": "https://www.inthetransition.com/",
+				"label": "In The Transition"
+			},
+			{
+				"url": "https://www.iamfortheloveofnature.com/",
+				"label": "I Am: For The Love Of Nature"
+			}
+		],
 		"socialMedia": {
 			"dribble": "",
 			"github": "",
