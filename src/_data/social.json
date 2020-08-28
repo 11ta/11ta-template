@@ -1,9 +1,34 @@
-{
-	"dribbble": "",
-	"github": "https://www.github.com/",
-	"instagram": "https://www.instagram.com/",
-	"linkedin": "http://www.linkedin.com/",
-	"pinterest": "https://www.pinterest.com/",
-	"twitter": "https://www.twitter.com/",
-	"youtube": false
-}
+[
+	{
+		"platform": "### Comment: Make sure to add SVG icon in /assets/svg with same name as 'platform' ###",
+		"url": ""
+	},
+	{
+		"platform": "dribbble",
+		"url": ""
+	},
+	{
+		"platform": "github",
+		"url": "https://www.github.com/shanerobinson"
+	},
+	{
+		"platform": "instagram",
+		"url": "https://www.instagram.com/shanerobinson"
+	},
+	{
+		"platform": "linkedin",
+		"url": "https://www.linkedin.com/in/rshanerobinson"
+	},
+	{
+		"platform": "pinterest",
+		"url": "https://www.pinterest.com/shanerobinson"
+	},
+	{
+		"platform": "twitter",
+		"url": "https://www.twitter.com/shanerobinson"
+	},
+	{
+		"platform": "youtube",
+		"url": ""
+	}
+]
