@@ -216,8 +216,8 @@ module.exports = {
 		text: 'text-teal-500',
 	},
 	footerCustom: {
-		barBg: '',
-		text: 'text-gray-700',
+		barBg: 'bg-gray-900',
+		text: 'text-gray-100',
 	},
 
 	/**
@@ -227,8 +227,8 @@ module.exports = {
 	socialIconsDefault: 'text-teal-400',
 	socialIconsHoverDefault: 'text-teal-500',
 
-	socialIconsCustom: 'text-gray-400',
-	socialIconsHoverCustom: 'text-gray-500',
+	socialIconsCustom: 'text-gray-100',
+	socialIconsHoverCustom: 'text-gray-200',
 
 	// Generally I use borders as replacements for <hr> tags.
 	// You may need to update Layouts and Templates if you want to use these
