@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: page
 pagination: 
   data: authors
   size: 1
@@ -8,8 +8,6 @@ permalink: "/authors/{{ author.slug }}/"
 eleventyComputed:
   title: "{{ author.name }}"
 ---
-
-<h1 class=" mb-4 {{ colors.headingsCustom or colors.headingsDefault }}">{{ title }}</h1>
 
 {% columns %}
 {% cols "flex-none" %}
