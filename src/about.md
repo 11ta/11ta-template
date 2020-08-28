@@ -12,7 +12,7 @@ seo:
   image:
 ---
 
-{% wrap "text-red-500 bg-red-100 mt-4 border border-red-300 rounded-lg underline" %}
+{% wrap "bg-red-100 mt-4 border border-red-300 rounded-lg underline" %}
 
 Text courtesy [Fillerama.io](http://fillerama.io/)
 
