@@ -131,7 +131,7 @@ module.exports = {
 	buttonDefault: {
 		text: 'text-white',
 		textHover: 'text-white',
-		bg: 'bg-teal-600',
+		bg: 'bg-teal-700',
 		bgHover: 'bg-teal-700',
 		border: 'border-teal-900',
 	},
@@ -217,7 +217,7 @@ module.exports = {
 	},
 	footerCustom: {
 		barBg: '',
-		text: 'text-gray-600',
+		text: 'text-gray-700',
 	},
 
 	/**
