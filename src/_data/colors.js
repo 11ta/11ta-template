@@ -96,8 +96,8 @@ module.exports = {
 	 * Manage the global Footer Icons below in the Footer section
 	 */
 	authorDefault: {
-		name: 'text-gray-600',
-		date: 'text-gray-500',
+		name: 'text-gray-700',
+		date: 'text-gray-700',
 		socialIcons: 'text-gray-500',
 		socialIconsHover: 'text-gray-600',
 	},
@@ -177,8 +177,8 @@ module.exports = {
 	 * === Previous / Next Post Detail Links
 	 */
 	prevNextDefault: {
-		text: 'text-gray-500',
-		textHover: 'text-gray-600',
+		text: 'text-gray-700',
+		textHover: 'text-gray-800',
 		bg: '',
 		bgHover: '',
 	},
@@ -194,8 +194,8 @@ module.exports = {
 	 * You can disable these globally in /src/_data/structure.js
 	 */
 	tagPillDefault: {
-		text: 'text-gray-500',
-		textHover: 'text-gray-600',
+		text: 'text-gray-700',
+		textHover: 'text-gray-800',
 		bg: 'bg-gray-200',
 		bgHover: 'bg-gray-300',
 	},

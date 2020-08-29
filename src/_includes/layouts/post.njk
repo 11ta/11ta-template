@@ -5,7 +5,7 @@ layout: base
 <article class="{{ structure.g_pageWidth }}">
 
   <h1 class="{{ colors.headingsCustom or colors.headingsDefault }}">{{ seo.title or title }}</h1>
-  <div class="text-sm text-gray-500">
+  <div class="text-sm {{ colors.authorCustom.date or colors.authorDefault.date}}">
     <time datetime="{{ date | machineDate }}">
       {{ date | readableDate }}
     </time>
