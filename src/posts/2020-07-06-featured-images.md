@@ -24,7 +24,7 @@ Just create an appropriate image for the Feature space above and place a relativ
 
 For example, this page's frontmatter:
 
-```js
+```yaml
 title: Featured Images
 date: 2020-07-06T17:44:03.000Z
 excerpt: Easily add featured images (heros) just like in Wordpress.
