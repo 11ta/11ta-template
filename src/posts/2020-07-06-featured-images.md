@@ -11,6 +11,7 @@ images: # relative to /src/assets/images/
   feature: 2020/07/featured-image.jpg
   thumb: 2020/07/featured-image.jpg
   slide:
+  align: object-left # object-center (default) - other options at https://tailwindcss.com/docs/object-position
 tags:
   - featured-image
   - hero

@@ -33,7 +33,7 @@
       below the nav and outside the default wrapper below. #}
       {% if images.feature %}
         <figure class="w-screen h-48 md:h-1/3">
-          <img class="object-cover w-full h-full" src="/assets/images/{{ images.feature }}" alt="{{ title }}">
+          <img class="object-cover {{ images.align }} w-full h-full" src="/assets/images/{{ images.feature }}" alt="{{ title }}">
         </figure>
       {% endif %}
 
