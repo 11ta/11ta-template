@@ -117,8 +117,8 @@ module.exports = {
 	 * Manage display in /src/_data/structure.js
 	 */
 	socialShareDefault: {
-		color: 'text-gray-500',
-		hover: 'text-gray-600',
+		color: 'text-gray-700',
+		hover: 'text-gray-800',
 	},
 	socialShareCustom: {
 		color: '',
