@@ -14,6 +14,11 @@ images: # relative to /src/assets/images/
 tags:
   - featured-image
   - hero
+  - shortcodes
+  - another
+  - some
+  - more
+  - again
 ---
 
 Just like in Wordpress, it's easy to add a **Featured Image** to display at the top of the page.

@@ -23,35 +23,37 @@ layout: base
   {{ layoutContent | safe }}
 
   {% if structure.g_showTagPills or structure.g_showSocialShareIcons %}
-    <div class="flex flex-row justify-between pt-4 mt-12 border-t ">
+    <div class="pt-4 mt-12 border-t md:justify-between md:items-start md:flex md:flex-row">
 
       {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
-      {% if structure.g_showTagPills %}
-        <div class="{{ colors.borderCustom.color or colors.borderDefault.color }} ">
+      <div class="md:w-1/2">
+        {% if structure.g_showTagPills %}
           {% include "components/tagpills.njk" %}
-        </div>
-      {% endif %}
+        {% endif %}
+      </div>
 
       {# If you don't want to display Social Share icons, disable them in /src/_data/structure.js  #}
-      {% if structure.g_showSocialShareIcons %}
-        {% include "components/socialshare.njk" %}
-      {% endif %}
+      <div class="px-2 pt-6 md:pt-2 md:w-1/2 md:flex md:justify-end">
+        {% if structure.g_showSocialShareIcons %}
+          {% include "components/socialshare.njk" %}
+        {% endif %}
+      </div>
 
     </div>
   {% endif %}
 
   {# ===== Previous and Next =====  #}
-  <div class="flex flex-row justify-between  border-t mt-4 pt-4 {{ colors.borderCustom.color or colors.borderDefault.color }} ">
+  <div class="border-t mt-4 pt-4 {{ colors.borderCustom.color or colors.borderDefault.color }} md:flex-row md:flex md:justify-between">
     {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.post | getNextCollectionItem(page) %}
 
-    <div class="">
+    <div class="py-2 text-center sm:py-0">
       {% if previousPost %}
         <a class="{{ colors.prevNextCustom.text or colors.prevNextDefault.text }} hover:{{ colors.prevNextCustom.text or colors.prevNextDefault.textHover }}" href="{{ previousPost.url }}">← {{ previousPost.data.title }}</a>
       {% endif %}
     </div>
 
-    <div class="">
+    <div class="py-2 text-center sm:py-0">
       {% if nextPost %}
         <a class="{{ colors.prevNextCustom.text or colors.prevNextDefault.text }} hover:{{ colors.prevNextCustom.text or colors.prevNextDefault.textHover }}" href="{{ nextPost.url }}">{{ nextPost.data.title }} →</a>
       {% endif %}

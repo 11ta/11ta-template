@@ -1,9 +1,9 @@
-<div>
+<div class="">
   {% for tag in tags %}
     {# Knock out the first iteration of the loop to drop the default "post" tag generated in `posts/posts.json`. #}
     {# If there's a better/easier way of doing this, please LMK.  #}
     {% if not loop.first %}
-      <div class="inline-block mx-2 mr-4">
+      <div class="inline-block p-2">
         <a href="/tags/{{ tag | slug }}/" class="px-4 py-2 text-sm {{ colors.tagPillCustom.text or colors.tagPillDefault.text }} {{ colors.tagPillCustom.bg or colors.tagPillDefault.bg }}  rounded-full hover:{{ colors.tagPillCustom.textHover or colors.tagPillDefault.textHover }}  hover:{{ colors.tagPillCustom.bgHover or colors.tagPillDefault.bgHover }}">{{ tag }}</a>
       </div>
     {% endif %}
