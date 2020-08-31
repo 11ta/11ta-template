@@ -25,6 +25,12 @@
       </a>
     {% endif %}
 
+    {% if author.socialMedia.piedpiper %}
+      <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Pinterest" href="{{ author.socialMedia.piedpiper | url }}">
+        {% svg "piedpiper", "Pied Piper logo", "mx-2 h-10 w-10 fill-current" %}
+      </a>
+    {% endif %}
+
     {% if author.socialMedia.pinterest %}
       <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ title }} on Pinterest" href="{{ author.socialMedia.pinterest | url }}">
         {% svg "pinterest", "Pinterest logo", "mx-2 h-10 w-10 fill-current" %}
