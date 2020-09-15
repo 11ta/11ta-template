@@ -30,8 +30,10 @@
             {{ post.data.excerpt }}
             {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
             {% if structure.g_showTagPills %}
-              {% set tags = post.data.tags %}
-              {% include "components/tagpills.njk" %}
+              <div class="pt-2">
+                {% set tags = post.data.tags %}
+                {% include "components/tagpills.njk" %}
+              </div>
             {% endif %}
           </p>
         </div>

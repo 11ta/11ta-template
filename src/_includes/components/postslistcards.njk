@@ -12,11 +12,6 @@
             </div>
             <div class="flex flex-col justify-between flex-1 p-6 bg-white">
               <div class="flex-1">
-                {% if structure.g_showTagPills %}
-                  {% set tags = post.data.tags %}
-                  {% include "components/tagpills.njk" %}
-                {% endif %}
-
                 <a href="{{ post.url | url }}" class="block">
                   <h3 class="mt-2 text-xl font-semibold leading-7 {{ colors.headingsCustom or colors.headingsDefault }}">
                     {{ post.data.title }}
@@ -26,6 +21,15 @@
                   </p>
                 </a>
               </div>
+
+              {# Found the TagPills are too much for this layout. Uncomment them below if you want to display them. #}
+              {# <div class="flex-1 bg-gray-100">
+                {% if structure.g_showTagPills %}
+                  {% set tags = post.data.tags %}
+                  {% include "components/tagpills.njk" %}
+                {% endif %}
+              </div> #}
+
               {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
               {# Display the Author block if structure.g_showAuthors is true (default) #}
               {% if structure.g_showAuthors %}

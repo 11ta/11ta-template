@@ -1,48 +1,42 @@
-<section>
-  <div class="container px-5 pt-8 pb-24 mx-auto">
-    <div class="grid -mx-4 -my-8 lg:grid-cols-2">
+<section class="mt-16">
+  <div class="relative px-4 pb-20 bg-gray-50 sm:px-6 lg:pb-28 lg:px-8">
+    <div class="relative mx-auto max-w-7xl">
+      <div class="grid gap-5 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
+        {% for post in postslist | reverse %}
 
-      {% for post in postslist | reverse %}
-
-        <div class="px-4 py-8">
-          <div class="h-full">
-            <div class="pl-6">
-              {# Don't display the Post Date if structure.g_showAuthors is true 
-                  which will display a date in the authordate component below #}
-              {% if not structure.g_showAuthors %}
-                <p class="text-sm leading-5 {{ colors.authorCustom.date or colors.authorDefault.date }}">
-                  <time datetime="{{ post.date | dateToFormat("yyyy-MM-dd") }}">{{ post.date | dateToFormat("LLL dd, yyyy") }}</time>
-                </p>
-              {% endif %}
-
-              <h3 class="mt-0 {{ colors.headingsCustom or colors.headingsDefault }}">
-                <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-              </h3>
-              <div class="leading-relaxed">
-                <p>
-                  {{ post.data.excerpt }}
-                  {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
-                  {% if structure.g_showTagPills %}
-                    {% set tags = post.data.tags %}
-                    {% include "components/tagpills.njk" %}
-                  {% endif %}
-                </p>
-                {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
-                {# Display the Author block if structure.g_showAuthors is true (default) #}
-                {% if structure.g_showAuthors %}
-                  {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
-                  {% if post.data.author %}
-                    {% set postAuthor = authors | getAuthor(post.data.author) %}
-                    {% include "components/authordate.njk" %}
-                  {% endif %}
+          <div class="flex flex-col ">
+            <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+              <div class="flex-1">
+                <a href="{{ post.url | url }}" class="block">
+                  <h3 class="mt-2 text-xl font-semibold leading-7 {{ colors.headingsCustom or colors.headingsDefault }}">
+                    {{ post.data.title }}
+                  </h3>
+                  <p class="mt-3 text-base leading-6 text-gray-500">
+                    {{ post.data.excerpt }}
+                  </p>
+                </a>
+              </div>
+              <div class="flex-1">
+                {% if structure.g_showTagPills %}
+                  {% set tags = post.data.tags %}
+                  {% include "components/tagpills.njk" %}
                 {% endif %}
               </div>
+
+              {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
+              {# Display the Author block if structure.g_showAuthors is true (default) #}
+              {% if structure.g_showAuthors %}
+                {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
+                {% if post.data.author %}
+                  {% set postAuthor = authors | getAuthor(post.data.author) %}
+                  {% include "components/authordate.njk" %}
+                {% endif %}
+              {% endif %}
             </div>
           </div>
-        </div>
 
-      {% endfor %}
-
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
