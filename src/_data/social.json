@@ -28,6 +28,10 @@
 		"url": "https://www.pinterest.com/shanerobinson"
 	},
 	{
+		"platform": "rss",
+		"url": "/feed.xml"
+	},
+	{
 		"platform": "twitter",
 		"url": "https://www.twitter.com/shanerobinson"
 	},
