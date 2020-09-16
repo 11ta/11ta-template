@@ -12,7 +12,7 @@ h1 {
 	@apply text-4xl;
 }
 h2 {
-	@apply text-3xl;
+	@apply pt-12 text-3xl;
 }
 h3 {
 	@apply text-2xl;
@@ -40,7 +40,7 @@ ul {
 	@apply ml-8 list-disc;
 }
 blockquote {
-	@apply pl-4 mx-4 my-4 border-l-4 border-gray-500;
+	@apply pl-4 m-4 border-l-4 border-gray-500;
 }
 code {
 	@apply p-1 text-sm bg-gray-200 border border-gray-300 rounded-lg;

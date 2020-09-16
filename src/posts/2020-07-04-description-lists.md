@@ -13,12 +13,14 @@ images: # relative to /src/assets/images/
   slide:
 tags:
   - shortcodes
-  - description-list
+  - wrap
 ---
 
-This post uses shortcode `wrap` and **Description List** shortcodes `dl` _(description list)_, `dt` _(description term)_, and `dd` _(description description)_.
+This post uses the paired shortcode `wrap` and **Description List** paired shortcodes `dl` _(description list)_, `dt` _(description term)_, and `dd` _(description description)_.
 
-The `wrap` shortcode is optional and is used to wrap the entire list in a rounded border with a gray-200 background.
+The `wrap` paired shortcode used in the exmaple is optional and is used to wrap the entire list in a rounded border with a gray-200 background.
+
+> :bulb: See the `/src/utils/paired-shortcodes.js` file for full description and usage examples.
 
 {% wrap "px-2 mt-8 mb-12 rounded-lg pb-2 border border-gray-300 bg-gray-200" %}
 
