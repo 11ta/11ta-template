@@ -28,7 +28,9 @@
 
           {# Display Post Excerpt if set 'true' in /src/_data/structure.js:g_showExcerpt  #}
           {% if structure.g_showExcerpt %}
-            {% include "components/excerpt.njk" %}
+            <div class="{{ colors.excerptCustom or colors.excerptDefault }}">
+              {{ post.data.excerpt }}
+            </div>
           {% endif %}
 
           {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
