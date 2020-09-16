@@ -6,9 +6,13 @@ module.exports = {
 	siteTextCustom: '',
 
 	/**
-	 * "xxxDefault" key values should generally be kept for reference so:
-	 *    1. You can easily revert to the original colors if needed.
-	 *    2. You can use them as reference for customizing your color set.
+	 * Reason for both 'xxxDefault' and 'xxxCustom'
+	 *  I could have only provided ONE set of settings. But knowing how users
+	 *  actually use a system, at some point they'll want to revert to the
+	 *  original color set...or at least reference it.
+	 *  Providing a 'Default' and 'Custom' set allows you to keep the original
+	 *  colors for future reference while setting 'Custom' overrides for entire
+	 *  sets or individual elements.
 	 *
 	 *    If you don't care about keeping them as reference, you can just
 	 *      change the "xxxDefault" key values.
