@@ -11,4 +11,13 @@ module.exports = {
 	authorEmail: 'shane@shanerobinson.com',
 	twitterSite: '@shanerobinson',
 	twitterCreator: '@shanerobinson',
+	address: {
+		street: '123 Main Street',
+		city: 'Anytown',
+		state: 'KZ',
+		zip: '54321',
+		phoneDisplay: '+1 (123) 456-7890',
+		phoneCall: '+11234567890',
+		email: 'hello@domain.com',
+	},
 }
