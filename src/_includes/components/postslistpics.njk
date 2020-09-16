@@ -1,9 +1,9 @@
-<section class="mt-24">
+<section class="mt-12">
   <div class="container px-5 pb-24 mx-auto">
     <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4">
 
       {% for post in postslist | reverse %}
-        <div class="p-4 mb-6 md:w-1/2 xl:w-1/3 sm:mb-0">
+        <div class="p-4 pb-12 md:w-1/2 xl:w-1/3 sm:mb-0">
           <div class="relative flex h-48 overflow-hidden border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
             <a class="" href="{{ post.url | url }}">
               <img class="absolute inset-0 object-cover {{ post.data.images.align }} w-full h-full" src={% if post.data.images.thumb %}"/assets/images/{{ post.data.images.thumb }}"{% else %}"/assets/images/david-kovalenko-G85VuTpw6jg-unsplash.jpg"{% endif %} alt="">
@@ -26,16 +26,18 @@
             {% endif %}
           </small>
 
-          <p class="text-base leading-relaxed">
-            {{ post.data.excerpt }}
-            {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
-            {% if structure.g_showTagPills %}
-              <div class="pt-2">
-                {% set tags = post.data.tags %}
-                {% include "components/tagpills.njk" %}
-              </div>
-            {% endif %}
-          </p>
+          {# Display Post Excerpt if set 'true' in /src/_data/structure.js:g_showExcerpt  #}
+          {% if structure.g_showExcerpt %}
+            {% include "components/excerpt.njk" %}
+          {% endif %}
+
+          {# If you don't want to display the Tag Pills, set "false" in /src/_data/structure.js #}
+          {% if structure.g_showTagPills %}
+            <div class="pt-2">
+              {% set tags = post.data.tags %}
+              {% include "components/tagpills.njk" %}
+            </div>
+          {% endif %}
         </div>
       {% endfor %}
 

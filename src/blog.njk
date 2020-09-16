@@ -1,6 +1,7 @@
 ---
 title: Blog
 date: 2020-08-05
+description: The Posts List display is controled in /src/_data/structure.js and ships with 4 options.
 layout: page
 eleventyNavigation:
   key: main
@@ -8,13 +9,36 @@ eleventyNavigation:
   order: 3    # order to display in the nav
 seo:
   title: From the blog...
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quisquam numquam atque consequatur. Porro quibusdam alias blanditiis a ipsa unde cupiditate, hic accusantium, fugit excepturi explicabo voluptatibus mollitia esse enim!"
+  description: 
 pagination:
   data: collections.post 
   size: 12
   reverse: true
   alias: posts
 ---
+
+<p>
+The Posts List display below is controled in <kbd>/src/_data/structure.js</kbd> and ships with 4 options by default in the <strong>postListStyle</strong> setting. 
+</p>
+<p>
+Currently setting = <strong>postListStyle: <em>{{ structure.postListStyle }}</em>
+  </strong>
+</p>
+<p>
+Defaults are:
+<ol>
+    <li>
+      <strong>postslist</strong> = Just text links with Title, Date/Author, Excerpt</li>
+    <li>
+      <strong>postslistsimple</strong> = Block-style Grid with Title, Date/Author Image, Tag Pills, Excerpt</li>
+    <li>
+      <strong>postslistpics</strong> = Block-style Grid with Post Thumbnail, Title, Date/Author, Tag Pills, Excerpt</li>
+    <li>
+      <strong>postslistcards</strong> = Cards with Border, Dropshadow, Post Thumbnail, Title, Date/Author Image, Excerpt</li>
+  </ol>
+</p>
+<p>You can easily modify existing or add your own by duplicating existing to use as base for modifications.</p>
+<hr class="mt-8">
 
 {% set postslist = posts | reverse %}
 

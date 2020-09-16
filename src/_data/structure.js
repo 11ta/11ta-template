@@ -25,6 +25,13 @@ module.exports = {
 	g_alignPagination: 'center',
 
 	/**
+	 * ===== Display Post Excerpt on Posts List =====
+	 * Set below to 'false' to globally disable Excerpt on the Posts List (/blog)
+	 *
+	 */
+	g_showExcerpt: true,
+
+	/**
 	 * ===== Display Author Blocks =====
 	 * Set below to 'false' to globally disable Author Avatars
 	 * and links to author's page on Post/Blog listings.
@@ -67,9 +74,10 @@ module.exports = {
 	 * You can currently set one of the following 3 options for how
 	 * the posts/blog listing page displays.
 	 * The templates are located in /src/includes/components/[name].njk
-	 *  1. postslist = Simple listing w/ Title, Date, Tags, Author (if set)
-	 *  2. postslistpics = Same as above with thumbnails
-	 *  3. postslistcards = Nice cards with Author/Date block
+	 *  1. postslist = Text link list, just Title, Date/Author, excerpt
+	 *  2. postslistsimple = Simple listing w/ Title, Date, Tags, Author (if set)
+	 *  3. postslistpics = Same as above with thumbnails
+	 *  4. postslistcards = Nice cards with Author/Date block
 	 *
 	 * NOTE: If you want to make your own list layouts, you can duplicate
 	 *        any of the existing layouts and modify as you want.

@@ -1,37 +1,28 @@
 <section class="mt-12">
   <div class="relative px-4 pb-20 sm:px-6 lg:pb-28 lg:px-8">
     <div class="relative mx-auto max-w-7xl">
-      <div class="grid gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
+      <div class="grid gap-5 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
         {% for post in postslist | reverse %}
 
-          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-            <div class="flex-shrink-0">
-              <a href="{{ post.url | url }}">
-                <img class="object-cover {{ post.data.images.align }} w-full h-48" src={% if post.data.images.thumb %}"/assets/images/{{ post.data.images.thumb }}"{% else %}"/assets/images/david-kovalenko-G85VuTpw6jg-unsplash.jpg"{% endif %} alt="{{ title }} Thumbnail">
-              </a>
-            </div>
+          <div class="flex flex-col ">
             <div class="flex flex-col justify-between flex-1 p-6 bg-white">
               <div class="flex-1">
                 <a href="{{ post.url | url }}" class="block">
                   <h3 class="mt-2 text-xl font-semibold leading-7 {{ colors.headingsCustom or colors.headingsDefault }}">
                     {{ post.data.title }}
                   </h3>
-
                   {# Display Post Excerpt if set 'true' in /src/_data/structure.js:g_showExcerpt  #}
                   {% if structure.g_showExcerpt %}
                     {% include "components/excerpt.njk" %}
                   {% endif %}
-
                 </a>
               </div>
-
-              {# Found the TagPills are too much for this layout. Uncomment them below if you want to display them. #}
-              {# <div class="flex-1 bg-gray-100">
+              <div class="flex-1">
                 {% if structure.g_showTagPills %}
                   {% set tags = post.data.tags %}
                   {% include "components/tagpills.njk" %}
                 {% endif %}
-              </div> #}
+              </div>
 
               {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
               {# Display the Author block if structure.g_showAuthors is true (default) #}
