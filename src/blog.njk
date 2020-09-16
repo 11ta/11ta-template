@@ -17,13 +17,17 @@ pagination:
   alias: posts
 ---
 
+<h3 class="mt-6">Setting Posts Lists Display</h3>
+
 <p>
-The Posts List display below is controled in <kbd>/src/_data/structure.js</kbd> and ships with 4 options by default in the <strong>postListStyle</strong> setting. 
+The Posts List display below is controled in <code>/src/_data/structure.js</code> and ships with 4 Component options by default in the <strong>postListStyle</strong> setting. Full instructions are in the comments in <code>/src/_data/structure.js:90</code>.
 </p>
+
 <p>
-Currently setting = <strong>postListStyle: <em>{{ structure.postListStyle }}</em>
-  </strong>
+Currently setting = <code>postListStyle: <em>{{ structure.postListStyle }}</em>
+  </code>
 </p>
+
 <p>
 Defaults are:
 <ol>
@@ -37,7 +41,20 @@ Defaults are:
       <strong>postslistcards</strong> = Cards with Border, Dropshadow, Post Thumbnail, Title, Date/Author Image, Excerpt</li>
   </ol>
 </p>
-<p>You can easily modify existing or add your own by duplicating existing to use as base for modifications.</p>
+
+<p>You can find these components in <code>/src/_includes/components/</code> and easily modify them or add your own by duplicating them to use as base for modifications.</p>
+<hr class="mt-8">
+
+<h3 class="mt-6">Pagination</h3>
+<p>
+Pagination is built in and currently set to display <code>{{ pagination.size }}</code> entries. <br>
+Pagination will NOT display if there are fewer entries than set in the frontmater, <code>pagination.size</code>. 
+</p>
+
+<p>
+This template = <code>/src/blog.njk</code>.
+</p>
+
 <hr class="mt-8">
 
 {% set postslist = posts | reverse %}

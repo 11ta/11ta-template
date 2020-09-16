@@ -4,5 +4,7 @@ layout: page
 title: All Tags...
 ---
 
-{% set tags = collections.tagList %}
-{% include "components/tagpills.njk" %}
+<div class="mt-6">
+  {% set tags = collections.tagList %}
+  {% include "components/tagpills.njk" %}
+</div>

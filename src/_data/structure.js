@@ -71,9 +71,9 @@ module.exports = {
 
 	/**
 	 * ===== Post List Style Options =====
-	 * You can currently set one of the following 3 options for how
+	 * You can currently set one of the following 4 options for how
 	 * the posts/blog listing page displays.
-	 * The templates are located in /src/includes/components/[name].njk
+	 * The templates are located in /src/_includes/components/[name].njk
 	 *  1. postslist = Text link list, just Title, Date/Author, excerpt
 	 *  2. postslistblocks = Simple listing w/ Title, Date, Tags, Author (if set)
 	 *  3. postslistthumbs = Same as above with thumbnails
@@ -94,6 +94,11 @@ module.exports = {
 	 * You can set the Tag List style separately from Post List above.
 	 * If you want Tag List to use the same layout as Post List,
 	 * you can leave it empty below.
+	 *
+	 * For example, given tag "frontmatter", the Tag List would be found at
+	 * http://localhost:8080/tags/frontmatter/ during development and
+	 * https://your-domain/tags/frontmatter/ in production
+	 *
 	 */
 	tagListStyle: '',
 }

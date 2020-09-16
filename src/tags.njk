@@ -12,8 +12,23 @@ permalink: /tags/{{ tag }}/
 eleventyComputed:
   title: Entries Tagged "{{ tag }}”
 ---
+
+<h3 class="mt-6">Setting Tags List Display</h3>
+
+<p>
+The Tags List display below is controled in <code>/src/_data/structure.js</code> in the same way as on <a href="/blog">the blog list</a> and ships with 4 Component options by default in the <strong>postListStyle</strong> setting. Full instructions are in the comments in <code>/src/_data/structure.js:103</code>.
+</p>
+
+<p>
+Currently setting = <code>tagListStyle: <em>{{ structure.tagListStyle or structure.postListStyle }}</em></code>
+</p>
+
+<p>This template = <code>/src/tags.njk</code></p>
+
+<hr class="mt-8">
+
 {# 
-  We set this to 'postslist' so we can use the same list templates as the blog 
+  We set this to 'postslist' so we can use the same postslist components as the /blog 
 #}
   {% set postslist = collections[tag] %}
 
