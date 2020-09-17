@@ -33,8 +33,8 @@
       {# If any frontmatter includes images.feature, insert it at the top of the page, 
       below the nav and outside the default wrapper below. #}
       {% if images.feature %}
-        <figure class="w-screen h-48 md:h-1/3">
-          <img class="object-cover {{ images.align }} w-full h-full" src="/assets/images/{{ images.feature }}" alt="{{ title }}">
+        <figure class="w-screen {{ images.height or "h-48 md:h-1/3" }}">
+          <img class="object-cover {{ images.align }} w-full h-full" src="{{ images.feature if 'http' in images.feature else "/assets/images/" + images.feature }}" alt="{{ title }}">
         </figure>
       {% endif %}
 
