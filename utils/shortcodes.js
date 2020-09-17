@@ -1,6 +1,10 @@
 const markdownIt = require('markdown-it')
 
 module.exports = {
+	/**
+	 * I still have to add instructions for this SVG shortcode
+	 *
+	 */
 	svg: function (name, desc, classes, location, viewBox) {
 		const viewBoxAttr = viewBox ? `viewBox="${viewBox}"` : ''
 		return `<svg ${viewBoxAttr} class="${classes}" aria-describedby="symbol-${name}-desc" aria-labelledby="symbol-${name}-desc" role="group">
@@ -9,6 +13,11 @@ module.exports = {
             </svg>`
 	},
 
+	/**
+	 * I honestly don't remember why I added this markdown shortcode?
+	 * I'm guessing at one point I wanted to use markdown in a .njk file (for some reason)
+	 * and so added this markdown processor shortcode.
+	 */
 	markdown: function (value) {
 		if (!value) {
 			return ''
