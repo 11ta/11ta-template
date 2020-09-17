@@ -38,11 +38,24 @@ eleventyComputed:
       {% endif %}
     {% endfor %}
   </div>
-
 </div>
 
 {# Display Author's social platform links  #}
-{% include "components/authorsocial.njk" %}
+<div class="flex items-center mt-4 md:justify-between">
+  <div class="flex justify-center md:order-2 {{ colors.authorCustom.socialIcons or colors.authorDefault.socialIcons }}">
+    {% for sites in author.socialWebsites %}
+      {% if sites.url %}
+        <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ author.name }} on {{ sites.label }}" href="{{ sites.url | url }}">
+          {% svg sites.label,
+          "mx-2 h-10 w-10",
+          sites.label ~ " logo",
+          "author" %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
 {% endcols %}
 {% endcolumns %}
 

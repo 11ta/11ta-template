@@ -28,10 +28,10 @@ module.exports = {
    * and are hardcoded in the layouts to provide unique values as required by Lighthouse.
    * 
    * Used in Layouts:
-   *  /src/_includes/components/nav.njk for the logos
-   *  /src/_includes/components/socialshare.njk 
+   *  /src/authors.njk 
    *  /src/_includes/partials/footer.njk 
-   *  
+   *  /src/_includes/components/socialshare.njk 
+   *  /src/_includes/components/nav.njk (for the logos)
 	 */
 	svg: function (name, classes, desc, location) {
 		const nameAttr = name ? name : 'piedpiper'

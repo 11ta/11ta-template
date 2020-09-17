@@ -6,35 +6,59 @@
 		"bio": "Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. ",
 		"companyWebsites": [
 			{
-				"url": "https://www.barefeetstudios.com",
 				"label": "Bare Feet Studios, LLC",
+				"url": "https://www.barefeetstudios.com",
 				"email": "shane@barefeetstudios.com"
 			}
 		],
 		"personalWebsites": [
 			{
-				"url": "https://www.shanerobinson.com",
-				"label": "ShaneRobinson.com"
+				"label": "ShaneRobinson.com",
+				"url": "https://www.shanerobinson.com"
 			},
 			{
-				"url": "https://linkist.netlify.app/",
-				"label": "Linkist: Control your own links"
+				"label": "Linkist: Control your own links",
+				"url": "https://linkist.netlify.app/"
 			},
 			{
-				"url": "https://sr-100daysofcode.netlify.app/",
-				"label": "#100DaysOfCode project minisite"
+				"label": "#100DaysOfCode project minisite",
+				"url": "https://sr-100daysofcode.netlify.app/"
 			}
 		],
-		"socialMedia": {
-			"dribble": "",
-			"github": "https://github.com/shanerobinson/",
-			"instagram": "https://instagram.com/shanerobinson/",
-			"linkedin": "http://www.linkedin.com/in/rshanerobinson",
-			"piedpiper": "https://piedpiper.com/shanerobinson/",
-			"pinterest": "https://pinterest.com/shanerobinson/",
-			"twitter": "https://twitter.com/shanerobinson/",
-			"youtube": ""
-		}
+		"socialWebsites": [
+			{
+				"label": "dribbble",
+				"url": ""
+			},
+			{
+				"label": "github",
+				"url": "https://github.com/shanerobinson"
+			},
+			{
+				"label": "instagram",
+				"url": "https://instagram.com/shanerobinson"
+			},
+			{
+				"label": "linkedin",
+				"url": "https://linkedin.com/in/rshanerobinson"
+			},
+			{
+				"label": "piedpiper",
+				"url": "https://piedpiper.com/shanerobinson"
+			},
+			{
+				"label": "pinterest",
+				"url": "https://pinterest.com/shanerobinson"
+			},
+			{
+				"label": "twitter",
+				"url": "https://twitter.com/shanerobinson"
+			},
+			{
+				"label": "youtube",
+				"url": ""
+			}
+		]
 	},
 	{
 		"slug": "roxanne-darling",
@@ -43,34 +67,58 @@
 		"bio": "Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. ",
 		"companyWebsites": [
 			{
-				"url": "https://www.barefeetstudios.com",
 				"label": "Bare Feet Studios, LLC",
+				"url": "https://www.barefeetstudios.com",
 				"email": "roxanne@barefeetstudios.com"
 			}
 		],
 		"personalWebsites": [
 			{
-				"url": "https://www.roxannedarling.com/",
-				"label": "RoxanneDarling.com"
+				"label": "RoxanneDarling.com",
+				"url": "https://www.roxannedarling.com/"
 			},
 			{
-				"url": "https://www.inthetransition.com/",
-				"label": "In The Transition"
+				"label": "In The Transition",
+				"url": "https://www.inthetransition.com/"
 			},
 			{
-				"url": "https://www.iamfortheloveofnature.com/",
-				"label": "I Am: For The Love Of Nature"
+				"label": "I Am: For The Love Of Nature",
+				"url": "https://www.iamfortheloveofnature.com/"
 			}
 		],
-		"socialMedia": {
-			"dribble": "",
-			"github": "",
-			"instagram": "https://instagram.com/roxannedarling/",
-			"linkedin": "http://www.linkedin.com/in/roxannedarling",
-			"piedpiper": "",
-			"pinterest": "https://pinterest.com/roxannedarling/",
-			"twitter": "https://twitter.com/roxannedarling/",
-			"youtube": ""
-		}
+		"socialWebsites": [
+			{
+				"label": "dribbble",
+				"url": ""
+			},
+			{
+				"label": "github",
+				"url": ""
+			},
+			{
+				"label": "instagram",
+				"url": "https://instagram.com/roxannedarling"
+			},
+			{
+				"label": "linkedin",
+				"url": "https://linkedin.com/in/roxannedarling"
+			},
+			{
+				"label": "piedpiper",
+				"url": ""
+			},
+			{
+				"label": "pinterest",
+				"url": "https://pinterest.com/roxannedarling"
+			},
+			{
+				"label": "twitter",
+				"url": "https://twitter.com/roxannedarling"
+			},
+			{
+				"label": "youtube",
+				"url": ""
+			}
+		]
 	}
 ]
