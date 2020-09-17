@@ -27,6 +27,13 @@ module.exports = {
 	 * vtitle  = "Your title for this video" : required : default = "YouTube Video"
 	 * vstart  = "4:20" : optional
 	 * vratio  = "w:h" : optional : default = "16:9"
+	 *
+	 * Usage in .md file
+	 *  {% youtube "1234567", "Your Custom Title", "1:23", "4:3" %}
+	 *
+	 * If you'd like the default title = "YouTube Video", start at the beginning, and 16:9 ratio,
+	 * you only need the following:
+	 *  {% youtube "1234567" %}
 	 */
 	youtube: function (vid, vtitle, vstart, vratio) {
 		const slug = vid ? vid : 'oHg5SJYRHA0'
