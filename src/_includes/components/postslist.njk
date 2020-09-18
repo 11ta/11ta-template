@@ -6,8 +6,8 @@
           <div class="pb-10">
             {# Post publish Date and Author display conditional  #}
             <div class="text-sm {{ colors.authorCustom.date or colors.authorDefault.date }}">
-              <time datetime="{{ post.data.date | machineDate }}">
-                {{ post.data.date | readableDate }}
+              <time datetime="{{ post.data.date | dateToFormat("yyyy-MM-dd") }}">
+                {{ post.data.date | dateToFormat("dd LLL yyyy") }}
               </time>
               {# Global disable author display in /src/_data/structure.js #}
               {% if structure.g_showAuthors %}

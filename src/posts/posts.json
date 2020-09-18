@@ -1,6 +1,6 @@
 {
 	"layout": "post",
-	"permalink": "/{{ page.date | dateToPermalink }}/{{ title | slugify }}/index.html",
+	"permalink": "/{{ page.date | dateToFormat('yyyy/MM/dd') }}/{{ title | slugify }}/index.html",
 	"tags": ["post"],
 	"author": "{{ meta.author }}"
 }

@@ -6,8 +6,8 @@ layout: base
 
   <h1 class="{{ colors.headingsCustom or colors.headingsDefault }}">{{ seo.title or title }}</h1>
   <div class="text-sm {{ colors.authorCustom.date or colors.authorDefault.date}}">
-    <time datetime="{{ date | machineDate }}">
-      {{ date | readableDate }}
+    <time datetime="{{ date | dateToFormat("yyyy-MM-dd") }}">
+      {{ date | dateToFormat("dd LLL yyyy") }}
     </time>
     {# Global disable author display in /src/_data/structure.js #}
     {% if structure.g_showAuthors %}

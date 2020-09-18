@@ -5,7 +5,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdownIt = require('markdown-it')
 const markdownItEmoji = require('markdown-it-emoji')
 
-const collections = require('./utils/collections.js')
+// const collections = require('./utils/collections.js')
 const filters = require('./utils/filters.js')
 const shortcodes = require('./utils/shortcodes.js')
 const pairedshortcodes = require('./utils/paired-shortcodes.js')
@@ -67,6 +67,8 @@ module.exports = function (eleventyConfig) {
 	/**
 	 * Collections?
 	 * ============================
+	 *
+	 * TAGLIST used from the official eleventy-base-blog  https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
 	 */
 	eleventyConfig.addCollection('tagList', function (collection) {
 		let tagSet = new Set()
@@ -120,8 +122,11 @@ module.exports = function (eleventyConfig) {
 
 	/**
 	 * Set custom markdown library instance...
+	 * and support for Emojis in markdown...
 	 * ...because why not control our .MD files and have Emojis built in?
 	 * @link https://www.11ty.dev/docs/languages/markdown/#optional-set-your-own-library-instance
+	 * @link https://www.npmjs.com/package/markdown-it-emoji
+	 *
 	 */
 	let options = {
 		html: true,

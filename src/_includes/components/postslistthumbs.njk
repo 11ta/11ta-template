@@ -14,7 +14,7 @@
           </h3>
 
           <small>
-            <time datetime="{{ post.date | machineDate }}">{{ post.date | readableDate }}</time>
+            <time datetime="{{ post.date | dateToFormat("yyyy-MM-dd") }}">{{ post.date | dateToFormat("dd LLL yyyy") }}</time>
             {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
             {# Display the Author block if structure.g_showAuthors is true (default) #}
             {% if structure.g_showAuthors %}
