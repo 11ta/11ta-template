@@ -16,6 +16,7 @@ tags:
   - youtube
   - video
   - embed
+  - shortcodes
 ---
 
 This system ships with a custom YouTube Embed shortcode that makes it easy to embed as many videos in your markdown posts/pages as you like.

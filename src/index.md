@@ -18,8 +18,8 @@ heroSettings:
     mobile: # options = h-1/1 (default = full screen), h-1/2, h-1/3, h-3/4, h-9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
     desktop: # leave blank to inherit "mobile" height (default = full screen)
   headingText: Is your data lost in the forest, or the trees?
-  headingTextColor: # text-gray-800 # default = text-white (can use any TailwindCSS text-[color]-[xxx])
-  subheadingText: This is some pithy text that explains why you should hire us without reading any further. Or is it farther?
+  headingTextColor: text-gray-800 # default = text-white (can use any TailwindCSS text-[color]-[xxx])
+  subheadingText: This is some pithy text that explains why you should hire us without reading any further... Or is it farther?
   subheadingTextColor: # Leave empty to inherit headingTextColor or default (text-white) or use any text-[color]-[xxx]
   buttonText: Contact Us... # no button generated if left blank
   buttonURL: /contact/ # full url required. Example: https://thisdomain.com/somepage/
@@ -36,35 +36,77 @@ heroSettings:
       - /assets/images/home/8.jpg
       - /assets/images/home/9.jpg
   video:
-    url: /assets/video/forestfire.mp4 # local relative to site root, or full https://... if remote?
-    opacityMobile: 50 # options 25, 50, 75, 100 (default)
-    opacityDesktop: # options 25, 50, 75, 100 (default)
+    url: /assets/video/pixabay-john-macdougall.mp4 # local relative to site root, or full https://... if remote?
+    opacityMobile: 25 # options 25, 50, 75, 100 (default)
+    opacityDesktop: 50 # options 25, 50, 75, 100 (default)
 ---
 
 We set out to build a starter project template for [11ty](https://11ty.dev '11ty Static Site Generator') that has [TailwindCSS](https://tailwindcss.com 'TailwindCSS Utility-First CSS Framework') and [Alpine.js](https://github.com/alpinejs/alpine 'Alpine.js : Think of it like Tailwind for JavaScript') baked in.
 
-It turned into a text-based CMS for managing small websites with simple text configuration files in the `/src/_data` directory.
+Version 1.0.0 morphed into a fully-configurable text-based CMS for managing small websites with easy-to-manage configuration files in the `/src/_data` directory.
+
+**The [Blog Posts](/blog/) cover the main features of the system.**
+
+## Install and Deploy
+
+Hop over to the GitHub repo and follow the instructions in the README.
+
+
+
+## :fire: Credit :fire: 
+
+First and foremost, I want to credit the [11ty](https://11ty.dev) community, especially those listed in the [starter projects](https://www.11ty.dev/docs/starter/)!
+
+Specifically, the following starter projects helped me understand the power and flexibility of 11ty and from their examples I was able to extend the functionality to build this system:
+
+- :fire: [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) by [Zach Leatherman](https://twitter.com/zachleat)
+- :fire: [eastslopestudio-eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) by [Ryan Scherler](https://twitter.com/ryanscherler)
+- :fire: [eleventyone](https://github.com/philhawksworth/eleventyone) by [Phil Hawksworth](https://twitter.com/philhawksworth)
+- :fire: [eleventy-tailwind-alpinejs-starter](https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter) by [Greg Wolanski](https://gregwolanski.com/)
+- :fire: [jet](https://github.com/marcamos/jet) by [Marc Amos](https://twitter.com/marcamos)
+
+## Features
+
+In addition to the Structural, Color, and Frontmatter contols listed below, the system also has the following features baked in:
+
+- **SIAB** *(site in a box)* ... Update the site settings in `/src/_data/meta.js`, content on the `index.md` and `about.md` pages, replace the `/src/posts/*.md` files with your own content and your new site is fully functional and ready to publish!
+- **100 Lighthouse scores** across the site's Pages and Posts ( *not just on pages with a little text and no images* :wink: ).
+- ATOM feed at [/feed.xml](/feed.xml).
+- Inlined CSS for the [Prism Okaidia](https://prismjs.com/) syntax highlight theme.
+- Webpack to bundle up [Alpine.js](https://github.com/alpinejs/alpine) and any custom JS you want to include.
+- Purged CSS and Minified source on production builds.
+- [Custom 404](/asdf) which lists 10 most recent Posts.
+- Contact form automagically works if [hosted at Netlify](https://docs.netlify.com/forms/setup/).
+- ...other things I'm probably forgetting but will add when I think of them.
+
+## Structural and Color Controls
 
 You can completely control:
 
-- Multiple Authors in `/src/_data/authors.json`
-- Colors of the NavBar, Headings, Buttons, etc. in `/src/_data/colors.js`
-- Site META and defaults in `/src/_data/meta.js`
-- Social Links in the Footer in `/src/_data/social.json`
-- And site-wide structures like max-width and display of different content blocks in `/src/_data/structure.js`
+- Multiple Authors in `/src/_data/authors.json`.
+- FOUR native [Posts List](/blog/) and [Tags List](/tags/frontmatter/) layout in the `src/_data/structures.js` file via, `postListStyle:` and `tagListStyle:` keys.
+- Colors of the NavBar, Headings, Buttons, etc. in `/src/_data/colors.js`.
+- Site META and defaults in `/src/_data/meta.js`.
+- Social Links icons in the Footer in `/src/_data/social.json`.
+- Social Share icons in the `/src/_includes/components/socialshare.njk` file.
+- And site-wide structures like max-width and display toggles of different content blocks in `/src/_data/structure.js`.
 
-The **Frontmatter** in files also allows you to manage:
+## Frontmatter Controls
 
-- Heros _(like on this home page)_ of types: **carousel, graphic, video,** and **split**.
-  - Actually, you can add those Hero types to **ANY** Page or Post just be usign the Frontmatter.
-- Featured Images _(full-width banners at the top of the page just like in Wordpress)_.
-- SEO overrides for OG and Twitter cards for Title, Description, and Images.
+The **Frontmatter** in your .md Posts and Pages files also allows you to manage:
 
-And there are several **Shortcodes** _(both single and paired)_ and **Filters** to allow Editors to manage:
+- [Heros](/2020/09/11/manage-hero-graphics-carousels-splits-and-video/) _(like on this home page)_ of types: **carousel, graphic, video,** and **split**. *(Actually, you can add those Hero types to **ANY** Page or Post just be usign the Frontmatter.)*
+- [Featured Images](/2020/09/06/featured-post-images/) _(full-width banners at the top of the page just like in Wordpress)_.
+- [SEO overrides for OG and Twitter cards](/2020/09/10/site-meta-og-and-twitter-cards/) for Title, Description, and Images.
 
-- Multi-column content _(without writing CSS)_
-- Description Lists for content like FAQs, Lists, etc.
-- Wrapper for managing blocks with background images, borders, etc.
-- YouTube embed that allows you to control add an iFrame title (required for accessability), width/height ratio, and set the start time in "m:ss" format so you don't have to manually count the seconds.
+## Native Shortcodes for Content Controls
 
-**This is all in Version 1... Lots more to come!**
+There are several **Shortcodes** _(both single and paired)_ and **Filters** to allow Editors to manage:
+
+- [Multi-column content](/2020/09/03/wrap-and-columns-shortcodes/) _(without writing CSS)_.
+- [SVG Sprites](/2020/09/09/svg-shortcode/) controls across the system and for inserting in .md Posts and Pages files. 
+- Custom Date display formats at the point of use.
+- [Description Lists](/2020/09/04/description-list-shortcodes/) for content like FAQs, Lists, etc.
+- [Wrapper](/2020/09/03/wrap-and-columns-shortcodes/) for managing blocks with background images, borders, etc.
+- [YouTube embed shortcode](/2020/09/08/youtube-video-embed/) that allows you to control and add an iFrame title *(required for accessability and Lighthouse scores)*, width/height ratio, and set the start time in "m:ss" format so you don't have to manually count the seconds.
+
