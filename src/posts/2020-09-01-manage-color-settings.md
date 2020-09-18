@@ -1,15 +1,15 @@
 ---
 title: Color Settings
-date: 2020-07-01T17:44:03.000Z
+date: 2020-09-01T17:44:03.000Z
 author: shane-robinson
 excerpt: It's simple to customize almost all the colors.
 seo:
   title:
   description:
-  image: 2020/07/colors.jpg
+  image: 2020/09/colors.jpg
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/colors.jpg
+  thumb: 2020/09/colors.jpg
   slide:
 tags:
   - colors

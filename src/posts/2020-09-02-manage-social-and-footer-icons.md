@@ -1,15 +1,15 @@
 ---
 title: Managing Social Share, Author, and Footer Icons
-date: 2020-07-02T17:44:03.000Z
+date: 2020-09-02T17:44:03.000Z
 author: shane-robinson
 excerpt: You can choose to display, or not, all the icons.
 seo:
   title:
   description:
-  image: 2020/07/social.jpg
+  image: 2020/09/social.jpg
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/social.jpg
+  thumb: 2020/09/social.jpg
   slide:
 tags:
   - social
@@ -18,7 +18,7 @@ tags:
   - structure
 ---
 
-As easily as you can [manage colors](/2020/07/01/color-settings/), you can also control the display, or not, the SVG icons around the site.
+As easily as you can [manage colors](/2020/09/01/color-settings/), you can also control the display, or not, the SVG icons around the site.
 
 > NOTE: We are a [Font Awesome Pro](https://fontawesome.com/) member and the SVGs in the `/src/assets/svg` directory are Font Awesome SVGs that have been modified to work specifically with [TailwindCSS](https://tailwindcss.com 'TailwindCSS Utility-First CSS Framework') and the customizations of this system. If you want to add your own SVGs you'll probably need to modify them and please be sure to **follow the attribution license**.
 
@@ -64,7 +64,7 @@ The same is true for the social links in the `/src/_data/authors.json` where you
 
 ## Adding SVG Icons to Content in Your .md Posts
 
-The post [SVG - Shortcode](/2020/07/09/svg-shortcode/) goes into detai on how to manage all the SVG Sprites in the system and how to add them to your Post and Pages markdown content via a Shortcode.
+The post [SVG - Shortcode](/2020/09/09/svg-shortcode/) goes into detai on how to manage all the SVG Sprites in the system and how to add them to your Post and Pages markdown content via a Shortcode.
 
 ## Post Social Share Icons
 

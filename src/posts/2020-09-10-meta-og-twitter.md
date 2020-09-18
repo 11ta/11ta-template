@@ -1,15 +1,15 @@
 ---
 title: Site META, OG, and Twitter Cards
-date: 2020-07-10T17:44:03.000Z
+date: 2020-09-10T17:44:03.000Z
 excerpt: Manage Site META data, open graph, and Twitter Card content at the Post and Page level
 author: shane-robinson
 seo:
   title:
   description:
-  image: 2020/07/twitter-card-image.png
+  image: 2020/09/twitter-card-image.png
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/twitter-card-image.png
+  thumb: 2020/09/twitter-card-image.png
   align: # object-center (default) - other options at https://tailwindcss.com/docs/object-position
   height: # optional. Default = h-48 md:h-1/3
 tags:
@@ -64,16 +64,16 @@ Take for example this very page's Frontmatter:
 ```yaml
 ---
 title: Site META, OG, and Twitter Cards
-date: 2020-07-10T17:44:03.000Z
+date: 2020-09-10T17:44:03.000Z
 excerpt: Manage Site META data, open graph, and Twitter Card content at the Post and Page level
 author: shane-robinson
 seo:
   title:
   description:
-  image: 2020/07/twitter-card-image.png
+  image: 2020/09/twitter-card-image.png
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/twitter-card-image.png
+  thumb: 2020/09/twitter-card-image.png
   align: # object-center (default) - other options at https://tailwindcss.com/docs/object-position
   height: # optional. Default = h-48 md:h-1/3
 tags:
@@ -87,11 +87,11 @@ tags:
 
 ```
 
-The `seo: image: 2020/07/twitter-card-image.png` will be used as the Twitter card and Open Graph image if you view the HTML source of this page.
+The `seo: image: 2020/09/twitter-card-image.png` will be used as the Twitter card and Open Graph image if you view the HTML source of this page.
 
 You can also see that same image is used for the `images: thumb:`. I thought about having a single image but thought some editors may want to have separate control over individual images used for OG and Twitter and the thumbnail displayed on the Posts Listing and Tags Listing pages.
 
-> NOTE: There's an entire post about [managing Feature Post Images](/2020/07/06/featured-post-images/) which you can see if left blank in this Post.
+> NOTE: There's an entire post about [managing Feature Post Images](/2020/09/06/featured-post-images/) which you can see if left blank in this Post.
 
 ## Fallback Data
 

@@ -1,15 +1,15 @@
 ---
 title: Full Frontmatter Example
-date: 2020-07-07T17:44:03.000Z
+date: 2020-09-07T17:44:03.000Z
 excerpt: There is a LOT of control options in the frontmatter.
 author: shane-robinson
 seo:
   title:
   description:
-  image: 2020/07/index-frontmatter.jpg
+  image: 2020/09/index-frontmatter.jpg
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/index-frontmatter.jpg
+  thumb: 2020/09/index-frontmatter.jpg
   slide:
 tags:
   - frontmatter

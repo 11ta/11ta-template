@@ -1,15 +1,15 @@
 ---
 title: Blockquotes - Shortcodes
-date: 2020-07-05T17:44:03.000Z
+date: 2020-09-05T17:44:03.000Z
 excerpt: Blockquotes are easy, even in Markdown. But what if you want to style them?
 author: shane-robinson
 seo:
   title:
   description:
-  image: 2020/07/blockquote.jpg
+  image: 2020/09/blockquote.jpg
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/blockquote.jpg
+  thumb: 2020/09/blockquote.jpg
   slide:
 tags:
   - blockquote

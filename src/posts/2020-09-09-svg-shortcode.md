@@ -1,15 +1,15 @@
 ---
 title: SVG - Shortcode
-date: 2020-07-09T17:44:03.000Z
+date: 2020-09-09T17:44:03.000Z
 excerpt: Easily add and customize SVGs in your markdown posts.
 author: shane-robinson
 seo:
   title:
   description:
-  image: 2020/07/svg-shortcode.svg
+  image: 2020/09/svg-shortcode.svg
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/svg-shortcode.svg
+  thumb: 2020/09/svg-shortcode.svg
   align: # object-center (default) - other options at https://tailwindcss.com/docs/object-position
   height: # optional. Default = h-48 md:h-1/3
 tags:
@@ -23,7 +23,7 @@ There's an entire SVG display and management features built-in to this system. I
 
 ## SVG Sprites : Managing Display, Colors, & Links
 
-> NOTE: The post, [Managing Social Share, Author, and Footer Icons](/2020/07/02/managing-social-share-author-and-footer-icons/) goes into a bit of detail on how to manage those elements.
+> NOTE: The post, [Managing Social Share, Author, and Footer Icons](/2020/09/02/managing-social-share-author-and-footer-icons/) goes into a bit of detail on how to manage those elements.
 
 SVG Sprites live in the `/src/assets/svg/` directory and are currently used in this system on:
 

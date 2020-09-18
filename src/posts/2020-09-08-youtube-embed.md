@@ -1,15 +1,15 @@
 ---
 title: YouTube Video Embed
-date: 2020-07-08T17:44:03.000Z
+date: 2020-09-08T17:44:03.000Z
 excerpt: Easily embed YouTube videos in your markdown posts.
 author: shane-robinson
 seo:
   title:
   description:
-  image: 2020/07/youtube-embed.jpg
+  image: 2020/09/youtube-embed.jpg
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/youtube-embed.jpg
+  thumb: 2020/09/youtube-embed.jpg
   align: object-left # object-center (default) - other options at https://tailwindcss.com/docs/object-position
   height: h-64 md:h-1/3 # optional. Default = h-48 md:h-1/3
 tags:

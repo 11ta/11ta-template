@@ -1,15 +1,15 @@
 ---
 title: Description List - Shortcodes
-date: 2020-07-04T17:44:03.000Z
+date: 2020-09-04T17:44:03.000Z
 author: roxanne-darling
 excerpt: A custom 11ty shortcode allows you to create great looking and function Description Lists.
 seo:
   title:
   description:
-  image: 2020/07/dl.jpg
+  image: 2020/09/dl.jpg
 images: # relative to /src/assets/images/
   feature:
-  thumb: 2020/07/dl.jpg
+  thumb: 2020/09/dl.jpg
   slide:
 tags:
   - shortcodes

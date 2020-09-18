@@ -59,7 +59,7 @@ module.exports = {
 	 * Also you may want to adjust the TailwindCSS colors and paddings attached
 	 * to the 'dt' and 'dd' shortcodes for your specific display requirements.
 	 *
-	 * Example post: /2020/07/04/description-list-shortcodes/
+	 * Example post: /2020/09/04/description-list-shortcodes/
 	 *
 	 * Usage in .md files
 	 *  {% dl %}
