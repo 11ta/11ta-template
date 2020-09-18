@@ -3,7 +3,7 @@
 		"slug": "shane-robinson",
 		"name": "Shane Robinson",
 		"image": "/assets/images/authors/shane-robinson.jpg",
-		"bio": "Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. ",
+		"bio": "I built this...and a lot of other things over the past 23+ years as a founder, developer, sys admin, and database architect. I taught myself to code in B.A.S.I.C. in 1983/4 on a Commodore 64 hooked up to my 13 in. black/white TV. Then we built large CMS systems in the 90s using PERL, SSI, and eventually the early versions of PHP. This was all years before Wordpress even existed. Fast forward to 2017 when I semi-retired from coding to spend more time on my Art practice. In early 2020 I wanted to throw a small ecommerce website together and planned to build it in HUGO (like I previously had with my own personal website.) After some research I found 11ty and knew I finally had a set of tools to quickly build secure, fast, fun-to-code websites. Not finding exactly what I wanted in a starter project/template, I built this to use as a template for turning out small sites and migrating several of our Wordpress sites to static.",
 		"companyWebsites": [
 			{
 				"label": "Bare Feet Studios, LLC",
@@ -64,7 +64,7 @@
 		"slug": "roxanne-darling",
 		"name": "Roxanne Darling",
 		"image": "/assets/images/authors/roxanne-darling.jpg",
-		"bio": "Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. Some bio information here about this author. ",
+		"bio": "Roxanne Darling loves to travel, speak in public, be on and in the ocean, and is giving up working really long hours. She walks the line between technology and communication with a ballerina’s balance (she used to dance at the Palo Alto Dance Theatre and is a certified yoga instructor) and has a way of inspiring even luddites to try new things with technology. Please let it be known though, perhaps as a graduate of UC Berkeley, she is not a bystander or interested in the status quo!",
 		"companyWebsites": [
 			{
 				"label": "Bare Feet Studios, LLC",
@@ -122,3 +122,4 @@
 		]
 	}
 ]
+

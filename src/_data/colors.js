@@ -105,8 +105,8 @@ module.exports = {
 	/**
 	 * ===== Excerpts on Post Lists
 	 */
-	excerptDefault: 'text-gray-600',
-	excerptCustom: 'text-sm leading-relaxed italic text-gray-600',
+	excerptDefault: 'text-gray-700',
+	excerptCustom: 'text-sm leading-relaxed italic text-gray-700',
 
 	/**
 	 * ===== Author / Date Block and their Social Icons =====
