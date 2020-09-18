@@ -37,10 +37,10 @@ p {
 }
 
 ol {
-	@apply ml-8 list-decimal;
+	@apply pt-4 ml-8 list-decimal;
 }
 ul {
-	@apply ml-8 list-disc;
+	@apply pt-4 ml-8 list-disc;
 }
 blockquote {
 	@apply pl-4 m-4 border-l-4 border-gray-500;
