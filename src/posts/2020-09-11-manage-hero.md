@@ -27,7 +27,7 @@ heroSettings:
   buttonBgColor: # leave blank to inherit from /src/_data/colors.buttonCustom.bg or buttonDefault.bg
   image: /assets/images/home/plane.jpg # image URL
   imagePosition: left # options = left, center, right
-  imageOpacity: 50 # options = 25, 50, 75 (default is 100)
+  imageOpacity: opacity-50 # options = opacity-25, opacity-50, opacity-75, opacity-100 (default)
   imageOpacityFilter: black # options = black or white (default) -> really depends on your background image
   carousel:
     images:
@@ -37,8 +37,8 @@ heroSettings:
       - /assets/images/home/9.jpg
   video:
     url: /assets/video/forestfire.mp4 # local relative to site root, or full https://... if remote?
-    opacityMobile: 50 # options 25, 50, 75, 100 (default)
-    opacityDesktop: # options 25, 50, 75, 100 (default)
+    opacityMobile: opacity-50 # options 25, 50, 75, 100 (default)
+    opacityDesktop: # options md:opacity-25, md:opacity-50, md:opacity-75, md:opacity-100 (default)
 tags:
   - hero
   - video
@@ -98,7 +98,7 @@ heroSettings:
   buttonBgColor: # leave blank to inherit from /src/_data/colors.buttonCustom.bg or buttonDefault.bg
   image: /assets/images/home/plane.jpg # image URL
   imagePosition: left # options = left, center, right
-  imageOpacity: 50 # options = 25, 50, 75 (default is 100)
+  imageOpacity: opacity-50 # options = opacity-25, opacity-50, opacity-75, opacity-100 (default)
   imageOpacityFilter: black # options = black or white (default) -> really depends on your background image
   carousel:
     images:
@@ -108,8 +108,8 @@ heroSettings:
       - /assets/images/home/9.jpg
   video:
     url: /assets/video/forestfire.mp4 # local relative to site root, or full https://... if remote?
-    opacityMobile: 50 # options 25, 50, 75, 100 (default)
-    opacityDesktop: # options 25, 50, 75, 100 (default)
+    opacityMobile: opacity-50 # options 25, 50, 75, 100 (default)
+    opacityDesktop: # options md:opacity-25, md:opacity-50, md:opacity-75, md:opacity-100 (default)
 ```
 
 {% wrap "text-gray-700 text-sm bg-red-100 p-2 border border-red-300 rounded-lg my-4" %}

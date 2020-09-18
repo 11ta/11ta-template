@@ -27,7 +27,7 @@ heroSettings:
   buttonBgColor: # leave blank to inherit from /src/_data/colors.buttonCustom.bg or buttonDefault.bg
   image: /assets/images/home/plane.jpg # image URL
   imagePosition: left # options = left, center, right
-  imageOpacity: 50 # options = 25, 50, 75 (default is 100)
+  imageOpacity: opacity-50 # options = opacity-25, opacity-50, opacity-75 opacity-100 (default)
   imageOpacityFilter: black # options = black or white (default) -> really depends on your background image
   carousel:
     images:
@@ -37,8 +37,8 @@ heroSettings:
       - /assets/images/home/9.jpg
   video:
     url: /assets/video/pixabay-john-macdougall.mp4 # local relative to site root, or full https://... if remote?
-    opacityMobile: 25 # options 25, 50, 75, 100 (default)
-    opacityDesktop: 50 # options 25, 50, 75, 100 (default)
+    opacityMobile: opacity-25 # options opacity-25, opacity-50, opacity-75, opacity-100 (default)
+    opacityDesktop: md:opacity-50 # be sure to set the breakpoint, options opacity-25, opacity-50, opacity-75, opacity-100 (default)
 ---
 
 We set out to build a starter project template for [11ty](https://11ty.dev '11ty Static Site Generator') that has [TailwindCSS](https://tailwindcss.com 'TailwindCSS Utility-First CSS Framework') and [Alpine.js](https://github.com/alpinejs/alpine 'Alpine.js : Think of it like Tailwind for JavaScript') baked in.
