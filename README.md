@@ -3,7 +3,9 @@
 
 I set out to build a starter project template for 11ty that has TailwindCSS and Alpine.js baked in.
 
-Version 1.0.0 morphed into a fully-configurable text-based CMS for managing small websites with easy-to-manage configuration files in the `/src/_data/` directory.
+Version 1.0.0 morphed into a deeply customizable, full featured, text-based CMS for managing small websites with easy-to-manage configuration files in the `/src/_data/` directory.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e6eb38e1-d081-46ea-a4f6-4d3d36ab7036/deploy-status)](https://app.netlify.com/sites/11ta/deploys)
 
 ![Lighthouse Performance](lighthouse/lighthouse_performance.svg) ![Lighthouse Accessibility](lighthouse/lighthouse_accessibility.svg) ![Lighthouse Best Practices](lighthouse/lighthouse_best-practices.svg) ![Lighthouse SEO](lighthouse/lighthouse_seo.svg)
 
@@ -11,7 +13,7 @@ Version 1.0.0 morphed into a fully-configurable text-based CMS for managing smal
 
 ## Live Demo
 
-**The live demo at https://11ta.netlify.app provides a feature list, and the evolving blog posts each highlight and provide examples of different features, shortcodes, customizations, and frontmatter controls.** 
+**The [live demo at "11ta.netlify.app"](https://11ta.netlify.app) provides a feature list, and the evolving blog posts each highlight and provide examples of different features, shortcodes, customizations, and frontmatter controls.**
 
 ## :fire: Credit :fire:
 
@@ -25,13 +27,11 @@ Specifically, the following starter projects helped me understand the power and 
 - :fire: [eleventy-tailwind-alpinejs-starter](https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter) by [Greg Wolanski](https://gregwolanski.com/)
 - :fire: [jet](https://github.com/marcamos/jet) by [Marc Amos](https://twitter.com/marcamos)
 
-
 ## Deploy and Host at Netlify Automatically
 
-To automatically deploy this Template to [Netlify for free hosting](https://www.netlify.com/pricing/), simply click the <kbd>Deploy to netlify</kbd> button below.
+To automatically deploy this Template to [Netlify for free hosting](https://www.netlify.com/pricing/), make sure you're logged in to your Netlify account and then simply click the <kbd>Deploy to netlify</kbd> button below.
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/11ta/11ta-template"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
-
 
 ## Install and Deploy Manually
 
@@ -40,3 +40,11 @@ To automatically deploy this Template to [Netlify for free hosting](https://www.
 - Run `npm install` to install dependencies
 - `npm run dev` to work locally
 
+## Planned
+
+- Search
+- More Structural controls for Index Page
+- Easy add Collections: Projects, Services, Jobs, etc.
+- "Themed" versions for Portfolios/Creatives, Agencies, Digital Gardens, etc.
+- Fully documented migration of Wordpress to 11ty
+- [Snipcart](https://snipcart.com/) integration
