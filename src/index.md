@@ -84,7 +84,7 @@ Specifically, the following starter projects helped me understand the power and 
 In addition to the Structural, Color, and Frontmatter contols listed below, the system also has the following features baked in:
 
 - **SIAB** *(site in a box)* ... Update the site settings in `/src/_data/meta.js`, content on the `index.md` and `about.md` pages, replace the `/src/posts/*.md` files with your own content and your new site is fully functional and ready to publish!
-- **100 Lighthouse scores** across the site's Pages and Posts ( *not just on pages with a little text and no images* :wink: ).
+- **100 Lighthouse scores** across the site's Pages and Posts (*not just on pages with a little text and no images* :wink:).
 - ATOM feed at [/feed.xml](/feed.xml).
 - Inlined CSS for the [Prism Okaidia](https://prismjs.com/) syntax highlight theme.
 - Webpack to bundle up [Alpine.js](https://github.com/alpinejs/alpine) and any custom JS you want to include.
@@ -109,7 +109,7 @@ You can completely control:
 
 The **Frontmatter** in your .md Posts and Pages files also allows you to manage:
 
-- [Heros](/2020/09/11/manage-hero-graphics-carousels-splits-and-video/) _(like on this home page)_ of types: **carousel, graphic, video,** and **split**. *(Actually, you can add those Hero types to **ANY** Page or Post just be usign the Frontmatter.)*
+- [Heros](/2020/09/11/manage-hero-graphics-carousels-splits-and-video/) _(like on this home page)_ of types: **carousel, graphic, video,** and **split**. *(Actually, you can add those Hero types to **ANY** Page or Post just be using the Frontmatter.)*
 - [Featured Images](/2020/09/06/featured-post-images/) _(full-width banners at the top of the page just like in Wordpress)_.
 - [SEO overrides for OG and Twitter cards](/2020/09/10/site-meta-og-and-twitter-cards/) for Title, Description, and Images.
 
