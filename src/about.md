@@ -18,10 +18,6 @@ Text courtesy [Fillerama.io](http://fillerama.io/)
 
 {% endwrap %}
 
-## Testing SVG Shortcode
-
-{% svg "github" %}
-
 ## I hear the jury's still out on science.
 
 Guy's a pro. It's a hug, Michael. I'm hugging you. Michael! I care deeply for nature. That's what it said on 'Ask Jeeves.' Across from where?
