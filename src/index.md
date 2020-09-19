@@ -45,15 +45,29 @@ We set out to build a starter project template for [11ty](https://11ty.dev '11ty
 
 Version 1.0.0 morphed into a fully-configurable text-based CMS for managing small websites with easy-to-manage configuration files in the `/src/_data` directory.
 
-**The [Blog Posts](/blog/) cover the main features of the system.**
+{% wrap "mt-4 bg-indigo-100 border border-indigo-300 text-lg italic rounded-full text-center" %}
+
+**[START HERE:](/blog/) The [Blog Posts](/blog/) cover the main features of the system.**
+
+{% endwrap %}
 
 ## Install and Deploy
 
-Hop over to the GitHub repo and follow the instructions in the README.
+To automatically deploy this Template to [Netlify for free hosting](https://www.netlify.com/pricing/), make sure you're logged in to your Netlify account and then simply click the `Deploy to netlify` button below.
 
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/11ta/11ta-template"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
+**Want to install and develop locally?** Hop over to the [GitHub repo](https://github.com/11ta/11ta-template/) and follow the instructions in the README.
 
-## :fire: Credit :fire: 
+{% wrap "border-t border-b border-indigo-300 mt-4 "%}
+
+| | |
+| :---- | ----: |
+| **Current Deploy Status:** | [![Netlify Status](https://api.netlify.com/api/v1/badges/e6eb38e1-d081-46ea-a4f6-4d3d36ab7036/deploy-status)](https://app.netlify.com/sites/11ta/deploys) |
+
+{% endwrap %}
+
+## :fire: Credit :fire:
 
 First and foremost, I want to credit the [11ty](https://11ty.dev) community, especially those listed in the [starter projects](https://www.11ty.dev/docs/starter/)!
 
@@ -104,9 +118,17 @@ The **Frontmatter** in your .md Posts and Pages files also allows you to manage:
 There are several **Shortcodes** _(both single and paired)_ and **Filters** to allow Editors to manage:
 
 - [Multi-column content](/2020/09/03/wrap-and-columns-shortcodes/) _(without writing CSS)_.
-- [SVG Sprites](/2020/09/09/svg-shortcode/) controls across the system and for inserting in .md Posts and Pages files. 
+- [SVG Sprites](/2020/09/09/svg-shortcode/) controls across the system and for inserting in .md Posts and Pages files.
 - Custom Date display formats at the point of use.
 - [Description Lists](/2020/09/04/description-list-shortcodes/) for content like FAQs, Lists, etc.
 - [Wrapper](/2020/09/03/wrap-and-columns-shortcodes/) for managing blocks with background images, borders, etc.
 - [YouTube embed shortcode](/2020/09/08/youtube-video-embed/) that allows you to control and add an iFrame title *(required for accessability and Lighthouse scores)*, width/height ratio, and set the start time in "m:ss" format so you don't have to manually count the seconds.
 
+## Planned
+
+- Search
+- More Structural controls for Index Page
+- Easy add Collections: Projects, Services, Jobs, etc.
+- "Themed" versions for Portfolios/Creatives, Agencies, Digital Gardens, etc.
+- Fully documented migration of Wordpress to 11ty
+- [Snipcart](https://snipcart.com/) integration
