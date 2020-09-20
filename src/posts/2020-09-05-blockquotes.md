@@ -3,6 +3,7 @@ title: Blockquotes - Shortcodes
 date: 2020-09-05T17:44:03.000Z
 excerpt: Blockquotes are easy, even in Markdown. But what if you want to style them?
 author: shane-robinson
+draft: 
 seo:
   title:
   description:
