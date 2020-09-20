@@ -3,6 +3,7 @@ title: Full Frontmatter Example
 date: 2020-09-07T17:44:03.000Z
 excerpt: There is a LOT of control options in the frontmatter.
 author: shane-robinson
+draft: 
 seo:
   title:
   description:

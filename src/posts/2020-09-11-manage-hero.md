@@ -3,6 +3,7 @@ title: Manage Hero Graphics, Carousels, Splits, and Video
 date: 2020-09-11T17:44:03.000Z
 excerpt: Manage Hero content such as full screen graphics, carousels, splits, video, and buttons
 author: shane-robinson
+draft: 
 seo:
   title:
   description:
