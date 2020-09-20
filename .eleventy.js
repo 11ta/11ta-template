@@ -65,7 +65,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addNunjucksAsyncShortcode('svgsprite', svgsprite)
 
 	/**
-	 * Collections?
+	 * Collections
 	 * ============================
 	 *
 	 * POST Collection set so we can check status of "draft:" frontmatter.
