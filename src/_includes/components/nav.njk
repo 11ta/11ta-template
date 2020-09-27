@@ -1,40 +1,48 @@
 {% set navPages = collections.pages | eleventyNavigation %}
 <nav x-data="{ open: false }" class="{{ colors.navCustom.barBg or colors.navDefault.barBg }} shadow relative">
-  <div class="{{ structure.g_pageWidth }}">
+  <div class="px-8 md:px-16 lg:px-24">
     <div class="flex justify-between h-16">
       <div class="flex">
         <div class="flex items-center flex-shrink-0">
-          <!-- small logo hidden on md and above -->
+          {# small logo hidden on md and above #}
           <a aria-label="Mobile Logo" href="/" class="block md:hidden {{ colors.logoCustom.mobile or colors.logoDefault.mobile }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Mobile Logo">
-            {% svg "logo_mobile", "fill-current w-16 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}", "The Mobile Logo" %}
+            {% svg "logo-mobile", "fill-current w-16 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}", "The Mobile Logo" %}
           </a>
-          <!-- large logo hidden on small, block on md -->
+          {# large logo hidden on small, block on md #}
           <a aria-label="Desktop Logo" href="/" class="hidden md:block {{ colors.logoCustom.desktop or colors.logoDefault.desktop }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Desktop Logo">
             {% svg "logo", "fill-current h-8 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}", "The Logo" %}
           </a>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
-          <!-- 11ty Nav Plugin loop  -->
+          {# 11ty Nav Plugin loop  #}
           {% for entry in navPages %}
             <a {% if page.url != entry.url %}href="{{ entry.url | url }}"{% endif %} alt="Link to {{ entry.title }}" class=" px-3 py-2 text-sm font-medium rounded-md items-center {% if page.url == entry.url %} {{ colors.navCustom.textActiveBg or colors.navDefault.textActiveBg }} {{ colors.navCustom.textActive or colors.navDefault.textActive }} {% else %} {{ colors.navCustom.text or colors.navDefault.text }} hover:{{ colors.navCustom.textHover or colors.navDefault.textHover }} {% endif %} focus:outline-none focus:{{ colors.navCustom.textFocus or colors.navDefault.textFocus }} transition duration-150 ease-in-out">
               {{ entry.title }}
             </a>
           {% endfor %}
+          {# Snipcart view cart, total and # items  #}
+          <button class="ml-4 text-sm snipcart-checkout {{ colors.navCustom.text or colors.navDefault.text }} hover:{{ colors.navCustom.textHover or colors.navDefault.textHover }}">
+            <svg class="inline w-6 pr-2 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor" d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z"></path>
+            </svg>
+            <span class="hidden lg:inline-block">
+              <span class="italic snipcart-total-price"></span>, <span class="italic snipcart-items-count"></span> items
+            </span>
+          </button>
         </div>
       </div>
 
-      <!-- Right side of Navbar -->
-      <!--  -->
+      {# Right side of Navbar  #}
 
-      <!-- MOBILE MENU -->
+      {# MOBILE MENU  #}
       <div class="flex items-center -mr-2 sm:hidden">
-        <!-- Mobile menu button -->
+        {# Mobile menu button #}
         <button @click="open = !open" class="inline-flex items-center justify-center p-2 {{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }} transition duration-150 ease-in-out rounded-md hover:{{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }} hover:{{ colors.navCustom.mobileButtonBgover or colors.navDefault.mobileButtonBgHover }} focus:outline-none focus:{{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }} focus:{{ colors.navCustom.mobileButton or colors.navDefault.mobileButton }}" x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" aria-label="Main menu" x-bind:aria-expanded="open">
-          <!-- Icon when menu is closed. -->
+          {# Icon when menu is closed.  #}
           <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
-          <!-- Icon when menu is open. -->
+          {# Icon when menu is open.  #}
           <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
@@ -45,12 +53,19 @@
 
   <div x-description="Mobile menu, toggle classes based on menu state." x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
     <div class="pt-2 pb-3">
-      <!-- 11ty Nav Plugin loop  -->
+      {# 11ty Nav Plugin loop  #}
       {% for entry in navPages %}
         <a {% if page.url != entry.url %}href="{{ entry.url | url }}"{% endif %} alt="Link to {{ entry.title }}" class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}{{ colors.navCustom.mobileBgActive or colors.navDefault.mobileBgActive }} {{ colors.navCustom.mobileTextActive or colors.navDefault.mobileTextActive }}{% else %}{{ colors.navCustom.mobileBg or colors.navDefault.mobileBg }} hover:{{ colors.navCustom.mobileTextHover or colors.navDefault.mobileTextHover }} hover:{{ colors.navCustom.mobileBgHover or colors.navDefault.mobileBgHover }}  {% endif %} text-base font-medium  {{ colors.navCustom.mobileText or colors.navDefault.mobileText }}  focus:outline-none focus:{{ colors.navCustom.mobileTextFocus or colors.navDefault.mobileTextFocus }} focus:{{ colors.navCustom.mobileBgFocus or colors.navDefault.mobileBgFocus }} transition duration-150 ease-in-out">
           {{ entry.title }}
         </a>
       {% endfor %}
+      <button class="ml-4 text-sm snipcart-checkout">
+        <svg class="inline w-6 pr-2 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <path fill="currentColor" d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z"></path>
+        </svg>
+        (<span class="relative inline italic snipcart-total-price"></span>, <span class="relative inline italic snipcart-items-count"></span> items)
+      </button>
+
     </div>
 
   </div>

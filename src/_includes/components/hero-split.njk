@@ -1,4 +1,4 @@
-<main class="lg:relative {{ heroSettings.height.mobile or 'h-1/1' }} sm:{{ heroSettings.height.desktop or heroSettings.height.mobile or 'h-1/1' }}">
+<main class="lg:relative {{ heroSettings.bg.color or 'bg-black' }} {{ heroSettings.height.mobile or 'h-1/1' }} sm:{{ heroSettings.height.desktop or heroSettings.height.mobile or 'h-1/1' }}">
   <div
         class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left"
       >
@@ -7,18 +7,18 @@
       <h2
             class="text-4xl font-semibold leading-10 tracking-tight {{ heroSettings.headingTextColor or 'text-white' }} sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
           >
-        {{ heroSettings.headingText }}
+        {{ heroSettings.headingText | safe }}
       </h2>
       <p
             class="max-w-md mx-auto mt-3 text-lg {{ heroSettings.subheadingTextColor }} sm:text-xl md:mt-5 md:max-w-3xl"
           >
-        {{ heroSettings.subheadingText }}
+        {{ heroSettings.subheadingText | safe }}
 
       </p>
 
       {% if heroSettings.buttonText %}
         <div class="w-full mt-12 ">
-          <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ colors.buttonCustom.text or colors.buttonDefault.text }} {{ colors.buttonCustom.bg or colors.buttonDefault.bg }} hover:{{ colors.buttonCustom.textHover or colors.buttonDefault.textHover }} hover:{{ colors.buttonCustom.bgHover or colors.buttonDefault.bgHover }} {{ colors.buttonCustom.border or colors.buttonDefault.border }}">{{ heroSettings.buttonText }}</a>
+          <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ heroSettings.buttonTextColor or colors.buttonCustom.text or colors.buttonDefault.text }} {{ heroSettings.buttonBgColor or colors.buttonCustom.bg or colors.buttonDefault.bg }} hover:{{ colors.buttonCustom.textHover or colors.buttonDefault.textHover }} hover:{{ heroSettings.buttonBgHover or colors.buttonCustom.bgHover or colors.buttonDefault.bgHover }} {{ heroSettings.buttonBorder or colors.buttonCustom.border or colors.buttonDefault.border }}">{{ heroSettings.buttonText }}</a>
         </div>
       {% endif %}
 
@@ -29,8 +29,8 @@
       >
     <img
           class="absolute inset-0 object-cover w-full h-full"
-          src="/assets/images/home/plane.jpg"
-          alt="Lost Plane"
+          src="/assets/images/{{ heroSettings.bg.image }}"
+          alt="Hero Image"
 />
   </div>
 </main>

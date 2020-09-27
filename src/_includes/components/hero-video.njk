@@ -1,6 +1,6 @@
-<header class="relative lg:overflow-hidden {{ heroSettings.height.mobile or 'h-1/1' }} sm:{{ heroSettings.height.desktop or heroSettings.height.mobile or 'h-1/1' }}">
-  <div class="absolute inset-0 z-negative {{ heroSettings.video.opacityMobile or 'opacity-100' }} {{ heroSettings.video.opacityDesktop or 'md:opacity-100' }}">
-    <video src="{{ heroSettings.video.url }}" autoplay muted loop class="object-cover w-full h-full"></video>
+<header class="relative lg:overflow-hidden {{ heroSettings.bg.color or 'bg-black' }} {{ heroSettings.height.mobile or 'h-1/1' }} sm:{{ heroSettings.height.desktop or heroSettings.height.mobile or 'h-1/1' }}">
+  <div class="absolute inset-0 z-negative {{ heroSettings.bg.opacityMobile or 'opacity-100' }} md:{{ heroSettings.bg.opacityDesktop or heroSettings.bg.opacityMobile or 'opacity-100' }}">
+    <video src="/assets/video/{{ heroSettings.bg.video }}" autoplay muted loop class="object-cover w-full h-full"></video>
   </div>
 
   {# Shared across hero components  #}
