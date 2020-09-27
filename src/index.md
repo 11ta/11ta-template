@@ -24,7 +24,7 @@ heroSettings:
     video: pixabay-john-macdougall.mp4 # local relative /assets/video/, or full https://... if remote?
     opacityMobile: opacity-50 # options opacity-n, 5, 10, 15, 20, 25, 50, 75, 100 (default)
     opacityDesktop: opacity-75 # Leave blank to inherit opacityMobile, use same options as opacityMobile
-  headingText: Is your data lost in the forest, or the trees?
+  headingText: Is your data lost in the forest,<br>or the trees?
   headingTextColor: # default = text-white (can use any TailwindCSS text-[color]-[xxx])
   headingTextCase: # default = as typed - options: uppercase, lowercase, capitalize
   subheadingText: This is some pithy text that explains why you should hire us without reading any further... Or is it farther?
@@ -37,10 +37,10 @@ heroSettings:
   buttonBorder: # leave blank to inherit from /src/_data/colors.buttonCustom.border or buttonDefault.border
   carousel:
     images:
-      - /assets/images/home/6.jpg
-      - /assets/images/home/7.jpg
-      - /assets/images/home/8.jpg
-      - /assets/images/home/9.jpg
+      - home/6.jpg
+      - home/7.jpg
+      - home/8.jpg
+      - home/9.jpg
 ---
 
 We set out to build a starter project template for [11ty](https://11ty.dev '11ty Static Site Generator') that has [TailwindCSS](https://tailwindcss.com 'TailwindCSS Utility-First CSS Framework') and [Alpine.js](https://github.com/alpinejs/alpine 'Alpine.js : Think of it like Tailwind for JavaScript') baked in.

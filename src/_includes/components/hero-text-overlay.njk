@@ -1,4 +1,4 @@
-<div class="absolute flex flex-col items-start justify-center h-full {{ heroSettings.headingTextColor or 'text-white' }} md:{{ structure.g_pageWidth }}">
+<div class="absolute flex flex-col items-start justify-center h-full {{ heroSettings.headingTextColor or 'text-white' }} {{ structure.g_pageWidth }}">
   <div class="text-4xl font-semibold leading-tight {{ heroSettings.headingTextCase }} md:text-6xl">
     {{ heroSettings.headingText | safe  }}
   </div>
