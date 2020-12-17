@@ -3,7 +3,7 @@
   <div class="px-8 md:px-16 lg:px-32">
     <div class="flex justify-between h-16">
       <div class="flex">
-        <div class="flex items-center flex-shrink-0">
+        <div class="flex items-center">
           {# small logo hidden on md and above #}
           <a aria-label="Mobile Logo" href="/" class="block md:hidden {{ colors.logoCustom.mobile or colors.logoDefault.mobile }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Mobile Logo">
             {% svg "logo-mobile", "fill-current w-16 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}", "The Mobile Logo" %}
