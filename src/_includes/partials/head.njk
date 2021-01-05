@@ -9,23 +9,22 @@
 {% endif %}
 {%- endset -%}
 {#- General #}
-<meta name="author" content="{{ author or meta.authorName }}">
-<meta name="description" content="{{ seo.description or excerpt or meta.siteDescription }}">
-<link rel="canonical" href="{{ absolutePageUrl }}">
+<meta name="author" content="{{ author or meta.authorName }}" />
+<meta name="description" content="{{ seo.description or excerpt or meta.siteDescription }}" />
+<link rel="canonical" href="{{ absolutePageUrl }}" />
 {#- Open Graph #}
-<meta property="og:site_name" content="{{ meta.title }}">
-<meta property="og:title" content="{{ seo.title or title }} | {{ meta.siteName }}">
-<meta property="og:description" content="{{ seo.description or excerpt or meta.siteDescription }}">
-<meta property="og:url" content="{{ absolutePageUrl }}">
-<meta property="og:locale" content="{{ meta.locale }}">
-<meta property="og:image" content="{{ ogImage | url | absoluteUrl(build.url) }}">
+<meta property="og:site_name" content="{{ meta.title }}" />
+<meta property="og:title" content="{{ seo.title or title }} | {{ meta.siteName }}" />
+<meta property="og:description" content="{{ seo.description or excerpt or meta.siteDescription }}" />
+<meta property="og:url" content="{{ absolutePageUrl }}" />
+<meta property="og:locale" content="{{ meta.locale }}" />
+<meta property="og:image" content="{{ ogImage | url | absoluteUrl(build.url) }}" />
 {#- Twitter Card #}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="{{ meta.twitterSite }}">
-<meta name="twitter:creator" content="{{ meta.twitterCreator }}">
-<meta name="twitter:title" content="{{ seo.title or title }} | {{ meta.siteName }}">
-<meta name="twitter:description" content="{{ seo.description or excerpt or meta.siteDescription }}">
-<meta name="twitter:image" content="{{ ogImage | url | absoluteUrl(build.url) }}">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="{{ meta.twitterSite }}" />
+<meta name="twitter:creator" content="{{ meta.twitterCreator }}" />
+<meta name="twitter:title" content="{{ seo.title or title }} | {{ meta.siteName }}" />
+<meta name="twitter:description" content="{{ seo.description or excerpt or meta.siteDescription }}" />
 {#- Favicon #}
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}">
 <link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-32x32.png' | url }}" sizes="32x32">
