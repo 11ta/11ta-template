@@ -170,29 +170,29 @@ module.exports = function (eleventyConfig) {
 	 * This so we can have and test a 404 during local dev.
 	 * @link https://www.11ty.dev/docs/config/#override-browsersync-server-options
 	 */
-	eleventyConfig.setBrowserSyncConfig({
-		notify: true,
-		snippetOptions: {
-			rule: {
-				match: /<\/head>/i,
-				fn: function (snippet, match) {
-					return snippet + match
-				},
-			},
-		},
+	// eleventyConfig.setBrowserSyncConfig({
+	// 	notify: true,
+	// 	snippetOptions: {
+	// 		rule: {
+	// 			match: /<\/head>/i,
+	// 			fn: function (snippet, match) {
+	// 				return snippet + match
+	// 			},
+	// 		},
+	// 	},
 		// Set local server 404 fallback
-		callbacks: {
-			ready: function (err, browserSync) {
-				const content_404 = fs.readFileSync('dist/404/index.html')
+		// callbacks: {
+		// 	ready: function (err, browserSync) {
+		// 		const content_404 = fs.readFileSync('dist/404.html')
 
-				browserSync.addMiddleware('*', (req, res) => {
-					// Provides the 404 content without redirect.
-					res.write(content_404)
-					res.end()
-				})
-			},
-		},
-	})
+		// 		browserSync.addMiddleware('*', (req, res) => {
+		// 			// Provides the 404 content without redirect.
+		// 			res.write(content_404)
+		// 			res.end()
+		// 		})
+		// 	},
+		// },
+	// })
 
 	return {
 		dir: {

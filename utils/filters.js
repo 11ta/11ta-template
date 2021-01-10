@@ -31,7 +31,17 @@ module.exports = {
 			replacement: '-',
 			remove: /[*+~.·,()'"`´%!?¿:@]/g,
 		})
-	},
+  },
+  
+    /**
+   * Pass ` | limit(x)` to a Collection loop to limit the number returned
+   * Alt = ` | reverse | limit(x)` to return X most recent
+   * Took the following filters from
+   * @link https://www.youtube.com/watch?v=wV77GwOY22w&feature=share
+   */
+  limit: (arr, count = 5) => {
+    return arr.slice(0, count)
+  },
 
 	/**
 	 * Get Authors from _data/authors.json to use in Post Lists and Detail
