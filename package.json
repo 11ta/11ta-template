@@ -36,10 +36,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-navigation": "^0.1.6",
-    "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@11ty/eleventy-plugin-rss": "^1.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
     "@tailwindcss/custom-forms": "^0.2.1",
     "alpinejs": "^2.8.0",
     "autoprefixer": "^9.8.6",
@@ -60,7 +60,7 @@
     "svg-sprite": "^1.5.0",
     "tailwindcss": "^1.9.6",
     "terser-webpack-plugin": "^4.2.3",
-    "webpack": "^4.44.2",
+    "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   }
 }
