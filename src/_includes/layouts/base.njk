@@ -18,7 +18,7 @@
     </style>
   </head>
   <body class="{{ colors.siteTextCustom or siteTextDefault }}">
-    <div hidden>{% svgsprite %}</div>
+    {% svgsprite %}
     <div class="flex flex-col min-h-screen">
       {% include "components/nav.njk" %}
 

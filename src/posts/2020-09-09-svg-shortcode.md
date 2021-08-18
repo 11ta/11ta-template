@@ -3,7 +3,7 @@ title: SVG - Shortcode
 date: 2020-09-09T17:44:03.000Z
 excerpt: Easily add and customize SVGs in your markdown posts.
 author: shane-robinson
-draft: 
+draft:
 seo:
   title:
   description:
@@ -18,9 +18,9 @@ tags:
   - shortcodes
 ---
 
-There's an entire SVG display and management features built-in to this system. It consists of both custom SVG Shortcode I wrote and in-line parsing and display of SVGs via the [svg-sprite NPM package](https://www.npmjs.com/package/svg-sprite).
+This template uses the [eleventy-plugin-svg-sprite](https://github.com/patrickxchong/eleventy-plugin-svg-sprite) package which compiles an SVG Sprite and installs a shortcode to display SVG in any file (Markdown, Nunjucks etc).
 
-> :fire: Massive Thank You to [Ryan Scherler and his Eventy Starter](https://github.com/eastslopestudio/eleventy-starter) where I first learned about the svg-sprite package.
+> :fire: Massive Thank You to [Ryan Scherler and his Eventy Starter](https://github.com/eastslopestudio/eleventy-starter) where I first learned about the svg-sprite package. Thanks also to Patrick Chong for creating [eleventy-plugin-svg-sprite](https://www.npmjs.com/package/eleventy-plugin-svg-sprite).
 
 ## SVG Sprites : Managing Display, Colors, & Links
 
@@ -53,7 +53,9 @@ You should also open those SVGs in your text/coding editor and see how they have
 
 If you're happily typing along on that next great blog post and you realize what it really needs is a SVG, you're in luck!
 
-{% svg "github", "mt-1 mr-2 h-10 w-10 text-blue-500 float-left" %} Just use the custom SVG Shortcode I created to insert a SVG anywhere and control it's size, color, padding, position, float, etc. For example, the following code returns the GitHub SVG floating to the left:
+{% svg "github", "mt-1 mr-2 h-10 w-10 text-blue-500 float-left" %}
+
+Just use the SVG Shortcode installed by [eleventy-plugin-svg-sprite](https://github.com/patrickxchong/eleventy-plugin-svg-sprite) to insert a SVG anywhere and control its size, color, padding, position, float, etc. For example, the following code returns the GitHub SVG floating to the left:
 
 {% raw %}
 
