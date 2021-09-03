@@ -2,6 +2,7 @@ const fs = require('fs')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const pluginSvgSprite = require("eleventy-plugin-svg-sprite");
 const markdownIt = require('markdown-it')
 const markdownItEmoji = require('markdown-it-emoji')
 
@@ -10,7 +11,6 @@ const filters = require('./utils/filters.js')
 const shortcodes = require('./utils/shortcodes.js')
 const pairedshortcodes = require('./utils/paired-shortcodes.js')
 const transforms = require('./utils/transforms.js')
-const svgsprite = require('./utils/svgsprite')
 
 module.exports = function (eleventyConfig) {
 	/**
@@ -21,6 +21,10 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRss)
 	eleventyConfig.addPlugin(pluginNavigation)
 	eleventyConfig.addPlugin(syntaxHighlight)
+	eleventyConfig.addPlugin(pluginSvgSprite, {
+		path: "./src/assets/svg",
+		globalClasses: "fill-current"
+	})
 
 	/**
 	 * Filters
@@ -56,13 +60,6 @@ module.exports = function (eleventyConfig) {
 			pairedshortcodes[shortcodeName]
 		)
 	})
-
-	/**
-	 * Add async shortcodes
-	 *
-	 * @link https://www.11ty.dev/docs/languages/nunjucks/#asynchronous-shortcodes
-	 */
-	eleventyConfig.addNunjucksAsyncShortcode('svgsprite', svgsprite)
 
 	/**
 	 * Collections
