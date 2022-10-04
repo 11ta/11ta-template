@@ -111,7 +111,7 @@ You can completely control:
 
 The **Frontmatter** in your .md Posts and Pages files also allows you to manage:
 
-- [Heros](/2020/09/11/manage-hero-graphics-carousels-splits-and-video/) _(like on this home page)_ of types: **carousel, graphic, video,** and **split**. _(Actually, you can add those Hero types to **ANY** Page or Post just be using the Frontmatter.)_
+- [Heros](/2020/09/11/manage-hero-graphics-carousels-splits-and-video/) _(like on this home page)_ of types: **carousel, graphic, video,** and **split**. _(Actually, you can add those Hero types to **ANY** Page or Post just by using the Frontmatter.)_
 - [Featured Images](/2020/09/06/featured-post-images/) _(full-width banners at the top of the page just like in Wordpress)_.
 - [SEO overrides for OG and Twitter cards](/2020/09/10/site-meta-og-and-twitter-cards/) for Title, Description, and Images.
 
