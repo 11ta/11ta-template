@@ -1,8 +1,16 @@
 # 11TA - 11ty, TailwindCSS, & Alpine.js Template
 
+> **Update v2.1, 221018 - It's working again!**
+> Greatly simplified. Updated all pkgs and removed those no longer necessary. All original functionality remains.
+> I'll be using this template for several personal sites and so will try to keep it updated with any changes and added functionality I create for those sites.
+
+---
+
 > **UPDATE v2.0.0 - Breaking Changes**
 > In order to provide scalability and cleaner frontmatter controls in current Posts _(and upcoming Products)_ collections, the Frontmatter keys were updated which required updates to `/src/_includes/components/*.njk`, `tailwind.config.js`, and other templates.
 > I apologize for the inconvenience.
+
+---
 
 I set out to build a starter project template for 11ty that has TailwindCSS and Alpine.js baked in.
 
