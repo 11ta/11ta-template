@@ -53,9 +53,6 @@ To automatically deploy this Template to [Netlify for free hosting](https://www.
 
 ## Planned
 
-- Search
-- More Structural controls for Index Page
-- Easy add Collections: Projects, Services, Jobs, etc.
 - "Themed" versions for Portfolios/Creatives, Agencies, Digital Gardens, etc.
-- Fully documented migration of Wordpress to 11ty
+- Easy add Collections: Projects, Services, Jobs, etc.
 - [Snipcart](https://snipcart.com/) integration
