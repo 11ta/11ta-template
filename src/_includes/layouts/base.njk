@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ seo.title or title }}  | {{ meta.siteName }}</title>
-    <link rel="stylesheet" href="/assets/tailwind.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
     <link rel="alternate" type="application/atom+xml" title="RSS Feed for {{ meta.siteName }}" href="/feed.xml"/>
     {# Only include the Flickity js if this page uses a hero.carousel  #}
     {% if hero == "carousel" or product.carousel -%}
@@ -14,7 +14,7 @@
     {%- include "partials/head.njk" %}
     {% set prismOkaidia %}{% include "src/assets/css/prism-okaidia.css" %}{% endset -%}
     <style>
-      {{prismOkaidia | cssmin | safe}}
+      {{prismOkaidia | safe}}
     </style>
   </head>
   <body class="{{ colors.siteTextCustom or siteTextDefault }}">

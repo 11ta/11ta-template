@@ -1,19 +1,13 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-	purge: [
+	content: [
 		'./src/**/*.html',
 		'./src/**/*.njk',
 		'./src/**/*.md',
 		'./src/_data/colors.js',
 		'./src/_data/structure.js',
 	],
-	experimental: {
-		applyComplexClasses: true,
-	},
-	future: {
-		removeDeprecatedGapUtilities: true,
-	},
 	theme: {
 		extend: {
 			opacity: (theme) => ({
@@ -37,5 +31,5 @@ module.exports = {
 		},
 	},
 	variants: {},
-	plugins: [require('@tailwindcss/custom-forms')],
+	plugins: [require('@tailwindcss/forms')],
 }

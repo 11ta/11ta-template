@@ -46,10 +46,10 @@ eleventyComputed:
     {% for sites in author.socialWebsites %}
       {% if sites.url %}
         <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ author.name }} on {{ sites.label }}" href="{{ sites.url | url }}">
-          {% svg sites.label,
+          {# {% svg sites.label,
           "mx-2 h-10 w-10",
           sites.label ~ " logo",
-          "author" %}
+          "author" %} #}
         </a>
       {% endif %}
     {% endfor %}

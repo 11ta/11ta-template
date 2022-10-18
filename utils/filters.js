@@ -1,6 +1,6 @@
 const { DateTime } = require('luxon')
 const slugify = require('slugify')
-const cleanCSS = require('clean-css')
+// const cleanCSS = require('clean-css')
 
 module.exports = {
 	/**
@@ -60,8 +60,8 @@ module.exports = {
 
 	/**
 	 * Minify and inline CSS per a tip on 11ty: https://www.11ty.dev/docs/quicktips/inline-css/
-	 */
-	cssmin: (code) => {
-		return new cleanCSS({}).minify(code).styles
-	},
+   cssmin: (code) => {
+     return new cleanCSS({}).minify(code).styles
+    },
+  */
 }
